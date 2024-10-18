@@ -21,10 +21,9 @@ A python script (mk_skos.py) is used to generate a de-duplicated [SKOS](https://
 
 The SKOS file parses cleanly into the [Protege ontology editor](https://protege.stanford.edu/).
 
-Prompt used
------------
+Prompt used to ChatGPT 4o Enterprise
+------------------------------------
 
-Prompt used to ChatGPT 4o Enterprise:
 ---
 
 > Please summarise the newly-introduced terms defined in these documents.
