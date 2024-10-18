@@ -1507,4 +1507,19 @@ Network Upgrade Inclusion Stages: Formalizes the stages that Core EIPs go throug
 
 EVM Transaction Bundles: Introduces two new transaction types and an opcode, enabling EVM-native transaction bundles that delegate local sequencing rights to off-chain entities. (EIP-7727)
 
+Enshrined Proposer-Builder Separation: Decouples the execution and consensus parts of an Ethereum block by allowing the proposer to delegate block construction to a builder, adding new validation mechanisms like Payload Timeliness Committees. (EIP-7732)
+
+Leaf-Level State Expiry in Verkle Trees: Introduces state expiry at the leaf level in Verkle trees by adding an "update epoch" to extension nodes, allowing inactive data to be expired and reactivated via new transactions. (EIP-7736)
+
+Uncouple Blob Count Between CL and EL: Separates blob count verification between the consensus and execution layers, allowing the consensus layer to verify blob targets while the execution layer dynamically receives the target from the consensus layer. (EIP-7742)
+
+Two-Dimensional Log Filter Data Structure: Replaces per-block bloom filters with a two-dimensional log filter structure to improve the efficiency and precision of searching for log events, enabling light-client-friendly Merkle proofs. (EIP-7745)
+
+State Conversion to Verkle Tree: Describes a procedure to gradually convert key-values from the Merkle Patricia Tree (MPT) to the Verkle Tree, allowing the migration of the Ethereum state in a manageable timeframe. (EIP-7748)
+
+wallet_signIntendedValidatorData Method: Adds a new RPC method for signing data with an intended validator address using ERC-191 version 0x00, providing a simpler, more secure alternative to EIP-712 for smart contract accounts. (EIP-7749)
+
+EOF/EVM Trace Specification: Updates the EIP-3155 JSON tracing specification to add support for EOF (EVM Object Format), enhancing the traceability of EOF contracts with new fields for sections and function depth. (EIP-7756)
+
+HASCODE Opcode: Introduces the HASCODE opcode to discriminate between externally owned accounts (EOAs) and contract accounts, helping implement ERC-721 and ERC-1155 standards in EOF contracts. (EIP-7761)
 
