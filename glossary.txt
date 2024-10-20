@@ -1523,3 +1523,13 @@ EOF/EVM Trace Specification: Updates the EIP-3155 JSON tracing specification to 
 
 HASCODE Opcode: Introduces the HASCODE opcode to discriminate between externally owned accounts (EOAs) and contract accounts, helping implement ERC-721 and ERC-1155 standards in EOF contracts. (EIP-7761)
 
+Increase MIN_BASE_FEE_PER_BLOB_GAS: Proposes increasing the MIN_BASE_FEE_PER_BLOB_GAS to speed up price discovery on blob space, enhancing the Ethereum network’s efficiency during high demand. (EIP-7762)
+
+Amsterdam Hardfork Meta: Lists the EIPs formally proposed, considered, and scheduled for inclusion in the Amsterdam network upgrade. (EIP-7773)
+
+Prevent Block Gas Smuggling: Modifies gas accounting to exclude discounts and refunds from block gas calculations, ensuring block gas usage aligns with the actual workload. (EIP-7778)
+
+Reduce Slot Time for Lower Peak Bandwidth: Proposes reducing Ethereum's slot time from 12 seconds to 8 seconds, increasing throughput by ~33% and improving bandwidth distribution. (EIP-7782)
+
+Controlled Gas Limit Increase Strategy: Introduces a controlled gas limit increase mechanism, gradually raising the gas limit by a fixed rate to scale network capacity predictably. (EIP-7783)
+

@@ -102,6 +102,11 @@ ex:Aml%20%28Anti-Money%20Laundering%29 a skos:Concept ;
     skos:definition "A set of international laws enacted to diminish the potential for criminal organizations or individuals to launder money. These rules and laws are applied to cryptocurrencies with varying effects in different jurisdictions." ;
     skos:prefLabel "Aml (Anti-Money Laundering)" .
 
+ex:Amsterdam%20Hardfork%20Meta a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7773.md> ;
+    skos:definition "Lists the EIPs formally proposed, considered, and scheduled for inclusion in the Amsterdam network upgrade. (EIP-7773)" ;
+    skos:prefLabel "Amsterdam Hardfork Meta" .
+
 ex:Anti-Correlation%20Attestation%20Penalties a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7716.md> ;
     skos:definition "Adjusts penalties for missed attestations based on their correlation with other missed attestations, encouraging validator diversification. (EIP-7716)" ;
@@ -560,6 +565,11 @@ ex:Contract%20Secured%20Revenue a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6968.md> ;
     skos:definition "Introduces Contract Secured Revenue (CSR) on EVM-based L2s, allowing smart contracts to claim a portion of transaction fees paid when users interact with them. (EIP-6968)" ;
     skos:prefLabel "Contract Secured Revenue" .
+
+ex:Controlled%20Gas%20Limit%20Increase%20Strategy a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7783.md> ;
+    skos:definition "Introduces a controlled gas limit increase mechanism, gradually raising the gas limit by a fixed rate to scale network capacity predictably. (EIP-7783)" ;
+    skos:prefLabel "Controlled Gas Limit Increase Strategy" .
 
 ex:Create2 a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-86.md> ;
@@ -1553,6 +1563,11 @@ ex:Increase%20Max%20Attestation%20Inclusion%20Slot a skos:Concept ;
     skos:definition "Extends the maximum inclusion slot for attestations to the last slot of the next epoch (N+1), improving LMD-GHOST security and enabling faster confirmation rules. (EIP-7045)" ;
     skos:prefLabel "Increase Max Attestation Inclusion Slot" .
 
+ex:Increase%20Min_Base_Fee_Per_Blob_Gas a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7762.md> ;
+    skos:definition "Proposes increasing the MIN_BASE_FEE_PER_BLOB_GAS to speed up price discovery on blob space, enhancing the Ethereum network’s efficiency during high demand. (EIP-7762)" ;
+    skos:prefLabel "Increase Min_Base_Fee_Per_Blob_Gas" .
+
 ex:Increase%20Sstore%20Price a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-5022.md> ;
     skos:definition "Increases the gas cost of the SSTORE opcode from 20,000 to 40,000 when creating new storage (i.e., from zero to non-zero), reflecting the growing cost of adding state. (EIP-5022)" ;
@@ -2140,6 +2155,11 @@ ex:Prepare%20For%20Address%20Space%20Extension a skos:Concept ;
     skos:definition "Modifies EOF operations to avoid trimming addresses during execution, preparing for future extensions to 256-bit addresses. (EIP-7676)" ;
     skos:prefLabel "Prepare For Address Space Extension" .
 
+ex:Prevent%20Block%20Gas%20Smuggling a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7778.md> ;
+    skos:definition "Modifies gas accounting to exclude discounts and refunds from block gas calculations, ensuring block gas usage aligns with the actual workload. (EIP-7778)" ;
+    skos:prefLabel "Prevent Block Gas Smuggling" .
+
 ex:Prevrandao a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4399.md> ;
     skos:definition "Supplants the DIFFICULTY opcode with PREVRANDAO, which returns the latest beacon chain randomness in PoS blocks, replacing the former PoW-related difficulty value. (EIP-4399)" ;
@@ -2259,6 +2279,11 @@ ex:Reduce%20Intrinsic%20Transaction%20Gas a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2780.md> ;
     skos:definition "Proposes lowering the intrinsic gas cost of a transaction from 21,000 to 7,000 gas, making ETH transactions more affordable. (EIP-2780)" ;
     skos:prefLabel "Reduce Intrinsic Transaction Gas" .
+
+ex:Reduce%20Slot%20Time%20For%20Lower%20Peak%20Bandwidth a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7782.md> ;
+    skos:definition "Proposes reducing Ethereum's slot time from 12 seconds to 8 seconds, increasing throughput by ~33% and improving bandwidth distribution. (EIP-7782)" ;
+    skos:prefLabel "Reduce Slot Time For Lower Peak Bandwidth" .
 
 ex:Reduced%20Gas%20Cost%20For%20Call%20To%20Self a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1380.md> ;
