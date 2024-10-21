@@ -7,7 +7,7 @@ The basic vocabulary (glossary.txt) is meant as dynamic input to generic Large L
 
 The generated ontology (ethereum_skos.ttl) is a more full-featured variant useful in orchestrated systems using a graph database.
 
-![Screenshot of an example interaction.](https://raw.githubusercontent.com/prototypo/ethereum-eips-ontology/refs/heads/main/images/example-interaction.png?token=GHSAT0AAAAAACYBPZR4CN4JMSQNKPBSI5G6ZYVUIWQ)
+![Screenshot of an example interaction.](https://github.com/prototypo/ethereum-eips-ontology/blob/main/images/example-interaction.png?raw=true&token=GHSAT0AAAAAACYBPZR4CN4JMSQNKPBSI5G6ZYVUIWQ)
 
 Creation
 --------
