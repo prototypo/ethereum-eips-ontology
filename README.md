@@ -5,6 +5,8 @@ Usage
 -----
 The generated ontology (ethereum_skos.ttl) is meant as dynamic input to generic Large Language Models to give them up-to-date context on Ethereum terms and definitions.
 
+![Screenshot of an example interaction.](https://raw.githubusercontent.com/prototypo/ethereum-eips-ontology/refs/heads/main/images/example-interaction.png)
+
 Creation
 --------
 This repository combines the following sources into a single clean text file in _term : definition_ format. That file (glossary.txt) contains duplicated entries from the sources.
