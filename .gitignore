@@ -1,2 +1,4 @@
 # Python virtual environment
 /venv
+*.swp
+.DS_Store
