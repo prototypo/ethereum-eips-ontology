@@ -1533,3 +1533,11 @@ Reduce Slot Time for Lower Peak Bandwidth: Proposes reducing Ethereum's slot tim
 
 Controlled Gas Limit Increase Strategy: Introduces a controlled gas limit increase mechanism, gradually raising the gas limit by a fixed rate to scale network capacity predictably. (EIP-7783)
 
+GETCONTRACT: Introduces the GETCONTRACT opcode to return the address containing the bytecode by its hash, allowing contracts to identify and interact based on deterministic and tamper-proof bytecode identifiers. This opcode enhances security, auditability, and efficiency in the Ethereum ecosystem by enabling deterministic references to contract code, bypassing the mutability and opacity of contract addresses. (EIP-7784)
+
+Dynamic target blob count: Adjusts the target blob count dynamically to maintain constant blob costs, aiming to optimize network resources and economic incentives related to blob space utilization, making L2 transactions costs predictable and stable. (EIP-7788)
+
+Controlled Gas Limit Increase Guidelines: Provides specific parameters for a controlled and gradual increase in the Ethereum gas limit, aiming to ensure stable and predictable network scalability by outlining the start block, rate of increase, and gas cap. (EIP-7790)
+
+Verifiable logs: Introduces a scheme to make the eth_getLogs response verifiable, enhancing the security and reliability of log information used by applications, by verifying log entries against accumulative commitments stored in a dedicated contract. (EIP-7792)
+

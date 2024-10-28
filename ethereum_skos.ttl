@@ -566,6 +566,11 @@ ex:Contract%20Secured%20Revenue a skos:Concept ;
     skos:definition "Introduces Contract Secured Revenue (CSR) on EVM-based L2s, allowing smart contracts to claim a portion of transaction fees paid when users interact with them. (EIP-6968)" ;
     skos:prefLabel "Contract Secured Revenue" .
 
+ex:Controlled%20Gas%20Limit%20Increase%20Guidelines a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7790.md> ;
+    skos:definition "Provides specific parameters for a controlled and gradual increase in the Ethereum gas limit, aiming to ensure stable and predictable network scalability by outlining the start block, rate of increase, and gas cap. (EIP-7790)" ;
+    skos:prefLabel "Controlled Gas Limit Increase Guidelines" .
+
 ex:Controlled%20Gas%20Limit%20Increase%20Strategy a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7783.md> ;
     skos:definition "Introduces a controlled gas limit increase mechanism, gradually raising the gas limit by a fixed rate to scale network capacity predictably. (EIP-7783)" ;
@@ -821,6 +826,11 @@ ex:Drop%20Pre-Merge%20Fields a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7642.md> ;
     skos:definition "Removes obsolete fields and messages from the eth protocol that became unnecessary after the Ethereum Merge. (EIP-7642)" ;
     skos:prefLabel "Drop Pre-Merge Fields" .
+
+ex:Dynamic%20Target%20Blob%20Count a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7788.md> ;
+    skos:definition "Adjusts the target blob count dynamically to maintain constant blob costs, aiming to optimize network resources and economic incentives related to blob space utilization, making L2 transactions costs predictable and stable. (EIP-7788)" ;
+    skos:prefLabel "Dynamic Target Blob Count" .
 
 ex:Ec%20Arithmetic%20Precompile a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1962.md> ;
@@ -1385,6 +1395,11 @@ ex:Genesis%20Block a skos:Concept ;
     rdfs:comment " The initial block of data computed in the history of a blockchain network." ;
     skos:definition "The first block in a blockchain, used to initialize a particular network and its cryptocurrency." ;
     skos:prefLabel "Genesis Block" .
+
+ex:Getcontract a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7784.md> ;
+    skos:definition "Introduces the GETCONTRACT opcode to return the address containing the bytecode by its hash, allowing contracts to identify and interact based on deterministic and tamper-proof bytecode identifiers. This opcode enhances security, auditability, and efficiency in the Ethereum ecosystem by enabling deterministic references to contract code, bypassing the mutability and opacity of contract addresses. (EIP-7784)" ;
+    skos:prefLabel "Getcontract" .
 
 ex:Geth a skos:Concept ;
     skos:definition "Go Ethereum. One of the most prominent implementations of the Ethereum protocol, written in Go. Read more at geth.ethereum.org" ;
@@ -3093,6 +3108,11 @@ ex:Validium a skos:Concept ;
     rdfs:comment " One of the technologies developed for scaling of the Ethereum network." ;
     skos:definition "An off-chain solution that uses validity proofs to improve transaction throughput. Unlike Zero-knowledge rollups, validium data isn't stored on layer 1 Mainnet." ;
     skos:prefLabel "Validium" .
+
+ex:Verifiable%20Logs a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7792.md> ;
+    skos:definition "Introduces a scheme to make the eth_getLogs response verifiable, enhancing the security and reliability of log information used by applications, by verifying log entries against accumulative commitments stored in a dedicated contract. (EIP-7792)" ;
+    skos:prefLabel "Verifiable Logs" .
 
 ex:Verkle%20Proof%20Verification%20Precompile a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7545.md> ;
