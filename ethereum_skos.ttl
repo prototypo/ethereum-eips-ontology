@@ -1391,6 +1391,11 @@ ex:Generalized%20Account%20Versioning%20Scheme a skos:Concept ;
     skos:definition "Introduces a scheme for account versioning, allowing multiple versions of virtual machines to coexist, facilitating upgrades to Ethereum’s execution environments. (EIP-1702)" ;
     skos:prefLabel "Generalized Account Versioning Scheme" .
 
+ex:Genesis a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7799.md> ;
+    skos:definition "Log entry in system_logs for initial balances at network genesis (EIP-7799)." ;
+    skos:prefLabel "Genesis" .
+
 ex:Genesis%20Block a skos:Concept ;
     rdfs:comment " The initial block of data computed in the history of a blockchain network." ;
     skos:definition "The first block in a blockchain, used to initialize a particular network and its cryptocurrency." ;
@@ -2180,6 +2185,11 @@ ex:Prevrandao a skos:Concept ;
     skos:definition "Supplants the DIFFICULTY opcode with PREVRANDAO, which returns the latest beacon chain randomness in PoS blocks, replacing the former PoW-related difficulty value. (EIP-4399)" ;
     skos:prefLabel "Prevrandao" .
 
+ex:Priorityrewards a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7799.md> ;
+    skos:definition "Log entry in system_logs recording total priority fees after block transactions (EIP-7799)." ;
+    skos:prefLabel "Priorityrewards" .
+
 ex:Private%20Blockchain a skos:Concept ;
     skos:definition "A blockchain or distributed ledger that has a closed network wherein participants are controlled by a single entity. A private blockchain requires a verification process for new participants. A private blockchain may also limit which individuals are able to participate in consensus of the blockchain network. See also ‘permissioned ledger’." ;
     skos:prefLabel "Private Blockchain" .
@@ -2597,6 +2607,11 @@ ex:Setcode a skos:Concept ;
     skos:definition "Introduces the SETCODE opcode (0xfc) that allows contracts to replace their code in place, avoiding the need for SELFDESTRUCT and preserving internal state. (EIP-6913)" ;
     skos:prefLabel "Setcode" .
 
+ex:Sha-256-512 a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7797.md> ;
+    skos:definition "Modified SHA-256 algorithm that skips preprocessing, limited to 512-bit inputs (EIP-7797)." ;
+    skos:prefLabel "Sha-256-512" .
+
 <http://www.consensys.net/ethereum-skos#Shard%20/%20Shard%20Chain> a skos:Concept ;
     skos:definition "Shard chains are discrete sections of the total blockchain that subsets of validators can be responsible for. This was originally intended to be the way that Ethereum scaled to millions of transactions per second, but it has now been superseded by the rapid development of scaling using rollups." ;
     skos:prefLabel "Shard / Shard Chain" .
@@ -2877,6 +2892,16 @@ ex:Sync%20Committee%20Slashings a skos:Concept ;
 ex:Syncing a skos:Concept ;
     skos:definition "The process of downloading the entire latest version of a blockchain to a node." ;
     skos:prefLabel "Syncing" .
+
+ex:System_Logs a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7799.md> ;
+    skos:definition "List tracking block-level logs for system events, separate from transaction logs (EIP-7799)." ;
+    skos:prefLabel "System_Logs" .
+
+ex:System_Logs_Root a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7799.md> ;
+    skos:definition "Field in the block header storing the root hash of system_logs for validation (EIP-7799)." ;
+    skos:prefLabel "System_Logs_Root" .
 
 ex:Szabo a skos:Concept ;
     rdfs:comment " A denomination of ether. 1 szabo = 10^12 wei. 10^6 szabo = 1 ether." ;
@@ -3215,6 +3240,11 @@ ex:Window.Evmproviders%20Object a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-5749.md> ;
     skos:definition "Proposes replacing window.ethereum with window.evmproviders, allowing multiple wallets to be injected simultaneously, improving interoperability and user experience. (EIP-5749)" ;
     skos:prefLabel "Window.Evmproviders Object" .
+
+ex:Withdrawal a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7799.md> ;
+    skos:definition "Log entry in system_logs for tracking withdrawals under EIP-4895 (EIP-7799)." ;
+    skos:prefLabel "Withdrawal" .
 
 ex:Wrapped%20Legacy%20Transactions a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2972.md> ;

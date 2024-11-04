@@ -1541,3 +1541,15 @@ Controlled Gas Limit Increase Guidelines: Provides specific parameters for a con
 
 Verifiable logs: Introduces a scheme to make the eth_getLogs response verifiable, enhancing the security and reliability of log information used by applications, by verifying log entries against accumulative commitments stored in a dedicated contract. (EIP-7792)
 
+SHA-256-512: Modified SHA-256 algorithm that skips preprocessing, limited to 512-bit inputs (EIP-7797).
+
+system_logs: List tracking block-level logs for system events, separate from transaction logs (EIP-7799).
+
+system_logs_root: Field in the block header storing the root hash of system_logs for validation (EIP-7799).
+
+PriorityRewards: Log entry in system_logs recording total priority fees after block transactions (EIP-7799).
+
+Withdrawal: Log entry in system_logs for tracking withdrawals under EIP-4895 (EIP-7799).
+
+Genesis: Log entry in system_logs for initial balances at network genesis (EIP-7799).
+
