@@ -19,20 +19,24 @@ Sources:
 2. Consensys' [A Blockchain Glossary for Beginners](https://consensys.io/knowledge-base/a-blockchain-glossary-for-beginners)
 3. The Ethereum Foundation's active [Ethereum Improvement Proposals (EIPs)](https://github.com/ethereum/EIPs/tree/master)
 
-ChatGPT 4o (Enterprise edition) was used to extract newly-created terms from the EIPs and add them sequentially to the text file until they are all represented.
+ChatGPT 4o was used to extract newly-created terms from the EIPs and add them sequentially to the text file until they are all represented.
 
 A python script (mk_skos.py) is used to generate a de-duplicated [SKOS](https://en.wikipedia.org/wiki/Simple_Knowledge_Organization_System) ontology. Where multiple definitions exist for the same term, both are kept both using different predicates (skos:definition for the primary and rdfs:comment for the secondary). EIPs are linked via skos:broader where they are found.
 
 The SKOS file parses cleanly into the [Protege ontology editor](https://protege.stanford.edu/).
 
-Prompt used to ChatGPT 4o Enterprise
-------------------------------------
+Prompt used to ChatGPT 4o
+--------------------------------------
 
 ---
 
-> Please summarise the newly-introduced terms defined in these documents.
-> Add the EIP number without any hyperlinks to the end of the definition,
-> enclosed in parentheses. Your output format should be "term : definition (EIP number)" 
-> 
-> Use succinct terms. For example, when a new opcode is introduced, use the opcode name
-> as the term.
+> Please summarise the newly-introduced terms defined in these documents. Add the EIP
+> number without any hyperlinks to the end of the definition, enclosed in parentheses. Your
+> output format should be "term : definition (EIP-number)".
+
+> Use succinct terms. For example, when a new opcode is introduced, use the opcode
+> name as the term.
+
+> For example, if EIP 100000 defines the FOO opcode, then the term is FOO. If the
+> definition was 'The FOO opcode prints "foo" when it is called' then your output should be:
+> 'FOO: The FOO opcode prints "foo" when it is called. (EIP-100000)'
