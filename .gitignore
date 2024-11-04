@@ -1,4 +1,7 @@
 # Python virtual environment
 /venv
+/lib
+/include
 *.swp
 .DS_Store
+pyvenv.cfg
