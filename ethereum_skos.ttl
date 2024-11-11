@@ -444,6 +444,11 @@ ex:Chunk-Based%20Code%20Merkleization a skos:Concept ;
     skos:definition "Splits contract code into fixed-size chunks and stores them in a Merkle tree, reducing witness sizes for stateless Ethereum clients. (EIP-2926)" ;
     skos:prefLabel "Chunk-Based Code Merkleization" .
 
+ex:Cl%20P2P%20Validation%20Rules a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7805.md> ;
+    skos:definition "A set of rules to validate ILs on the consensus layer to prevent denial-of-service attacks and ensure efficient propagation. (EIP-7805)" ;
+    skos:prefLabel "Cl P2P Validation Rules" .
+
 ex:Client%20%28Ethereum%20Or%20Other%20Compatible%20Blockchain%29 a skos:Concept ;
     skos:definition "In computing in general, a ‘client’ is a program, running on a local computer, that is accessing data made available by a remote computer. In public blockchain networks, a ‘client’ is the software that actually does the work of syncing block data, confirming transactions, and participating in network consensus. A client usually includes a cryptocurrency software wallet. Consensys has supported efforts to maintain the Ethereum clients of Besu and Teku." ;
     skos:prefLabel "Client (Ethereum Or Other Compatible Blockchain)" .
@@ -900,6 +905,21 @@ ex:Encryption a skos:Concept ;
     skos:definition "Encrpytion, literally ‘in a hidden place’, is the art and science of encoding information to control who can read it, or how it is to be read.  Encryption occurs in natural (human) languages, as well as in machine and computer languages.  Highly complex, and therefore difficult to decipher, encryption is an essential element enabling blockchain networks to be simultaneously public and secure.  Enterprise Ethereum Alliance (EEA) A group of Ethereum core developers, startups, and large companies working together to commercialize and use Ethereum for different business applications." ;
     skos:prefLabel "Encryption" .
 
+ex:Engine_Forkchoiceupdated a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7805.md> ;
+    skos:definition "API endpoint modified to include IL transactions as part of payload attributes. (EIP-7805)" ;
+    skos:prefLabel "Engine_Forkchoiceupdated" .
+
+ex:Engine_Getinclusionlist a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7805.md> ;
+    skos:definition "An API endpoint in the execution engine for retrieving an IL. (EIP-7805)" ;
+    skos:prefLabel "Engine_Getinclusionlist" .
+
+ex:Engine_Newpayload a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7805.md> ;
+    skos:definition "API endpoint modified to support transactions within ILs in the payload. (EIP-7805)" ;
+    skos:prefLabel "Engine_Newpayload" .
+
 ex:Ens a skos:Concept ;
     skos:definition "The Ethereum Name Service is a protocol, managed by a DAO, which assigns human- readable and easy-to-remember addresses to Ethereum addresses and assets, homologous to the traditional internet’s DNS." ;
     skos:prefLabel "Ens" .
@@ -1299,6 +1319,11 @@ ex:Finney a skos:Concept ;
     skos:definition "A denomination of ether. 1 finney = 1015 wei. 103 finney = 1 ether." ;
     skos:prefLabel "Finney" .
 
+ex:Focil a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7805.md> ;
+    skos:definition "Fork-choice enforced inclusion list (IL) mechanism to ensure transactions' inclusion by a validator committee. (EIP-7805)" ;
+    skos:prefLabel "Focil" .
+
 ex:Fork a skos:Concept ;
     rdfs:comment " ‘Forking’ is a term that comes from the world of collaborative software development, and refers to the action of copying an existing application or set of code and modifying it to create an alternate version. At the blockchain protocol level, a ‘fork’ creates an alternative version of a blockchain. Forks are often enacted intentionally to apply upgrades to a network.  Soft Forks render two chains with some compatibility, while Hard Forks create a new version of the chain that must be adopted to continue participation. In the instance of a contentious Hard Fork, this can create two versions of a blockchain network. See also “hard fork”." ;
     skos:definition "A change in protocol causing the creation of an alternative chain." ;
@@ -1533,6 +1558,21 @@ ex:Identity%20Precompile%20Evm-Ification a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7666.md> ;
     skos:definition "Replaces the identity precompile with an equivalent piece of EVM code, reducing the number of precompiles in Ethereum. (EIP-7666)" ;
     skos:prefLabel "Identity Precompile Evm-Ification" .
+
+ex:Il%20%28Inclusion%20List%29 a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7805.md> ;
+    skos:definition "List of prioritized transactions selected by validators for forced inclusion in a block to counter censorship. (EIP-7805)" ;
+    skos:prefLabel "Il (Inclusion List)" .
+
+ex:Il%20Committee a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7805.md> ;
+    skos:definition "A set of validators chosen each slot to create, gossip, and enforce inclusion lists. (EIP-7805)" ;
+    skos:prefLabel "Il Committee" .
+
+ex:Il%20Equivocation a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7805.md> ;
+    skos:definition "Occurs when a committee member submits multiple differing ILs, leading to the member being disregarded in voting. (EIP-7805)" ;
+    skos:prefLabel "Il Equivocation" .
 
 ex:Immutability a skos:Concept ;
     skos:definition "The inability to be altered or changed. This is a key element of blockchain networks: once written onto a blockchain ledger, data cannot be altered. This immutability provides the basis for commerce and trade to take place on blockchain networks." ;

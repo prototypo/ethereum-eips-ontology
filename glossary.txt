@@ -1553,3 +1553,18 @@ Withdrawal: Log entry in system_logs for tracking withdrawals under EIP-4895 (EI
 
 Genesis: Log entry in system_logs for initial balances at network genesis (EIP-7799).
 
+FOCIL: Fork-choice enforced inclusion list (IL) mechanism to ensure transactions' inclusion by a validator committee. (EIP-7805)
+
+IL (Inclusion List): List of prioritized transactions selected by validators for forced inclusion in a block to counter censorship. (EIP-7805)
+
+IL Committee: A set of validators chosen each slot to create, gossip, and enforce inclusion lists. (EIP-7805)
+
+IL Equivocation: Occurs when a committee member submits multiple differing ILs, leading to the member being disregarded in voting. (EIP-7805)
+
+CL P2P Validation Rules: A set of rules to validate ILs on the consensus layer to prevent denial-of-service attacks and ensure efficient propagation. (EIP-7805)
+
+engine_getInclusionList: An API endpoint in the execution engine for retrieving an IL. (EIP-7805)
+
+engine_newPayload: API endpoint modified to support transactions within ILs in the payload. (EIP-7805)
+
+engine_forkchoiceUpdated: API endpoint modified to include IL transactions as part of payload attributes. (EIP-7805)
