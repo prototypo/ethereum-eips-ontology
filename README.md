@@ -9,7 +9,7 @@ The basic vocabulary (glossary.txt) is meant as dynamic input to generic Large L
 
 The generated ontology (ethereum_skos.ttl) is a more full-featured variant useful in orchestrated systems using a graph database. It is shown below in the [Protege ontology editor](https://protege.stanford.edu).
 
-![Screenshot of the ontology in Protege.]([images/ontology_in_protege.png?raw=true)
+![Screenshot of the ontology in Protege.](images/ontology_in_protege.png?raw=true)
 
 
 Creation
