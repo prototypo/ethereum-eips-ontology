@@ -5,9 +5,12 @@ Usage
 -----
 The basic vocabulary (glossary.txt) is meant as dynamic input to generic Large Language Models to give them up-to-date context on Ethereum terms and definitions.
 
-The generated ontology (ethereum_skos.ttl) is a more full-featured variant useful in orchestrated systems using a graph database.
-
 ![Screenshot of an example interaction.](https://github.com/prototypo/ethereum-eips-ontology/blob/main/images/example-interaction.png?raw=true&token=GHSAT0AAAAAACYBPZR4CN4JMSQNKPBSI5G6ZYVUIWQ)
+
+The generated ontology (ethereum_skos.ttl) is a more full-featured variant useful in orchestrated systems using a graph database. It is shown below in the [Protege ontology editor](https://protege.stanford.edu).
+
+![Screenshot of the ontology in Protege.]([https://github.com/prototypo/ethereum-eips-ontology/blob/main/images/ontology_in_protege.png?raw=true&token=GHSAT0AAAAAACYBPZR4CN4JMSQNKPBSI5G6ZYVUIWQ)
+
 
 Creation
 --------
