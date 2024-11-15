@@ -1568,3 +1568,11 @@ engine_getInclusionList: An API endpoint in the execution engine for retrieving 
 engine_newPayload: API endpoint modified to support transactions within ILs in the payload. (EIP-7805)
 
 engine_forkchoiceUpdated: API endpoint modified to include IL transactions as part of payload attributes. (EIP-7805)
+
+SSZ Execution Block Header: A normalized SSZ container representation for execution blocks in Ethereum. (EIP-7807)
+
+Requests Hash: A hash computed using ExecutionRequests.hash_tree_root() in the Consensus Layer. (EIP-7807)
+
+Execution Block Hash: A hash derived from hash_tree_root, replacing the traditional keccak256-based block hash in various contexts. (EIP-7807)
+
+Transaction-Type Range for RIPs: A reserved range (0x40 to 0x7f) for transaction types used by the Rollup Improvement Proposal process. (EIP-7808)

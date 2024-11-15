@@ -1221,6 +1221,11 @@ ex:Exchange a skos:Concept ;
     skos:definition "A place to trade cryptocurrency. Centralized exchanges, operated by companies like Coinbase and Gemini, function as intermediaries, while decentralized exchanges do not have a central authority." ;
     skos:prefLabel "Exchange" .
 
+ex:Execution%20Block%20Hash a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7807.md> ;
+    skos:definition "A hash derived from hash_tree_root, replacing the traditional keccak256-based block hash in various contexts. (EIP-7807)" ;
+    skos:prefLabel "Execution Block Hash" .
+
 ex:Execution%20Client a skos:Concept ;
     skos:definition "Execution clients (formerly known as \"Eth1 clients\"), such as Besu, Erigon, Go-Ethereum (Geth), Nethermind, are tasked with processing and broadcasting transactions and managing Ethereum's state. They run the computations for each transaction using the Ethereum Virtual Machine to ensure that the rules of the protocol are followed." ;
     skos:prefLabel "Execution Client" .
@@ -2433,6 +2438,11 @@ ex:Repricing%20Sload%20And%20Sstore a skos:Concept ;
     skos:definition "Increases the gas cost of SLOAD and SSTORE operations to accommodate the additional bandwidth needed for stateless clients using block proofs. (EIP-2035)" ;
     skos:prefLabel "Repricing Sload And Sstore" .
 
+ex:Requests%20Hash a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7807.md> ;
+    skos:definition "A hash computed using ExecutionRequests.hash_tree_root() in the Consensus Layer. (EIP-7807)" ;
+    skos:prefLabel "Requests Hash" .
+
 ex:Reserve%20Precompile%20Address%20Range%20For%20Rips a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7587.md> ;
     skos:definition "Reserves a precompile address range for the Rollup Improvement Proposal (RIP) process to avoid conflicts with Ethereum precompiles. (EIP-7587)" ;
@@ -2770,6 +2780,11 @@ ex:Spurious%20Dragon%20Hard%20Fork a skos:Concept ;
     skos:definition "Specifies changes for the Spurious Dragon hard fork, including replay attack protection, state trie clearing, and contract code size limits. (EIP-607)" ;
     skos:prefLabel "Spurious Dragon Hard Fork" .
 
+ex:Ssz%20Execution%20Block%20Header a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7807.md> ;
+    skos:definition "A normalized SSZ container representation for execution blocks in Ethereum. (EIP-7807)" ;
+    skos:prefLabel "Ssz Execution Block Header" .
+
 ex:Ssz%20Optional a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6475.md> ;
     skos:definition "Introduces the Optional[T] type in SSZ, allowing compact serialization for optional values without using workaround types like Union. (EIP-6475)" ;
@@ -3064,6 +3079,11 @@ ex:Transaction%20Status%20Code%20In%20Receipts a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-658.md> ;
     skos:definition "Replaces the intermediate state root in transaction receipts with a status code (1 for success, 0 for failure), allowing users to easily determine transaction outcomes. (EIP-658)" ;
     skos:prefLabel "Transaction Status Code In Receipts" .
+
+ex:Transaction-Type%20Range%20For%20Rips a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7808.md> ;
+    skos:definition "A reserved range (0x40 to 0x7f) for transaction types used by the Rollup Improvement Proposal process. (EIP-7808)" ;
+    skos:prefLabel "Transaction-Type Range For Rips" .
 
 ex:Transient%20Storage%20Opcodes a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1153.md> ;
