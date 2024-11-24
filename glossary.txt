@@ -1576,3 +1576,11 @@ Requests Hash: A hash computed using ExecutionRequests.hash_tree_root() in the C
 Execution Block Hash: A hash derived from hash_tree_root, replacing the traditional keccak256-based block hash in various contexts. (EIP-7807)
 
 Transaction-Type Range for RIPs: A reserved range (0x40 to 0x7f) for transaction types used by the Rollup Improvement Proposal process. (EIP-7808)
+
+CREATE_DELEGATE: A new EVM instruction at 0xf6 allowing contracts to create clones using EIP-7702 delegation designations. (EIP-7819)
+
+MAGIC: A constant value set as 0xef0100 used in the CREATE_DELEGATE instruction. (EIP-7819)
+
+EMPTY_ACCOUNT_COST: A constant gas cost set as 25000 for executing the CREATE_DELEGATE instruction. (EIP-7819)
+
+BASE_COST: A constant gas cost set as 12500 for calculating refunds during the CREATE_DELEGATE process. (EIP-7819)

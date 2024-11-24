@@ -173,6 +173,11 @@ ex:Base%20Fee a skos:Concept ;
     skos:definition "Every block has a reserve price known as the 'base fee'. It is the minimum gas fee a user must pay to include a transaction in the next block." ;
     skos:prefLabel "Base Fee" .
 
+ex:Base_Cost a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7819.md> ;
+    skos:definition "A constant gas cost set as 12500 for calculating refunds during the CREATE_DELEGATE process. (EIP-7819)" ;
+    skos:prefLabel "Base_Cost" .
+
 ex:Basefee%20Opcode a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3198.md> ;
     skos:definition "Adds the BASEFEE opcode, allowing smart contracts to access the block's base fee, useful for gas-related logic such as gas futures and bounties. (EIP-3198)" ;
@@ -591,6 +596,11 @@ ex:Create2Copy a skos:Concept ;
     skos:definition "Introduces the CREATE2COPY opcode to reduce gas costs for creating contracts with identical code by referencing an existing contract’s code, avoiding redeployment gas expenses. (EIP-5478)" ;
     skos:prefLabel "Create2Copy" .
 
+ex:Create_Delegate a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7819.md> ;
+    skos:definition "A new EVM instruction at 0xf6 allowing contracts to create clones using EIP-7702 delegation designations. (EIP-7819)" ;
+    skos:prefLabel "Create_Delegate" .
+
 ex:Crosschain%20Identifier%20Specification a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3220.md> ;
     skos:definition "Defines a self-verifying blockchain identifier, incorporating chain metadata to differentiate blockchains, including forks, for crosschain operations. (EIP-3220)" ;
@@ -895,6 +905,11 @@ ex:Empty%20Accounts%20Deprecation a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7523.md> ;
     skos:definition "Prohibits empty accounts (with no code, zero nonce, and zero balance) on post-merge networks, eliminating legacy technical debt. (EIP-7523)" ;
     skos:prefLabel "Empty Accounts Deprecation" .
+
+ex:Empty_Account_Cost a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7819.md> ;
+    skos:definition "A constant gas cost set as 25000 for executing the CREATE_DELEGATE instruction. (EIP-7819)" ;
+    skos:prefLabel "Empty_Account_Cost" .
 
 ex:Encrypted%20Vs%20Unencrypted%20Keys a skos:Concept ;
     skos:definition "As discussed elsewhere, public and private cryptographic key pairs are one of the technologies that underpins cryptocurrencies and “crypto” tech in general. In MetaMask, an unencrypted private key is 64 characters long, and it is used to unlock or restore wallets. An encrypted key is also 64 letters long and is a regular private key that has gone through the process of encryption. Usually, encrypted private keys are kept within the extension or device they are encrypted by, and they remain out of sight from the user. This is meant to add another layer of security to keep a user’s wallet information safe.By way of example: if the world ‘Apple’ was your private key, then it was encrypted three letters down the alphabet, your new encrypted key would be ‘Dssoh’ . Since you know the way to encrypt this key, you could derive the original private key from it by reversing the method of encryption." ;
@@ -1795,6 +1810,11 @@ ex:Liquidity%20Tokens a skos:Concept ;
 ex:Lmd-Ghost a skos:Concept ;
     skos:definition "The fork-choice algorithm used by Ethereum's consensus clients to identify the head of the chain. LMD-GHOST is an acronym standing for \"Latest Message Driven Greediest Heaviest Observed SubTree\" which means that the head of the chain is the block with the greatest accumulation of attestations in its history." ;
     skos:prefLabel "Lmd-Ghost" .
+
+ex:Magic a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7819.md> ;
+    skos:definition "A constant value set as 0xef0100 used in the CREATE_DELEGATE instruction. (EIP-7819)" ;
+    skos:prefLabel "Magic" .
 
 ex:Mainnet a skos:Concept ;
     rdfs:comment " The primary network where actual transactions take place on a specific distributed ledger. For example, The Ethereum Mainnet (capitalized in this case) is the public blockchain where network validation and transactions take place." ;
