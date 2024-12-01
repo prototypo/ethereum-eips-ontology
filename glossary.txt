@@ -1584,3 +1584,5 @@ MAGIC: A constant value set as 0xef0100 used in the CREATE_DELEGATE instruction.
 EMPTY_ACCOUNT_COST: A constant gas cost set as 25000 for executing the CREATE_DELEGATE instruction. (EIP-7819)
 
 BASE_COST: A constant gas cost set as 12500 for calculating refunds during the CREATE_DELEGATE process. (EIP-7819)
+
+MODEXP Limit: Introduces an upper bound of 8192 bits (1024 bytes) for the length_of_BASE, length_of_EXPONENT, and length_of_MODULUS inputs in the MODEXP precompile. If these inputs exceed the limit, the execution halts, returns an error, and consumes all gas. (EIP-7823)

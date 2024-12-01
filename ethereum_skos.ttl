@@ -1932,6 +1932,11 @@ ex:Modexp%20Gas%20Cost a skos:Concept ;
     skos:definition "Reprices the ModExp precompile (0x05) to more accurately reflect its computational cost, improving efficiency for cryptographic operations. (EIP-2565)" ;
     skos:prefLabel "Modexp Gas Cost" .
 
+ex:Modexp%20Limit a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7823.md> ;
+    skos:definition "Introduces an upper bound of 8192 bits (1024 bytes) for the length_of_BASE, length_of_EXPONENT, and length_of_MODULUS inputs in the MODEXP precompile. If these inputs exceed the limit, the execution halts, returns an error, and consumes all gas. (EIP-7823)" ;
+    skos:prefLabel "Modexp Limit" .
+
 ex:Modifications%20To%20Ethash%20To%20Invalidate%20Asic%20Hardware a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-969.md> ;
     skos:definition "Aims to modify the Ethash algorithm to break existing ASIC miners by changing certain FNV constants, enhancing resistance against hardware centralization. (EIP-969)" ;
