@@ -1839,6 +1839,16 @@ ex:Max%20Fee%20Per%20Gas a skos:Concept ;
     skos:definition "The Max Fee is the absolute maximum amount a user is willing to pay per unit of gas (gwei) to get a transaction included in a block." ;
     skos:prefLabel "Max Fee Per Gas" .
 
+ex:Max_Code_Size a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7830.md> ;
+    skos:definition "The maximum size of EOF contract code is increased to 64 KiB, allowing more complex contracts to be deployed. (EIP-7830)" ;
+    skos:prefLabel "Max_Code_Size" .
+
+ex:Max_Initcode_Size a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7830.md> ;
+    skos:definition "The maximum size for EOF contract initialization code is set to 128 KiB, reflecting the updated MAX_CODE_SIZE. (EIP-7830)" ;
+    skos:prefLabel "Max_Initcode_Size" .
+
 ex:Maximal%20Extractable%20Value%20%28Mev%29 a skos:Concept ;
     rdfs:comment " The maximum value that can be extracted from block production in excess of the standard block reward and gas fees by including, excluding, and changing the order of transactions in a block." ;
     skos:definition "Originally known as Miner Extractable Value, MEV is a broad complex topic that refers to the inclusion, exclusion, and reordering of transactions within a block in order to extract more value from it, generally in excess of what a validator (or miner, on PoW networks) would earn from producing the block. MEV includes activities such as frontrunning, arbitrage, and what could be considered malicious actions to profit off of other users’ transactions. This is a very active topic of research that is changing rapidly." ;
@@ -3077,6 +3087,7 @@ ex:Transaction%20Fee a skos:Concept ;
     skos:prefLabel "Transaction Fee" .
 
 ex:Transaction%20Gas%20Limit%20Cap a skos:Concept ;
+    rdfs:comment " A protocol-level cap on the maximum gas used by a single transaction, set to 30 million gas. Transactions exceeding this limit are invalidated. (EIP-7825)" ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4803.md> ;
     skos:definition "Sets a maximum transaction gas limit of 2^63-1, ensuring that gas values are within a reasonable range. (EIP-4803)" ;
     skos:prefLabel "Transaction Gas Limit Cap" .

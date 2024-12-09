@@ -1586,3 +1586,10 @@ EMPTY_ACCOUNT_COST: A constant gas cost set as 25000 for executing the CREATE_DE
 BASE_COST: A constant gas cost set as 12500 for calculating refunds during the CREATE_DELEGATE process. (EIP-7819)
 
 MODEXP Limit: Introduces an upper bound of 8192 bits (1024 bytes) for the length_of_BASE, length_of_EXPONENT, and length_of_MODULUS inputs in the MODEXP precompile. If these inputs exceed the limit, the execution halts, returns an error, and consumes all gas. (EIP-7823)
+
+Transaction Gas Limit Cap: A protocol-level cap on the maximum gas used by a single transaction, set to 30 million gas. Transactions exceeding this limit are invalidated. (EIP-7825)
+
+MAX_CODE_SIZE: The maximum size of EOF contract code is increased to 64 KiB, allowing more complex contracts to be deployed. (EIP-7830)
+
+MAX_INITCODE_SIZE: The maximum size for EOF contract initialization code is set to 128 KiB, reflecting the updated MAX_CODE_SIZE. (EIP-7830)
+
