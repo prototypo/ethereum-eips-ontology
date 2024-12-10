@@ -4,7 +4,7 @@
 cd $(dirname "$0")
 cd ..
 
-file="glossary.txt"
+file="eip-ontology.txt"
 count="10" # Number of lines to look backward
 
 # Extract last EIP using regex

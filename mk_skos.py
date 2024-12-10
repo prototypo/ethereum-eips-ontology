@@ -17,14 +17,14 @@ g.bind("skos", SKOS)
 g.bind("rdfs", RDFS)
 g.bind("ex", EX)
 
-# Read the glossary file
-glossary_file = "glossary.txt"
+# Read the ontology file
+ontology_file = "eip-ontology.txt"
 
 # Keep track of terms seen
 terms = {}
 
-# Parsing the glossary file
-with open(glossary_file, 'r') as file:
+# Parsing the ontology file
+with open(ontology_file, 'r') as file:
     lines = file.readlines()
 
 # Function to create SKOS concepts and their relations
@@ -49,7 +49,7 @@ def create_skos_concept(normterm, term_escaped, definition):
 
     return concept
 
-# Process each line in the glossary
+# Process each line in the ontology
 for line in lines:
 
     if ( len(line) > 5 ):
