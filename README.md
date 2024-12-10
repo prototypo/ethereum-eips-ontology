@@ -1,7 +1,7 @@
 Ethereum EIPs Ontology
 ======================
 
-The Ethereum EIPs Ontology provides current AI systems with up-to-date knowledge of the Ethereum ecosystem via serialisatio of key concepts from the Ethereum Improvement Proposals. It is supplimented with general Ethereum glossaries of terms for added context.
+The Ethereum EIPs Ontology provides current AI systems with up-to-date knowledge of the Ethereum ecosystem via serialisation of key concepts from the Ethereum Improvement Proposals. It is supplemented with general Ethereum glossaries of terms for added context.
 
 There are two key files in this repository:
 
