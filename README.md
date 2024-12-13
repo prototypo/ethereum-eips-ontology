@@ -3,8 +3,9 @@ Ethereum EIPs Ontology
 
 The Ethereum EIPs Ontology provides current AI systems with up-to-date knowledge of the Ethereum ecosystem via serialisatio of key concepts from the Ethereum Improvement Proposals. It is supplimented with general Ethereum glossaries of terms for added context.
 
-There are two key files in this repository:
+There are three key files in this repository:
 
+* ethereum-glossary.txt, a glossary of Ethereum terms and their definitions.
 * eip-ontology.txt, a simple _term: definition_ version of the ontology with some duplicate terms in plain text format. This version is intended for single-user interactions with an LLM user interface that supports file uploading.
 * eip-ontology-skos.ttl, a more complete ontology in [SKOS](https://en.wikipedia.org/wiki/Simple_Knowledge_Organization_System) format. This version is intended for use in a graph database orchestrated with an LLM in production products or services. 
 
@@ -23,6 +24,8 @@ We note that LLMs are upgrading their capabilities quickly. ChatGPT will already
 Usage
 -----
 The flat file ontology (eip-ontology.txt) is meant as dynamic input to generic Large Language Models to give them up-to-date context on Ethereum terms and definitions for single-user interactions.
+
+The Ethereum glossary (ethereum-glossary.txt) may be used in conjunction with the onology if desired. In most cases, modern LLMs will already have time-delayed understanding of most of the terms in the glossary.
 
 The screenshot below shows a simple interaction between a user and ChatGPT 4o (although any LLM that provides for file uploads may be used). In this example, one can see how easy it to upload the file and then prompt the LLM to provide correct, contextual information about current Ethereum concepts.
 
