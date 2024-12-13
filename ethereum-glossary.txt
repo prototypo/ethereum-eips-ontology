@@ -168,7 +168,11 @@ DAO: A Digital Decentralized Autonomous Organization (DAO, pronounced like the C
 
 Dapp: A dApp is a decentralized application that runs on a blockchain network, offering services without a central controlling authority. At a minimum dapp has a smart contract connected to a web interface. In addition, many dapps include decentralized storage and/or a message protocol and platform.
 
-Data availability: Any node can independently verify transactions on a blockchain in order to maintain transparency and trust in the system.
+Data availability (DA): Any node can independently verify transactions on a blockchain in order to maintain transparency and trust in the system.
+
+DA Certificate: Data Availability Certificate. When a layer two chain that uses a non-Ethereum DA layer stores data in a data availability layer, it may utilise a multitude of servers. The architecture may be such that each server signs information verifying that it has stored information. The layer two chain combines these signatures together to form what is known as a DA Certificate.
+
+DA Bridge: Data Availability Bridge. Some public data availability networks host a light client on Ethereum to allow layer two chains (validiums or optiminiums) to prove values that were stored in the data availability layer. This works by verifying a zero knowledge proof of the consensus of the data availability network in a contract on Ethereum. This technology is useful as it allows a multitude of layer two chains to settle on Ethereum without expending a lot of gas verifiying signatures for each DA certificate for each layer two chain.
 
 Decentralization: The concept of moving the control and execution of processes away from a central entity.
 
