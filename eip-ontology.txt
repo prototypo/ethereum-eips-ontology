@@ -840,3 +840,8 @@ MAX_CODE_SIZE: The maximum size of EOF contract code is increased to 64 KiB, all
 
 MAX_INITCODE_SIZE: The maximum size for EOF contract initialization code is set to 128 KiB, reflecting the updated MAX_CODE_SIZE. (EIP-7830)
 
+Data Availability: Also known by acronym DA.
+
+DA Certificate: Data Availability Certificate. When a layer two chain that uses a non-Ethereum DA layer stores data in a data availability layer, it may utilise a multitude of servers. The architecture may be such that each server signs information verifying that it has stored information. The layer two chain combines these signatures together to form what is known as a DA Certificate.
+
+DA Bridge: Data Availability Bridge. Some public data availability networks host a light client on Ethereum to allow layer two chains (validiums or optiminiums) to prove values that were stored in the data availability layer. This works by verifying a zero knowledge proof of the consensus of the data availability network in a contract on Ethereum. This technology is useful as it allows a multitude of layer two chains to settle on Ethereum without expending a lot of gas verifiying signatures for each DA certificate for each layer two chain.
