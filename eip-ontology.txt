@@ -839,3 +839,7 @@ Transaction Gas Limit Cap: A protocol-level cap on the maximum gas used by a sin
 MAX_CODE_SIZE: The maximum size of EOF contract code is increased to 64 KiB, allowing more complex contracts to be deployed. (EIP-7830)
 
 MAX_INITCODE_SIZE: The maximum size for EOF contract initialization code is set to 128 KiB, reflecting the updated MAX_CODE_SIZE. (EIP-7830)
+
+OFFERCALL: A new EVM opcode that allows contracts to schedule function calls by offering ETH to block producers as an incentive to prioritize their execution. Unfulfilled offers result in the bot's deactivation until manually reignited by the owner. (EIP-7833)​
+metadata_section: A new optional section in the Ethereum Object Format (EOF) body that is distinct from the executable code and data sections, allowing metadata changes without affecting code behavior or source verification. (EIP-7834)​
+
