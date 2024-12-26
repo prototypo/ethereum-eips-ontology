@@ -1695,6 +1695,11 @@ ex:Slashing%20Protection%20Interchange%20Format a skos:Concept ;
     skos:definition "Defines a JSON format for proof-of-stake validator slashing protection data to enable secure migration between clients. (EIP-3076)" ;
     skos:prefLabel "Slashing Protection Interchange Format" .
 
+ex:Slot a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7843.md> ;
+    skos:definition "The SLOT precompile returns the current slot number as an 8-byte unsigned long in big-endian encoding. (EIP-7843)" ;
+    skos:prefLabel "Slot" .
+
 ex:Smart%20Contract%20Weakness%20Classification%20%28Swc%29 a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1470.md> ;
     skos:definition "Introduces a classification scheme for security weaknesses in Ethereum smart contracts, aligned with the Common Weakness Enumeration (CWE) scheme. (EIP-1470)" ;

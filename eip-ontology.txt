@@ -843,3 +843,5 @@ MAX_INITCODE_SIZE: The maximum size for EOF contract initialization code is set 
 OFFERCALL: A new EVM opcode that allows contracts to schedule function calls by offering ETH to block producers as an incentive to prioritize their execution. Unfulfilled offers result in the bot's deactivation until manually reignited by the owner. (EIP-7833)​
 metadata_section: A new optional section in the Ethereum Object Format (EOF) body that is distinct from the executable code and data sections, allowing metadata changes without affecting code behavior or source verification. (EIP-7834)​
 
+SLOT: The SLOT precompile returns the current slot number as an 8-byte unsigned long in big-endian encoding. (EIP-7843)
+
