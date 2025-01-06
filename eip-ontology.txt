@@ -845,3 +845,12 @@ metadata_section: A new optional section in the Ethereum Object Format (EOF) bod
 
 SLOT: The SLOT precompile returns the current slot number as an 8-byte unsigned long in big-endian encoding. (EIP-7843)
 
+PRECOMPILE_ADDRESS: The address of the new precompiled contract for deactivating or reactivating a delegated EOA's private key. (EIP-7851)
+
+PRECOMPILE_GAS_COST: The gas cost for executing the new precompiled contract, tentatively set at 5000. (EIP-7851)
+
+DELEGATED_CODE_PREFIX: The prefix (0xef0100) used in the delegated code for EOAs as per EIP-7702. (EIP-7851)
+
+Active state: A state where the private key of the EOA is active and can sign transactions (0xef0100 || address). (EIP-7851)
+
+Deactivated state: A state where the private key of the EOA is deactivated, appended with 0x00 (0xef0100 || address || 0x00). (EIP-7851)

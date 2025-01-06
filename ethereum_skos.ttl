@@ -27,6 +27,11 @@ ex:Account%20Gas%20Storage%20Opcodes a skos:Concept ;
     skos:definition "Introduces new opcodes (SELFGAS, USEGAS, STOREGAS) that allow contracts to store gas for later use, improving gas management without increasing state size. (EIP-3322)" ;
     skos:prefLabel "Account Gas Storage Opcodes" .
 
+ex:Active%20State a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7851.md> ;
+    skos:definition "A state where the private key of the EOA is active and can sign transactions (0xef0100 || address). (EIP-7851)" ;
+    skos:prefLabel "Active State" .
+
 ex:Add%20Basefee%20To%20Eth_Getblockbyhash a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3041.md> ;
     skos:definition "Adds a baseFee field to the eth_getBlockByHash JSON-RPC endpoint, returning the base fee for any block post-EIP-1559. (EIP-3041)" ;
@@ -371,6 +376,11 @@ ex:Deactivate%20Selfdestruct a skos:Concept ;
     skos:definition "Renames the SELFDESTRUCT opcode to SENDALL, allowing contracts to transfer all ETH to a target without deleting code or storage, to prepare for future stateless Ethereum. (EIP-4758)" ;
     skos:prefLabel "Deactivate Selfdestruct" .
 
+ex:Deactivated%20State a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7851.md> ;
+    skos:definition "A state where the private key of the EOA is deactivated, appended with 0x00 (0xef0100 || address || 0x00). (EIP-7851)" ;
+    skos:prefLabel "Deactivated State" .
+
 <http://www.consensys.net/ethereum-skos#Decrease%20Base%20Cost%20Of%20Tload/Tstore> a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7609.md> ;
     skos:definition "Reduces the base gas cost for TLOAD and TSTORE and introduces a superlinear pricing model, improving the efficiency of transient storage. (EIP-7609)" ;
@@ -395,6 +405,11 @@ ex:Delegatecall a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7.md> ;
     skos:definition "A new opcode that is similar to CALLCODE, but it retains the sender and value from the parent scope to the child scope during execution (EIP-7)." ;
     skos:prefLabel "Delegatecall" .
+
+ex:Delegated_Code_Prefix a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7851.md> ;
+    skos:definition "The prefix (0xef0100) used in the delegated code for EOAs as per EIP-7702. (EIP-7851)" ;
+    skos:prefLabel "Delegated_Code_Prefix" .
 
 ex:Deposit%20Contract%20Snapshot%20Interface a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4881.md> ;
@@ -1324,6 +1339,16 @@ ex:Precompile%20And%20Keccak256%20Repricing a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2666.md> ;
     skos:definition "Reprices the SHA256, RIPEMD, and KECCAK256 functions to better reflect their computational costs. (EIP-2666)" ;
     skos:prefLabel "Precompile And Keccak256 Repricing" .
+
+ex:Precompile_Address a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7851.md> ;
+    skos:definition "The address of the new precompiled contract for deactivating or reactivating a delegated EOA's private key. (EIP-7851)" ;
+    skos:prefLabel "Precompile_Address" .
+
+ex:Precompile_Gas_Cost a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7851.md> ;
+    skos:definition "The gas cost for executing the new precompiled contract, tentatively set at 5000. (EIP-7851)" ;
+    skos:prefLabel "Precompile_Gas_Cost" .
 
 ex:Precompiledcall%20Opcode a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1109.md> ;
