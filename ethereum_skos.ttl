@@ -172,6 +172,11 @@ ex:Block%20Explorer%20Api%20Routes a skos:Concept ;
     skos:definition "Standardizes API routes for blockchain explorers, such as paths for transactions, blocks, accounts, and tokens, improving consistency across platforms. (EIP-3091)" ;
     skos:prefLabel "Block Explorer Api Routes" .
 
+ex:Block-Level%20Warming a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7863.md> ;
+    skos:definition "Addresses and storage keys remain \"warm\" throughout an entire block’s execution, reducing redundant cold access costs for frequently accessed storage slots. (EIP-7863)" ;
+    skos:prefLabel "Block-Level Warming" .
+
 ex:Blockchain%20Storage%20Rent%20Payment a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1418.md> ;
     skos:definition "Introduces rent payments for storage used by accounts, with rent deducted based on the quantity of storage each account uses. (EIP-1418)" ;
@@ -395,6 +400,11 @@ ex:Defuse%20Difficulty%20Bomb%20And%20Reset%20Block%20Reward a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1227.md> ;
     skos:definition "Proposes permanently disabling the difficulty bomb and resetting the block reward to 5 ETH to give users more freedom over Ethereum's governance. (EIP-1227)" ;
     skos:prefLabel "Defuse Difficulty Bomb And Reset Block Reward" .
+
+ex:Delayed%20Execution%20Layer%20State%20Root a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7862.md> ;
+    skos:definition "The state_root in block n's ExecutionPayload now references the post-state of block n-1, eliminating the need to compute and verify the post-state root for block n, reducing block production latency. (EIP-7862)" ;
+    skos:prefLabel "Delayed Execution Layer State Root" .
 
 ex:Delegate%20Transaction a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-5806.md> ;
@@ -1995,6 +2005,11 @@ ex:Uncouple%20Blob%20Count%20Between%20Cl%20And%20El a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7742.md> ;
     skos:definition "Separates blob count verification between the consensus and execution layers, allowing the consensus layer to verify blob targets while the execution layer dynamically receives the target from the consensus layer. (EIP-7742)" ;
     skos:prefLabel "Uncouple Blob Count Between Cl And El" .
+
+ex:Unified%20Binary%20Tree a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7864.md> ;
+    skos:definition "A new Ethereum state structure that replaces hexary Patricia trees with a single binary tree, merging account and storage tries into one, improving proof efficiency and state organization. (EIP-7864)" ;
+    skos:prefLabel "Unified Binary Tree" .
 
 ex:Unified%20Verkle%20Tree%20For%20State a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6800.md> ;

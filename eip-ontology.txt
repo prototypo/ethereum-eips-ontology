@@ -854,3 +854,10 @@ DELEGATED_CODE_PREFIX: The prefix (0xef0100) used in the delegated code for EOAs
 Active state: A state where the private key of the EOA is active and can sign transactions (0xef0100 || address). (EIP-7851)
 
 Deactivated state: A state where the private key of the EOA is deactivated, appended with 0x00 (0xef0100 || address || 0x00). (EIP-7851)
+
+Delayed Execution Layer State Root: The state_root in block n's ExecutionPayload now references the post-state of block n-1, eliminating the need to compute and verify the post-state root for block n, reducing block production latency. (EIP-7862)
+
+Block-level Warming: Addresses and storage keys remain "warm" throughout an entire block’s execution, reducing redundant cold access costs for frequently accessed storage slots. (EIP-7863)
+
+Unified Binary Tree: A new Ethereum state structure that replaces hexary Patricia trees with a single binary tree, merging account and storage tries into one, improving proof efficiency and state organization. (EIP-7864)
+
