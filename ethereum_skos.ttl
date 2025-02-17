@@ -1043,6 +1043,11 @@ ex:Increase%20The%20Max_Effective_Balance a skos:Concept ;
     skos:definition "Raises the maximum effective balance for validators while maintaining the minimum 32 ETH requirement, allowing for compounding rewards and validator consolidation. (EIP-7251)" ;
     skos:prefLabel "Increase The Max_Effective_Balance" .
 
+ex:Initcodetransaction a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7873.md> ;
+    skos:definition "A new transaction type that enables the deployment of EOF contracts using the TXCREATE instruction. (EIP-7873)" ;
+    skos:prefLabel "Initcodetransaction" .
+
 ex:Is_Static%20Opcode a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2970.md> ;
     skos:definition "Introduces the IS_STATIC opcode, which indicates if the current context is static (i.e., part of a STATICCALL) to enhance account abstraction and security. (EIP-2970)" ;
@@ -1173,6 +1178,11 @@ ex:Modexp%20Gas%20Cost a skos:Concept ;
     skos:definition "Reprices the ModExp precompile (0x05) to more accurately reflect its computational cost, improving efficiency for cryptographic operations. (EIP-2565)" ;
     skos:prefLabel "Modexp Gas Cost" .
 
+ex:Modexp%20Gas%20Cost%20Increase a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7883.md> ;
+    skos:definition "A change in the pricing formula of the ModExp precompile to ensure it is not underpriced for its resource consumption. (EIP-7883)" ;
+    skos:prefLabel "Modexp Gas Cost Increase" .
+
 ex:Modexp%20Limit a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7823.md> ;
     skos:definition "Introduces an upper bound of 8192 bits (1024 bytes) for the length_of_BASE, length_of_EXPONENT, and length_of_MODULUS inputs in the MODEXP precompile. If these inputs exceed the limit, the execution halts, returns an error, and consumes all gas. (EIP-7823)" ;
@@ -1187,6 +1197,11 @@ ex:Modify%20Ethereum%20Pow%20Incentive%20Structure%20And%20Delay%20Difficulty%20
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1295.md> ;
     skos:definition "Proposes reducing uncle rewards, removing nephew rewards, and delaying the difficulty bomb while maintaining the current block reward of 3 ETH. (EIP-1295)" ;
     skos:prefLabel "Modify Ethereum Pow Incentive Structure And Delay Difficulty Bomb" .
+
+ex:Mreturn a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7877.md> ;
+    skos:definition "A renamed version of the existing RETURN opcode, which returns sequential bytes from memory. (EIP-7877)" ;
+    skos:prefLabel "Mreturn" .
 
 ex:Muir%20Glacier%20Difficulty%20Bomb%20Delay a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2384.md> ;
@@ -1615,6 +1630,11 @@ ex:Rpc.Discover a skos:Concept ;
     skos:definition "Adds OpenRPC service discovery to Ethereum’s JSON-RPC services, enabling machine-readable API specifications. (EIP-1901)" ;
     skos:prefLabel "Rpc.Discover" .
 
+ex:Rreturn a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7877.md> ;
+    skos:definition "A new opcode that allows returning data directly from the existing RETURNDATA buffer. (EIP-7877)" ;
+    skos:prefLabel "Rreturn" .
+
 ex:Safe%20Transaction%20Authorization%20Via%20Html%20Popup a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-107.md> ;
     skos:definition "Describes an authorization mechanism that allows web-based dApps to request transactions via eth_sendTransaction by opening an HTML popup for user approval without the need for CORS, enhancing security for user transactions. (EIP-107)" ;
@@ -1754,6 +1774,11 @@ ex:Spurious%20Dragon%20Hard%20Fork a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-607.md> ;
     skos:definition "Specifies changes for the Spurious Dragon hard fork, including replay attack protection, state trie clearing, and contract code size limits. (EIP-607)" ;
     skos:prefLabel "Spurious Dragon Hard Fork" .
+
+ex:Sreturn a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7877.md> ;
+    skos:definition "A new opcode that allows returning data directly from storage without first copying it to memory. (EIP-7877)" ;
+    skos:prefLabel "Sreturn" .
 
 ex:Ssz%20Execution%20Block%20Header a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7807.md> ;
@@ -1966,6 +1991,11 @@ ex:Transient%20Storage%20Opcodes a skos:Concept ;
     skos:definition "Introduces TLOAD and TSTORE opcodes, which behave similarly to storage but discard values after each transaction, allowing more gas-efficient inter-frame communication. (EIP-1153)" ;
     skos:prefLabel "Transient Storage Opcodes" .
 
+ex:Treturn a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7877.md> ;
+    skos:definition "A new opcode that allows returning data directly from transient storage without first copying it to memory. (EIP-7877)" ;
+    skos:prefLabel "Treturn" .
+
 ex:Trie%20Format%20Transition a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2584.md> ;
     skos:definition "Proposes a method to convert the Ethereum state trie from hexary to binary using overlay trees, enabling a phased transition. (EIP-2584)" ;
@@ -1975,6 +2005,11 @@ ex:Two-Dimensional%20Log%20Filter%20Data%20Structure a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7745.md> ;
     skos:definition "Replaces per-block bloom filters with a two-dimensional log filter structure to improve the efficiency and precision of searching for log events, enabling light-client-friendly Merkle proofs. (EIP-7745)" ;
     skos:prefLabel "Two-Dimensional Log Filter Data Structure" .
+
+ex:Txcreate a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7873.md> ;
+    skos:definition "A new instruction that allows contracts to create EOF contracts using initcode from transaction data. (EIP-7873)" ;
+    skos:prefLabel "Txcreate" .
 
 ex:Txgaslimit%20And%20Callgaslimit a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2542.md> ;

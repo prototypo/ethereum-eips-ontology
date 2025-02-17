@@ -861,3 +861,16 @@ Block-level Warming: Addresses and storage keys remain "warm" throughout an enti
 
 Unified Binary Tree: A new Ethereum state structure that replaces hexary Patricia trees with a single binary tree, merging account and storage tries into one, improving proof efficiency and state organization. (EIP-7864)
 
+TXCREATE: A new instruction that allows contracts to create EOF contracts using initcode from transaction data. (EIP-7873)
+
+InitcodeTransaction: A new transaction type that enables the deployment of EOF contracts using the TXCREATE instruction. (EIP-7873)
+
+SRETURN: A new opcode that allows returning data directly from storage without first copying it to memory. (EIP-7877)
+
+TRETURN: A new opcode that allows returning data directly from transient storage without first copying it to memory. (EIP-7877)
+
+RRETURN: A new opcode that allows returning data directly from the existing RETURNDATA buffer. (EIP-7877)
+
+MRETURN: A renamed version of the existing RETURN opcode, which returns sequential bytes from memory. (EIP-7877)
+
+ModExp Gas Cost Increase: A change in the pricing formula of the ModExp precompile to ensure it is not underpriced for its resource consumption. (EIP-7883)
