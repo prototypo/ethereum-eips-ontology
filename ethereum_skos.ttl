@@ -286,6 +286,11 @@ ex:Coinbase%20Calls a skos:Concept ;
     skos:definition "Allows the block coinbase (validator) to execute contracts directly without a transaction, where tx.origin = block.coinbase and gas.price = 0. (EIP-2474)" ;
     skos:prefLabel "Coinbase Calls" .
 
+ex:Coinbase%20Signature a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7886.md> ;
+    skos:definition "A cryptographic signature from the COINBASE over the block header, authorizing the upfront payment of inclusion costs and ensuring commitment to the block. (EIP-7886)" ;
+    skos:prefLabel "Coinbase Signature" .
+
 ex:Committee%20Index%20Outside%20Attestation a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7549.md> ;
     skos:definition "Moves the committee index outside the signed attestation message, allowing aggregation of equal consensus votes and improving Casper FFG efficiency. (EIP-7549)" ;
@@ -400,6 +405,11 @@ ex:Defuse%20Difficulty%20Bomb%20And%20Reset%20Block%20Reward a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1227.md> ;
     skos:definition "Proposes permanently disabling the difficulty bomb and resetting the block reward to 5 ETH to give users more freedom over Ethereum's governance. (EIP-1227)" ;
     skos:prefLabel "Defuse Difficulty Bomb And Reset Block Reward" .
+
+ex:Delayed%20Execution a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7886.md> ;
+    skos:definition "A mechanism allowing block validation without executing transactions by deferring execution-related fields and charging the COINBASE upfront for inclusion costs. (EIP-7886)" ;
+    skos:prefLabel "Delayed Execution" .
 
 ex:Delayed%20Execution%20Layer%20State%20Root a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7862.md> ;
@@ -997,6 +1007,11 @@ ex:Incentivize%20Access%20List%20Provisioning a skos:Concept ;
     skos:definition "Reduces the gas cost of access lists, encouraging their use and improving the data load efficiency for execution layer clients. (EIP-7707)" ;
     skos:prefLabel "Incentivize Access List Provisioning" .
 
+ex:Inclusion%20Cost a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7886.md> ;
+    skos:definition "The upfront fee paid by COINBASE for each transaction, covering base cost, calldata, and blob fees, which is refunded if the transaction executes successfully. (EIP-7886)" ;
+    skos:prefLabel "Inclusion Cost" .
+
 ex:Inclusion%20Lists a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7547.md> ;
     skos:definition "Introduces a mechanism allowing proposers to specify transactions that must be included in subsequent blocks, improving censorship resistance. (EIP-7547)" ;
@@ -1315,6 +1330,11 @@ ex:Paged%20Memory%20Allocation a skos:Concept ;
     skos:definition "Proposes changing the EVM’s memory model to use paged memory, improving flexibility for smart contract memory management while keeping gas costs manageable. (EIP-3336)" ;
     skos:prefLabel "Paged Memory Allocation" .
 
+ex:Parent%20Requests%20Hash a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7886.md> ;
+    skos:definition "A deferred execution field in the block header that commits to the execution layer requests from the parent block instead of the current one. (EIP-7886)" ;
+    skos:prefLabel "Parent Requests Hash" .
+
 ex:Partial%20Removal%20Of%20Refunds a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3403.md> ;
     skos:definition "Removes gas refunds for SELFDESTRUCT and restricts SSTORE refunds to a specific case, targeting the elimination of GasToken while preserving efficiency for certain use cases like anti-reentrancy locks. (EIP-3403)" ;
@@ -1359,6 +1379,11 @@ ex:Poseidon%20Hash%20Function%20Precompile a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-5988.md> ;
     skos:definition "Adds a precompiled contract for the Poseidon cryptographic hash function, enabling efficient interoperability with ZK-rollups and zero-knowledge proofs on Ethereum. (EIP-5988)" ;
     skos:prefLabel "Poseidon Hash Function Precompile" .
+
+ex:Pre-State%20Root a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7886.md> ;
+    skos:definition "The state root of the blockchain before executing the current block, replacing state_root in the header to allow deferred execution validation. (EIP-7886)" ;
+    skos:prefLabel "Pre-State Root" .
 
 ex:Precompile%20And%20Keccak256%20Repricing a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2666.md> ;
@@ -1744,6 +1769,11 @@ ex:Skinny%20Create2 a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1014.md> ;
     skos:definition "Introduces the CREATE2 opcode, allowing contracts to be created at addresses that depend on a hash of the sender's address, a salt, and the contract's initialization code. (EIP-1014)" ;
     skos:prefLabel "Skinny Create2" .
+
+ex:Skipped%20Transaction a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7886.md> ;
+    skos:definition "A transaction included in a block but not executed due to insufficient funds, gas limits, incorrect nonce, or invalid sender type, with its inclusion cost still paid by COINBASE. (EIP-7886)" ;
+    skos:prefLabel "Skipped Transaction" .
 
 ex:Slashing%20Protection%20Interchange%20Format a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3076.md> ;

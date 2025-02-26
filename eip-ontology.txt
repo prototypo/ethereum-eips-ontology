@@ -874,3 +874,15 @@ RRETURN: A new opcode that allows returning data directly from the existing RETU
 MRETURN: A renamed version of the existing RETURN opcode, which returns sequential bytes from memory. (EIP-7877)
 
 ModExp Gas Cost Increase: A change in the pricing formula of the ModExp precompile to ensure it is not underpriced for its resource consumption. (EIP-7883)
+
+Delayed Execution: A mechanism allowing block validation without executing transactions by deferring execution-related fields and charging the COINBASE upfront for inclusion costs. (EIP-7886)
+
+Skipped Transaction: A transaction included in a block but not executed due to insufficient funds, gas limits, incorrect nonce, or invalid sender type, with its inclusion cost still paid by COINBASE. (EIP-7886)
+
+Coinbase Signature: A cryptographic signature from the COINBASE over the block header, authorizing the upfront payment of inclusion costs and ensuring commitment to the block. (EIP-7886)
+
+Inclusion Cost: The upfront fee paid by COINBASE for each transaction, covering base cost, calldata, and blob fees, which is refunded if the transaction executes successfully. (EIP-7886)
+Pre-State Root: The state root of the blockchain before executing the current block, replacing state_root in the header to allow deferred execution validation. (EIP-7886)
+
+Parent Requests Hash: A deferred execution field in the block header that commits to the execution layer requests from the parent block instead of the current one. (EIP-7886)
+
