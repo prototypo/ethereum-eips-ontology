@@ -886,3 +886,10 @@ Pre-State Root: The state root of the blockchain before executing the current bl
 
 Parent Requests Hash: A deferred execution field in the block header that commits to the execution layer requests from the parent block instead of the current one. (EIP-7886)
 
+interfaces capability : A new capability added to EIP-5792 that allows applications to attach contract interface specifications (ABIs) to wallet_sendCalls requests, enabling wallets to reliably decode calldata and present it to users. (EIP-7896)
+
+abi-v1 : An interface spec version corresponding to Solidity's pragma abicoder v1, used to describe how a contract decodes calldata into function arguments. (EIP-7896)
+
+abi-v2 : An interface spec version corresponding to Solidity's pragma abicoder v2 (or pragma experimental ABIEncoderV2), used to describe how a contract decodes calldata into function arguments. Also implemented by Vyper. (EIP-7896)
+
+

@@ -12,6 +12,16 @@ ex:5%20Fnv%20Primes%20For%20Ethash a skos:Concept ;
     skos:definition "Modifies the Ethash algorithm by introducing five new FNV primes to replace the single FNV prime, aiming to disrupt existing ASIC miners and maintain Ethereum’s ASIC resistance. (EIP-3372)" ;
     skos:prefLabel "5 Fnv Primes For Ethash" .
 
+ex:Abi-V1 a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7896.md> ;
+    skos:definition "An interface spec version corresponding to Solidity's pragma abicoder v1, used to describe how a contract decodes calldata into function arguments. (EIP-7896)" ;
+    skos:prefLabel "Abi-V1 " .
+
+ex:Abi-V2 a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7896.md> ;
+    skos:definition "An interface spec version corresponding to Solidity's pragma abicoder v2 (or pragma experimental ABIEncoderV2), used to describe how a contract decodes calldata into function arguments. Also implemented by Vyper. (EIP-7896)" ;
+    skos:prefLabel "Abi-V2 " .
+
 ex:Access%20Key%20Opcode a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7664.md> ;
     skos:definition "Introduces the ACCESS_KEY opcode to read access-list keys of the executing contract, ensuring reliable static input declaration. (EIP-7664)" ;
@@ -1062,6 +1072,11 @@ ex:Initcodetransaction a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7873.md> ;
     skos:definition "A new transaction type that enables the deployment of EOF contracts using the TXCREATE instruction. (EIP-7873)" ;
     skos:prefLabel "Initcodetransaction" .
+
+ex:Interfaces%20Capability a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7896.md> ;
+    skos:definition "A new capability added to EIP-5792 that allows applications to attach contract interface specifications (ABIs) to wallet_sendCalls requests, enabling wallets to reliably decode calldata and present it to users. (EIP-7896)" ;
+    skos:prefLabel "Interfaces Capability " .
 
 ex:Is_Static%20Opcode a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2970.md> ;
