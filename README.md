@@ -71,3 +71,4 @@ Prompt used to ChatGPT 4o
 > For example, if EIP 100000 defines the FOO opcode, then the term is FOO. If the
 > definition was 'The FOO opcode prints "foo" when it is called' then your output should be:
 > 'FOO: The FOO opcode prints "foo" when it is called. (EIP-100000)'
+
