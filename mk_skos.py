@@ -79,7 +79,7 @@ for line in lines:
       next
 
 # Save the SKOS vocabulary to a file
-output_file = "ethereum_skos.ttl"
+output_file = "eip-ontology-skos.ttl"
 try:
 	g.serialize(destination=output_file, format="turtle")
 	exit(0)
