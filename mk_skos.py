@@ -80,7 +80,11 @@ for line in lines:
 
 # Save the SKOS vocabulary to a file
 output_file = "ethereum_skos.ttl"
-g.serialize(destination=output_file, format="turtle")
+try:
+	g.serialize(destination=output_file, format="turtle")
+	exit(0)
+except:
+	exit(1)
 
-print(f"SKOS vocabulary has been created and saved as '{output_file}'.")
+#print(f"SKOS vocabulary has been created and saved as '{output_file}'.")
 

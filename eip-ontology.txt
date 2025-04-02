@@ -893,103 +893,70 @@ abi-v1 : An interface spec version corresponding to Solidity's pragma abicoder v
 abi-v2 : An interface spec version corresponding to Solidity's pragma abicoder v2 (or pragma experimental ABIEncoderV2), used to describe how a contract decodes calldata into function arguments. Also implemented by Vyper. (EIP-7896)
 
 
-
-
-Here are the newly-introduced terms defined in this document:
-
-* `ExecutionPayloadWithInclusionProof`: A payload containing execution data and an inclusion proof, used for block import latency reduction.
-* `SignedExecutionPayload`: An encrypted version of the ExecutionPayload with a signature from the builder/validator.
-* `SignedExecutionPayloadHeader` (EIP-123): A header containing information about the SignedExecutionPayload.
-* `newPayloadHeader` engine API: An API introduced to process new payloads in block processing when an ExecutionPayload is not available.
-* `getExecutionPayload`: Optional method for EL clients to retrieve execution payload from their p2p network peers (EIP-456).
-* Data Availability Sampling (DAS) mechanisms: Mechanisms used by nodes to verify the availability of data without re-executing transactions.
+SignedExecutionPayload: A payload containing a signed execution result, used in PBS pipeline (EIP-1234)
+ExecutionPayloadWithInclusionProof: A payload including an inclusion proof for transactions within the block (EIP-1234)
+SignedExecutionPayloadHeader: A header containing information about a signed execution payload (EIP-1234)
 
 
 
-Here are the newly-introduced terms defined in this document:
+initcode : The code executed by a contract at initialization time (EIP-3860)
+JUMPDEST : A label used to optimize gas metering for initcode analysis 
+FOO : Not mentioned in the document.
 
-* EIP: Ethereum Improvement Proposal
-* JUMPDEST: A special address used to optimize gas metering for `initcode` costing.
-(EIP-3860)
+
+
+contract code size limit : The maximum allowed size of a contract's bytecode (EIP-170)
+gas metering : A system to measure and charge for gas used by contracts exceeding 24KB in size (EIP-7907) 
+code loading cost : Gas required to load the bytecode of a new contract into memory, at 2 gas per 32-byte word above 24KB (EIP-7907)
+access cost : The additional gas charged when accessing stored code without physically loading it (EIP-7907)
+
+
+
+JSON : A standardized canonical form of data via RFC-8785 (EIP-...).
+YAML : Lacks a standard canonical form.
+XML : Not used for configuration due to increased library size and lack of standardization within this specification.
+CRC-32 : A widely implemented, non-cryptographic hash function used instead of Keccak256. 
+Canonical Form : The standardized format of data as per RFC-8785 (EIP-...).
+Hash Format : The method of generating a checksum using CRC-32 or another cryptographic algorithm.
+
+
+
+Excess gas: The amount of unused gas in a transaction (EIP-7915)
  
-Note that there is only one new term introduced in this document, which is related to a specific change made by the proposed EIP.
+Equilibrium quantity: The optimal number of blobs consumed by the protocol at equilibrium (EIP-7915)
+
+Fine-grained fluctuations: Small changes in fee that can create feedback loops (EIP-7915)
 
 
 
-Here are the newly-introduced terms defined in this document:
-
-* Gas metering: a system to measure and limit gas usage for contract code loading.
-* JUMPDEST analysis: an additional computational resource required for preprocessing large contracts.
-
-Note that there is no new opcode introduced in this EIP, so I did not include any opcodes in the list.
-
-
-
-Here are the newly-introduced terms defined in this document:
-
-* Canonical form: a standardized format for configuration data, chosen due to its ubiquity and readability.
-* RFC-8785: a reference to the standard defining the canonical JSON format.
-* Standardized canonical form: a specific definition of how JSON should be formatted.
-
-Note that there are no new terms defined in this document. The text appears to be an explanation of why certain formats (JSON, YAML) were chosen for configuration data and not others (XML).
+ProgressiveList : A scalable, efficient alternative to existing list types (EIP-7916)
+Simple Serialize (SSZ) : An encoding scheme for Ethereum data structures (no EIP number mentioned in the document)
+Generalized Indices (gindices) : Stable merkleization indices for individual elements of a ProgressiveList (EIP-7916)
+Merkle Proofs : A cryptographic technique used to efficiently verify list contents (no EIP number mentioned in the document)
+SSZ : An encoding scheme for Ethereum data structures, similar to Simple Serialize but with different parameters and defaults (EIP-7916)
 
 
 
-Here are the newly-introduced terms defined in this document:
-
-* Excess blob gas: The amount of gas used by a transaction that exceeds its allocated limit.
-* Linear domain: A mathematical representation where values can be directly compared and manipulated without considering their magnitude or scale.
-* Log-domain: A mathematical representation where values are represented as logarithms, allowing for easier comparison across different scales.
-* Excess blob base fee EMA (Exponential Moving Average): An average of excess gas prices over time to smooth out fluctuations in the market.
+proposer_lookahead : a deterministic value representing the proposer schedule for at least MIN_SEED_LOOKAHEAD + 1 epochs (EIP-7917)
+MIN_SEED_LOOKAHEAD : an integer constant defining the minimum number of epochs to look ahead in seed generation (EIP-7917)
 
 
 
-Here are the newly-introduced terms defined in this document:
-
-* ProgressiveList: A scalable, efficient alternative to traditional lists.
-	(EIP-1234)
-* SSZ: Simple Storage and Retrieval
-	(EIP-5678)
-
-Note that there is only one new term explicitly mentioned in the provided text. The other concepts discussed are related to existing types (e.g., `ProgressiveList[T]`, `List[T, N]`) or general principles (e.g., "good enough" defaults), but they do not introduce new terms.
-
-If you'd like me to extract any additional information from the document that could be considered a newly-introduced term, please let me know!
+TARGET_BLOB_GAS_PER_BLOCK : The targeted number of blobs per block gas unit (EIP-7918)
+TX_BASE_COST : The price for a simple blob-carrying transaction (EIP-7918)
 
 
 
-Here are the newly-introduced terms defined in this document:
-
-* Proposer schedule: The list of validators selected as proposers for each slot within an epoch.
-* Proposer index: A validator's index that indicates their eligibility to be a proposer at a given slot, calculated by sampling until sufficient effective balance is reached. (EIP-1234)
-* Effective balance: The total amount of stake held by a validator in the network.
-
-Note: I couldn't find any other newly-introduced terms defined in this document apart from these three. If you'd like me to clarify or expand on them, please let me know!
+SSZ : A single, forward-compatible format for on-chain data (EIP-7919)
+StableContainer : Forward-compatible container type across forks (EIP-7919)
+Merkle proofs : Data structure used to verify Ethereum transactions and blocks
+JSON-RPC : Remote procedure call protocol for interacting with Ethereum nodes
+Portal network : Decentralized archive node aiming to be a trusted API gateway
 
 
 
-Here are the newly-introduced terms defined in this document:
-
-* TARGET_BLOB_GAS_PER_BLOCK: The gas price for a blob block.
-* BLOBS_PER_BLOCK_TARGET: The target number of blobs per block.
-* GAS_PER_BLOB: The base fee per unit data stored as a blob.
-
-
-
-Here are the newly-introduced terms defined in this document:
-
-* SSZ: Shortened Small Write, a serialization format used for Ethereum data
-* PURGE: Serialization harmonization, refers to transitioning execution block structures from old formats to new ones
-* REST (Representational State of Resource): A web service interface style that follows HTTP protocol
-* Snappy compression: A lossless compression algorithm used in the binary API
-
-Note: These terms are not directly defined as opcodes or transaction features, but rather as part of a broader effort to improve Ethereum's data serialization and API.
-
-
-
-Here are the newly-introduced terms defined in this document:
-
-*   JUMPDEST: A byte value that can serve as a target for `JUMPI` instructions.
-    (EIP 7921)
-*   JUMPI: An instruction that jumps to an address specified by its immediate argument, which must match one of the values designated as valid `JUMPDEST`.
-    (EIP 7921)
+JUMPDEST: A byte value used as a target for JUMPi and JUMP instructions (EIP-7921)
+PUSH1: An opcode that pushes an immediate argument onto the stack 
+CODECOPY: Data spans can invalidate subsequent JUMPDEST
+DOSSize: Codesize is a linear DoS vector because code must be preprocessed to determine JUMPDEST validity
 
