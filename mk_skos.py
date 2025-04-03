@@ -1,6 +1,7 @@
 from rdflib import Graph, Namespace, Literal, RDF, RDFS, URIRef
 from rdflib.namespace import SKOS
 from urllib.parse import quote  # For URL-escaping
+import os
 import re
 
 # Base IRI for the SKOS vocabulary
@@ -19,12 +20,14 @@ g.bind("ex", EX)
 
 # Read the ontology file
 ontology_file = "eip-ontology.txt"
+OntologyDir='/Users/davidhyland-wood/Documents/GitHub/ethereum-eips-ontology'
+ontology_path = os.path.join(OntologyDir, ontology_file)
 
 # Keep track of terms seen
 terms = {}
 
 # Parsing the ontology file
-with open(ontology_file, 'r') as file:
+with open(ontology_path, 'r') as file:
     lines = file.readlines()
 
 # Function to create SKOS concepts and their relations
@@ -79,6 +82,7 @@ for line in lines:
       next
 
 # Save the SKOS vocabulary to a file
+os.chdir(OntologyDir)
 output_file = "eip-ontology-skos.ttl"
 try:
 	g.serialize(destination=output_file, format="turtle")

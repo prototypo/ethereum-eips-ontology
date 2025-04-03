@@ -321,11 +321,6 @@ ex:Clique%20Proof-Of-Authority%20Consensus%20Protocol a skos:Concept ;
     skos:definition "Proposes a proof-of-authority consensus protocol designed for Ethereum testnets to address issues in low-hashrate PoW networks. (EIP-225)" ;
     skos:prefLabel "Clique Proof-Of-Authority Consensus Protocol" .
 
-ex:Codecopy a skos:Concept ;
-    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7921.md> ;
-    skos:definition "Data spans used to invalidate subsequent JUMPDEST checks  (EIP-7921)" ;
-    skos:prefLabel "Codecopy" .
-
 ex:Coinbase%20Calls a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2474.md> ;
     skos:definition "Allows the block coinbase (validator) to execute contracts directly without a transaction, where tx.origin = block.coinbase and gas.price = 0. (EIP-2474)" ;

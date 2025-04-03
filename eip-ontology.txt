@@ -962,5 +962,3 @@ contract_address: Commitments to contract addresses included in receipt data. (E
 SSZ transaction signature scheme: A new signature scheme for native use of SSZ transactions without conversion through trusted API gateways. (EIP-7919)
 
 
-CODECOPY: Data spans used to invalidate subsequent JUMPDEST checks  (EIP-7921)
-
