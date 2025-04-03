@@ -104,6 +104,8 @@ Byzantium fork: A “hard fork” in the Ethereum network that occurred in Octob
 
 Byzantium fork: The first of two hard forks for the Metropolis development stage. It included EIP-649 Metropolis Difficulty Bomb Delay and Block Reward Reduction, where the Ice Age was delayed by 1 year and the block reward was reduced from 5 to 3 ether.
 
+Call Data: The data associated with a transaction to a smart contract. It usually contains a 4-byte method identifier followed by serialized arguments.
+
 Casper FFG: Casper-FFG is a proof-of-stake consensus protocol used in conjunction with the LMD-GHOST fork choice algorithm to allow consensus clients to agree on the head of the Beacon Chain.
 
 Checkpoint: The Beacon Chain has a tempo divided into slots (12 seconds) and epochs (32 slots). The first slot in each epoch is a checkpoint. When a supermajority of validators attests to the link between two checkpoints, they can be justified and then when another checkpoint is justified on top, they can be finalized.
@@ -286,7 +288,7 @@ Etherscan: A popular website for analyzing activity on the Ethereum blockchain. 
 
 Events: Allows the use of EVM logging facilities. Dapps can listen for events and use them to trigger JavaScript callbacks in the user interface.
 
-EVM (Ethereum Virtual Machine): The EVM is a virtual machine that operates on the Ethereum network. It is Turing complete and allows anyone, anywhere to execute arbitrary EVM bytecode. All Ethereum nodes run on the EVM. It is home for smart contracts based on the Ethereum blockchain.
+EVM: The EVM is the Ethereum Virtual Machine, a virtual machine that operates on the Ethereum network. It is Turing complete and allows anyone, anywhere to execute arbitrary EVM bytecode. All Ethereum nodes run on the EVM. It is home for smart contracts based on the Ethereum blockchain.
 
 EVM assembly language: A human-readable form of EVM bytecode.
 
@@ -342,6 +344,8 @@ genesis block: The initial block of data computed in the history of a blockchain
 
 Geth: Go Ethereum. One of the most prominent implementations of the Ethereum protocol, written in Go. Read more at geth.ethereum.org
 
+gossip: Peer-to-peer communication between Ethereum nodes. Gossip may be one-to-many communication over the network or one-to-one communication for swapping requests and responses between specific nodes.
+
 gwei: A minuscule and common denomination of ETH, and the unit in which gas prices are often specified. See ‘ether (denominations)’ entry for more information.
 
 Gwei: Short for gigawei, a denomination of ether, commonly utilized to price gas.  1 gwei = 10^9 wei. 10^9 gwei = 1 ether.
@@ -395,6 +399,8 @@ InterPlanetary File System (IPFS): A decentralized file storage and referencing 
 Issuance: The minting of new ether to reward block proposal, attestation and whistle-blowing.
 
 JSON-RPC: JSON-RPC is, quite simply, a method used to move data around computer systems, and predates public blockchain technology. It was chosen as a standard for moving data between blockchain networks and Internet browsers and wallets, with the result that these networks have come to be called ‘RPC networks’ , despite JSON-RPC not being their defining technical feature.
+
+JUMPDEST: An OPCODE of the Ethereum virtual machine to annotate possible jump destinations
 
 Keccak-256: Cryptographic hash function used in Ethereum. Keccak-256 was standardized as SHA-3.
 
@@ -565,6 +571,10 @@ Public goods: Public goods are things everyone can use for free, like parks or c
 Public key: A public key is a set of characters that lets others send you digital currency securely, like an email address for money.
 
 public key: Public blockchain networks are just that: public.  Their data is accessible and readable by anyone. In order to have any degree of usability when it comes to allowing users to do some things, like send transactions, but not others, like steal other peoples’ tokens, cryptographic technology is used. In particular, a design paradigm known as ‘public/private key pairs’ is employed to ensure users can interact with others on the network as they wish, while keeping their own account secure.These key pairs consist of two long strings of alphanumeric characters. A public key can be derived mathematically from its corresponding private key, but the inverse is not true: it is mathematically impossible to derive a private key from its corresponding public key. This allows, for example, users to have a public wallet address that anyone can use to send them tokens, with the peace of mind that as long as they properly keep the corresponding private key safe, those tokens cannot be stolen.  See also ‘private key’.
+
+PUSH0: Pushes 0 onto the EVM stack; introduced by the Shanghai hardfork (EIP-3855).
+
+PUSH1: Pushes a 1-byte value onto the EVM stack.
 
 Re-entrancy attack: An attack that consists of an attacker contract calling a victim contract function in such a way that during execution the victim calls the attacker contract again, recursively. This can result, for example, in the theft of funds by skipping parts of the victim contract that update balances or count withdrawal amounts.
 
