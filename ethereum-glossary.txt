@@ -761,4 +761,3 @@ Zero-knowledge proof: A zero-knowledge proof is a cryptographic method that allo
 Zero-knowledge rollup: A rollup of transactions that use validity proofs to offer increased layer 2 transaction throughput while using the security provided by Mainnet (layer 1). Although they can't handle complex transaction types, like optimistic rollups, they don't have latency issues because transactions are provably valid when submitted.
 
 zk-SNARKs: Zero-Knowledge Succinct Non-interactive ARguments of Knowledge are an incredible technology, and vital to the scaling of blockchain technology and the decentralized web. They are mathematically complex and can be daunting; this explanation from the Ethereum Foundation is a good primer.
-
