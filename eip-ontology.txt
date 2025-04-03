@@ -885,3 +885,82 @@ Inclusion Cost: The upfront fee paid by COINBASE for each transaction, covering 
 Pre-State Root: The state root of the blockchain before executing the current block, replacing state_root in the header to allow deferred execution validation. (EIP-7886)
 
 Parent Requests Hash: A deferred execution field in the block header that commits to the execution layer requests from the parent block instead of the current one. (EIP-7886)
+
+REVERT: All calls to this opcode must emit a log with revert data. (EIP-7889)
+
+LOG1: A special type of log that can be used by reverted transactions.  (EIP-7889)
+
+
+Blob Parameter Only (BPO): A mechanism for scaling Ethereum's blob capacity through targeted hard forks that modify only blob-related parameters. (EIP-7892)
+
+blob target: The maximum amount of data allowed in blobs on a given block. (EIP-7892)
+
+blob limit: The total number of blocks that can be stored as blobs before the network is full. (EIP-7892)
+
+baseFeeUpdateFraction: The fraction by which base fees are updated when updating the blob capacity. (EIP-7892)
+
+
+interfaces: contract interface specifications (ABIs) that a wallet needs to reliably decode calldata in requests (EIP-7896)
+
+ABI attachment: capability to enable calldata decoding in wallets.  (EIP-7896)
+
+
+ExecutionPayloadHeader: Replaces ExecutionPayload in BeaconBlockBody (EIP-7898)
+
+ExecutionPayloadWithInclusionProof: Independent transmission of execution payload and inclusion proof  (EIP-7898)
+
+
+initcode: The code executed by a contract at its initialization, which must be within 49152 bytes in size before EIP-3860. (EIP-7903)
+
+calldata: Data passed as part of an instruction call or memory expansion operation, which must be within 24576 bytes in size before EIP-170. (EIP-7903)
+
+memory expansion: An operation that expands the contract's memory space to accommodate additional data. (EIP-7903)
+
+
+excess_contract_size: max(0, contract_size - 0x6000) (EIP-7907)
+
+
+eth_config JSON-RPC Method:  (EIP-7910)
+
+JSON: A format chosen for its ubiquity, machine and human readability, and a standardized canonical form via RFC-8785. (EIP-7910)
+
+CRC-32: A hash function used instead of cryptographic hashes due to reasons including node lying, convenience reduction, and widespread implementation. (EIP-7910)
+
+
+blob base fee: the base fee for blob gas usage (EIP-7915)
+
+excess blob gas update: a mechanism to adjust the blob base fee based on current demand (EIP-7915)
+
+long-run average: the long-term average of the blob base fee, used as a reference point (EIP-7915)
+
+
+ProgressiveList[T]: A SSZ type representing lists of arbitrary length with stable merkleization. (EIP-7916)
+
+gindices: Generalized indices for individual elements in a list.  (EIP-7916)
+
+N: The fixed capacity imposed by existing List types, which can lead to inefficient hashing and unnecessary bounds checks. (EIP-7916)
+
+
+proposer_lookahead: a deterministic value pre-calculated and stored in the beacon state at the start of every epoch (EIP-7917)
+
+MIN_SEED_LOOKAHEAD: an integer constant representing the minimum number of epochs for which lookahead is considered predictable (EIP-7917)
+
+
+TARGET_BLOB_GAS_PER_BLOCK: targeted number of blobs to be carried by a block (EIP-7918)
+
+TX_BASE_COST: base cost of a simple blob-carrying transaction (EIP-7918)
+
+calc_excess_blob_gas(): function that checks fee parity (EIP-7918)
+
+
+StableContainer: A container that stores data in a single SSZ format, forward compatible across forks.  (EIP-7919)
+
+from: Commitments to properties computed from the original RLP representation. (EIP-7919)
+
+contract_address: Commitments to contract addresses included in receipt data. (EIP-7919)
+
+SSZ transaction signature scheme: A new signature scheme for native use of SSZ transactions without conversion through trusted API gateways. (EIP-7919)
+
+
+CODECOPY: Data spans used to invalidate subsequent JUMPDEST checks  (EIP-7921)
+
