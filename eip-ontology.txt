@@ -891,3 +891,79 @@ interfaces capability : A new capability added to EIP-5792 that allows applicati
 abi-v1 : An interface spec version corresponding to Solidity's pragma abicoder v1, used to describe how a contract decodes calldata into function arguments. (EIP-7896)
 
 abi-v2 : An interface spec version corresponding to Solidity's pragma abicoder v2 (or pragma experimental ABIEncoderV2), used to describe how a contract decodes calldata into function arguments. Also implemented by Vyper. (EIP-7896)
+ExecutionPayload: A field in BeaconBlockBody containing transactions (EIP-7898)
+
+ExecutionPayloadHeader: Replaced ExecutionPayload, contains header information only (EIP-7898)
+
+BeaconBlockBody: Contains execution payload and other block data (EIP-7898)
+
+gossip: Refers to the dissemination of blocks through gossip protocol (EIP-7898)
+
+EL: Short for "execution layer", refers to the Ethereum Virtual Machine (EVM) (EIP-7898)
+
+ePBS/APS: Proposals related to improving beacon node performance (EIP-7898)
+
+initcode: The code executed by a contract at startup, restricted to 49152 bytes until EIP-7903 removal. (EIP-7903)
+
+JUMPDEST: A specific address within an `initcode` that serves as the starting point for execution of the program.  (EIP-7903)
+
+calldata: Data passed from one contract call to another or used by a smart contract during its execution, excluding memory expansion costs. (EIP-7903)
+
+memory expansion: The process of expanding the available memory space within an Ethereum transaction to accommodate additional data beyond what is specified in calldata. (EIP-7903)
+
+excess_contract_size: max(0, contract_size - 0x6000) (EIP-7907)
+
+eip: 7910 (EIP-7910)
+
+definition: A method that describes the configuration of the current and next fork. (EIP-7910)
+
+definition: The activation of a hard fork on the Holešky testnet. (EIP-7910)
+
+definition: Variables in testnets, such as deposit contract values. (EIP-7910)
+
+blob base fee: the minimum price at which blobspace can be used (EIP-7915)
+
+excess blob gas update: adjusts the amount of excess gas available for blobspace usage based on current fees and demand (EIP-7915)
+
+fee schedule: a set of rules governing how Ethereum's transaction fees are calculated (EIP-7915)
+
+long-run average: an estimate of the long-term average value of a variable, in this case, the base fee (EIP-7915)
+
+linear domain: a mathematical representation where variables change linearly with respect to each other (EIP-7915)
+
+ProgressiveList[T]: A SSZ type representing lists of arbitrary length with stable merkleization. (EIP-7916)
+
+gindices: Generalized indices for individual elements in a list, maintaining stability across modifications.  (EIP-7916)
+
+SSZ: Simple Serialize, an encoding scheme used by Ethereum's consensus protocols. (EIP-7916)
+
+proposer_lookahead: a deterministic value pre-calculated and stored in the beacon state at the start of every epoch (EIP-7917)
+
+RANDAO delay: the time between when an effective balance is available for use as input to proposer election, used in calculating lookahead (EIP-7917)
+
+effective balances (EB): the current amount that validators can spend on transactions without being penalized (EIP-7917)
+
+blob_base_fee_per_gas: price per gas for a simple blob-carrying transaction (EIP-7918)
+
+TARGET_BLOB_GAS_PER_BLOCK: targeted number of blobs to be carried by a block (EIP-7918)
+
+TX_BASE_COST: base cost of a simple blob-carrying transaction (EIP-7918)
+
+calc_excess_blob_gas(): function that checks fee parity between execution and blob fees (EIP-7918)
+
+SSZ: Shortened Small-Buffered format for encoding data (EIP-7919)
+
+StableContainer: A forward-compatible container that enables compatibility across Ethereum forks (EIP-7919)
+
+from: The original RLP representation of a property in an SSZ transaction (EIP-7919)
+
+contract_address: Commitments to properties computed from the original RLP representation (EIP-7919)
+
+PURGE: Serialization harmonization, referring to transitioning execution block layout (EIP-7919)
+
+JUMPDEST: A byte value (0x5b) that determines validity for JUMP and JUMPI opcodes (EIP-7921)
+
+PUSH1: An opcode parameter supplied within code rather than on the stack (EIP-7921)
+
+CODECOPY: Data spans used in EVM execution (EIP-7921)
+
