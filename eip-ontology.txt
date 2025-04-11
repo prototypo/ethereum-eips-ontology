@@ -965,3 +965,16 @@ SSZ transaction signature scheme: A new signature scheme for native use of SSZ t
 
 CODECOPY: Data spans used to invalidate subsequent JUMPDEST checks  (EIP-7921)
 
+
+
+generation length: 256 epochs (~27 hours) (EIP-7922)
+
+churn limit: The maximum number of validators allowed to exit within a given time frame. (EIP-7922)
+
+
+ALLOCATE_PAGE_COST: Cost of allocating a page in memory (EIP-7923)
+
+THRASH_PAGE_COST: Cost of thrashing (reusing) a page in memory (EIP-7923)
+
+MSIZE: Returns the current size of the memory space (EIP-7923)
+

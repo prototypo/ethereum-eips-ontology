@@ -77,6 +77,11 @@ ex:Alias%20Origin%20To%20Sender a skos:Concept ;
     skos:definition "Aliases the ORIGIN opcode to the SENDER opcode, eliminating distinctions between the original transaction initiator and the immediate sender. (EIP-7645)" ;
     skos:prefLabel "Alias Origin To Sender" .
 
+ex:Allocate_Page_Cost a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7923.md> ;
+    skos:definition "Cost of allocating a page in memory (EIP-7923)" ;
+    skos:prefLabel "Allocate_Page_Cost" .
+
 ex:Amsterdam%20Hardfork%20Meta a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7773.md> ;
     skos:definition "Lists the EIPs formally proposed, considered, and scheduled for inclusion in the Amsterdam network upgrade. (EIP-7773)" ;
@@ -310,6 +315,11 @@ ex:Chunk-Based%20Code%20Merkleization a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2926.md> ;
     skos:definition "Splits contract code into fixed-size chunks and stores them in a Merkle tree, reducing witness sizes for stateless Ethereum clients. (EIP-2926)" ;
     skos:prefLabel "Chunk-Based Code Merkleization" .
+
+ex:Churn%20Limit a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7922.md> ;
+    skos:definition "The maximum number of validators allowed to exit within a given time frame. (EIP-7922)" ;
+    skos:prefLabel "Churn Limit" .
 
 ex:Cl%20P2P%20Validation%20Rules a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7805.md> ;
@@ -992,6 +1002,11 @@ ex:Generalized%20Account%20Versioning%20Scheme a skos:Concept ;
     skos:definition "Introduces a scheme for account versioning, allowing multiple versions of virtual machines to coexist, facilitating upgrades to Ethereum’s execution environments. (EIP-1702)" ;
     skos:prefLabel "Generalized Account Versioning Scheme" .
 
+ex:Generation%20Length a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7922.md> ;
+    skos:definition "256 epochs (~27 hours) (EIP-7922)" ;
+    skos:prefLabel "Generation Length" .
+
 ex:Genesis a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7799.md> ;
     skos:definition "Log entry in system_logs for initial balances at network genesis (EIP-7799)." ;
@@ -1342,6 +1357,11 @@ ex:Mreturn a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7877.md> ;
     skos:definition "A renamed version of the existing RETURN opcode, which returns sequential bytes from memory. (EIP-7877)" ;
     skos:prefLabel "Mreturn" .
+
+ex:Msize a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7923.md> ;
+    skos:definition "Returns the current size of the memory space (EIP-7923)" ;
+    skos:prefLabel "Msize" .
 
 ex:Muir%20Glacier%20Difficulty%20Bomb%20Delay a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2384.md> ;
@@ -2110,6 +2130,11 @@ ex:Tethashv1 a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1485.md> ;
     skos:definition "Modifies the Ethash PoW algorithm to obsolete current ASIC miners by replacing the deprecated FNV-0 hash with the FNV1A hash function. (EIP-1485)" ;
     skos:prefLabel "Tethashv1" .
+
+ex:Thrash_Page_Cost a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7923.md> ;
+    skos:definition "Cost of thrashing (reusing) a page in memory (EIP-7923)" ;
+    skos:prefLabel "Thrash_Page_Cost" .
 
 ex:Time-Aware%20Base%20Fee%20Calculation a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4396.md> ;
