@@ -597,6 +597,21 @@ ex:Eip%20Editor%20Handbook a skos:Concept ;
     skos:definition "Outlines the responsibilities and processes of Ethereum Improvement Proposal (EIP) editors, including how decisions are made, the election of a Keeper of Consensus, and editor membership guidelines. (EIP-5069)" ;
     skos:prefLabel "Eip Editor Handbook" .
 
+ex:Eip-6110 a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7927.md> ;
+    skos:definition "Consensus layer client behavior regarding pre-merge blocks and deposit logs (EIP-7927)" ;
+    skos:prefLabel "Eip-6110" .
+
+ex:Eip-7639 a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7927.md> ;
+    skos:definition "Pre-merge history dropping policy (EIP-7927)" ;
+    skos:prefLabel "Eip-7639" .
+
+ex:Eip-7642 a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7927.md> ;
+    skos:definition "Execution layer client implementation requirement for eth/69 support (EIP-7927)" ;
+    skos:prefLabel "Eip-7642" .
+
 ex:Eips%20Eligible%20For%20Inclusion a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2378.md> ;
     skos:definition "Tracks the status of EIPs that have been vetted by the core developers and marked as eligible for inclusion in future forks or upgrades. (EIP-2378)" ;
@@ -746,6 +761,11 @@ ex:Eth%20Transfers%20Emit%20A%20Log a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-5793.md> ;
     skos:definition "Extends the NewPooledTransactionHashes message to include transaction types and sizes, allowing nodes to optimize the fetching and propagation of transactions. (EIP-5793)" ;
     skos:prefLabel "Eth/68 - Add Transaction Type To Announcements" .
+
+<http://www.consensys.net/ethereum-skos#Eth/69> a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7927.md> ;
+    skos:definition "over DevP2P protocol (EIP-7927)" ;
+    skos:prefLabel "Eth/69" .
 
 <http://www.consensys.net/ethereum-skos#Eth/70%20-%20Available-Blocks-Extended%20Protocol> a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7542.md> ;
