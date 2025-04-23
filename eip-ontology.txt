@@ -979,10 +979,9 @@ THRASH_PAGE_COST: Cost of thrashing (reusing) a page in memory (EIP-7923)
 MSIZE: Returns the current size of the memory space (EIP-7923)
 
 
-
 eth/69: over DevP2P protocol (EIP-7927)
 
-EIP-7642: Execution layer client implementation requirement for eth/69 support (EIP-7927)
+EIP-7642: Execution layer client implementation requirement for eth/69 (EIP-7927)
 
 EIP-7639: Pre-merge history dropping policy (EIP-7927)
 

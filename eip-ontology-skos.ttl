@@ -609,7 +609,7 @@ ex:Eip-7639 a skos:Concept ;
 
 ex:Eip-7642 a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7927.md> ;
-    skos:definition "Execution layer client implementation requirement for eth/69 support (EIP-7927)" ;
+    skos:definition "Execution layer client implementation requirement for eth/69 (EIP-7927)" ;
     skos:prefLabel "Eip-7642" .
 
 ex:Eips%20Eligible%20For%20Inclusion a skos:Concept ;
