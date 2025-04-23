@@ -978,3 +978,6 @@ THRASH_PAGE_COST: Cost of thrashing (reusing) a page in memory (EIP-7923)
 
 MSIZE: Returns the current size of the memory space (EIP-7923)
 
+
+eth/69: over DevP2P protocol (EIP-7927)
+

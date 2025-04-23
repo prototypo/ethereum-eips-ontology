@@ -747,6 +747,11 @@ ex:Eth%20Transfers%20Emit%20A%20Log a skos:Concept ;
     skos:definition "Extends the NewPooledTransactionHashes message to include transaction types and sizes, allowing nodes to optimize the fetching and propagation of transactions. (EIP-5793)" ;
     skos:prefLabel "Eth/68 - Add Transaction Type To Announcements" .
 
+<http://www.consensys.net/ethereum-skos#Eth/69> a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7927.md> ;
+    skos:definition "over DevP2P protocol (EIP-7927)" ;
+    skos:prefLabel "Eth/69" .
+
 <http://www.consensys.net/ethereum-skos#Eth/70%20-%20Available-Blocks-Extended%20Protocol> a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7542.md> ;
     skos:definition "Introduces eth/70, which extends the Ethereum protocol with block range information and adds messages for requesting and sending block ranges. (EIP-7542)" ;
