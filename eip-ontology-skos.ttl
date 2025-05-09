@@ -157,6 +157,11 @@ ex:Binary%20Trie%20Structure a skos:Concept ;
     skos:definition "Proposes a transition from a hexary to a binary trie structure for Ethereum’s account and storage tries, improving stateless Ethereum support and reducing proof sizes. (EIP-3102)" ;
     skos:prefLabel "Binary Trie Structure" .
 
+ex:Bitmaps a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7939.md> ;
+    skos:definition "Not specified (EIP-7939)" ;
+    skos:prefLabel "Bitmaps" .
+
 ex:Bitwise%20Shifting%20Instructions a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-145.md> ;
     skos:definition "Adds efficient bitwise shift operations: SHL (shift left), SHR (logical shift right), and SAR (arithmetic shift right), improving processing efficiency by lowering gas costs compared to arithmetic-based shifting. (EIP-145)" ;
@@ -211,6 +216,11 @@ ex:Block-Level%20Warming a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7863.md> ;
     skos:definition "Addresses and storage keys remain \"warm\" throughout an entire block’s execution, reducing redundant cold access costs for frequently accessed storage slots. (EIP-7863)" ;
     skos:prefLabel "Block-Level Warming" .
+
+ex:Block_Access_List a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7928.md> ;
+    skos:definition "A list of all addresses and storage keys accessed during a block, along with their post-execution values for writes. (EIP-7928)" ;
+    skos:prefLabel "Block_Access_List" .
 
 ex:Blockchain%20Storage%20Rent%20Payment a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1418.md> ;
@@ -277,10 +287,65 @@ ex:Bw6-761%20Curve%20Operations a skos:Concept ;
     skos:definition "Introduces precompiles for performing elliptic curve operations on the BW6-761 curve, enabling efficient verification of zkSNARK proofs. (EIP-3026)" ;
     skos:prefLabel "Bw6-761 Curve Operations" .
 
+ex:Byte%20String%20Comparisons a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7939.md> ;
+    skos:definition "Not specified (EIP-7939)" ;
+    skos:prefLabel "Byte String Comparisons" .
+
 ex:Byzantium%20Hard%20Fork a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-609.md> ;
     skos:definition "Specifies the Byzantium hard fork, part of the Metropolis upgrade, introducing features like the REVERT opcode, elliptic curve precompiles, and transaction status codes. (EIP-609)" ;
     skos:prefLabel "Byzantium Hard Fork" .
+
+ex:C001 a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7937.md> ;
+    skos:definition "64-bit arithmetic operation (EIP-7937)" ;
+    skos:prefLabel "C001" .
+
+ex:C00B a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7937.md> ;
+    skos:definition "End of multibyte arithmetic operation (EIP-7937)" ;
+    skos:prefLabel "C00B" .
+
+ex:C010 a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7937.md> ;
+    skos:definition "Multibyte comparison operation (EIP-7937)" ;
+    skos:prefLabel "C010" .
+
+ex:C015 a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7937.md> ;
+    skos:definition "End of multibyte comparison operation (EIP-7937)" ;
+    skos:prefLabel "C015" .
+
+ex:C016 a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7937.md> ;
+    skos:definition "Bitwise shift left by a multiple of 8 bits (EIP-7937)" ;
+    skos:prefLabel "C016" .
+
+ex:C019 a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7937.md> ;
+    skos:definition "Bitwise right shift by a multiple of 8 bits (EIP-7937)" ;
+    skos:prefLabel "C019" .
+
+ex:C056 a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7937.md> ;
+    skos:definition "Legacy flow control opcode (EOFv0) (EIP-7937)" ;
+    skos:prefLabel "C056" .
+
+ex:C057 a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7937.md> ;
+    skos:definition "Legacy flow control opcode (EOFv1) (EIP-7937)" ;
+    skos:prefLabel "C057" .
+
+ex:C0E1 a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7937.md> ;
+    skos:definition "EOFv1 flow control opcode (EIP-7937)" ;
+    skos:prefLabel "C0E1" .
+
+ex:C0E2 a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7937.md> ;
+    skos:definition "EOFv1 flow control opcode (EIP-7937)" ;
+    skos:prefLabel "C0E2" .
 
 ex:Calc_Excess_Blob_Gas%28%29 a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7918.md> ;
@@ -295,6 +360,11 @@ ex:Calldata a skos:Concept ;
 ex:Calldepth a skos:Concept ;
     skos:definition "A proposed opcode to return the remaining available call stack depth during contract execution, introduced in (EIP-3 EIP-3)." ;
     skos:prefLabel "Calldepth" .
+
+ex:Cbrt a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7939.md> ;
+    skos:definition "Not specified (EIP-7939)" ;
+    skos:prefLabel "Cbrt" .
 
 ex:Cease%20Serving%20History%20Before%20Pos a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7639.md> ;
@@ -331,6 +401,11 @@ ex:Clique%20Proof-Of-Authority%20Consensus%20Protocol a skos:Concept ;
     skos:definition "Proposes a proof-of-authority consensus protocol designed for Ethereum testnets to address issues in low-hashrate PoW networks. (EIP-225)" ;
     skos:prefLabel "Clique Proof-Of-Authority Consensus Protocol" .
 
+ex:Clz a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7939.md> ;
+    skos:definition "Opcode to count the number of leading zero bits in a 256-bit word (EIP-7939)" ;
+    skos:prefLabel "Clz" .
+
 ex:Codecopy a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7921.md> ;
     skos:definition "Data spans used to invalidate subsequent JUMPDEST checks  (EIP-7921)" ;
@@ -360,6 +435,21 @@ ex:Completed%20Transaction%20Subscriptions%20And%20Filters a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-758.md> ;
     skos:definition "Proposes subscriptions and filters for completed transactions, allowing external callers to be notified of completed transactions and retrieve function return data when transactions are mined. (EIP-758)" ;
     skos:prefLabel "Completed Transaction Subscriptions And Filters" .
+
+ex:Computed_Balance_Diffs a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7928.md> ;
+    skos:definition "A dictionary tracking every address with a balance change in the block. (EIP-7928)" ;
+    skos:prefLabel "Computed_Balance_Diffs" .
+
+ex:Computed_Code_Changes a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7928.md> ;
+    skos:definition "A dictionary recording pre-transaction nonce values for deployed contracts in the block. (EIP-7928)" ;
+    skos:prefLabel "Computed_Code_Changes" .
+
+ex:Computed_Nonce_Diffs a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7928.md> ;
+    skos:definition "A structure recording pre-transaction nonce values for all deployer accounts and deployed contracts in the block. (EIP-7928)" ;
+    skos:prefLabel "Computed_Nonce_Diffs" .
 
 ex:Configurable%20On-Chain%20Issuance a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1015.md> ;
@@ -410,6 +500,11 @@ ex:Controlled%20Gas%20Limit%20Increase%20Strategy a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7783.md> ;
     skos:definition "Introduces a controlled gas limit increase mechanism, gradually raising the gas limit by a fixed rate to scale network capacity predictably. (EIP-7783)" ;
     skos:prefLabel "Controlled Gas Limit Increase Strategy" .
+
+ex:Core%20Devs a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7940.md> ;
+    skos:definition "Not explicitly defined, but refers to the group of developers responsible for maintaining the Ethereum network. (EIP-7940)" ;
+    skos:prefLabel "Core Devs" .
 
 ex:Crc-32 a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7910.md> ;
@@ -601,6 +696,11 @@ ex:Eips%20Eligible%20For%20Inclusion a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2378.md> ;
     skos:definition "Tracks the status of EIPs that have been vetted by the core developers and marked as eligible for inclusion in future forks or upgrades. (EIP-2378)" ;
     skos:prefLabel "Eips Eligible For Inclusion" .
+
+ex:El%20Devs a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7935.md> ;
+    skos:definition "Execution Layer developers (EIP-7935)" ;
+    skos:prefLabel "El Devs" .
 
 ex:Elected%20Block%20Proposer%20Not%20Slashed a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6988.md> ;
@@ -897,6 +997,11 @@ ex:Expirable%20Transaction a skos:Concept ;
     skos:definition "Adds a transaction type with an expiration defined by a block number, allowing transactions to automatically expire after a certain block height. (EIP-5081)" ;
     skos:prefLabel "Expirable Transaction" .
 
+ex:Exponential%20Growth%20Model a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7938.md> ;
+    skos:definition "An exponential schedule where gas limit increases by a factor of 10 every approximately 2 years. (EIP-7938)" ;
+    skos:prefLabel "Exponential Growth Model" .
+
 ex:Extbalance a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1803.md> ;
     skos:definition "Renames the BALANCE opcode to EXTBALANCE for clarity, aligning with other EXTCODE opcodes. (EIP-1803)" ;
@@ -977,6 +1082,11 @@ ex:From a skos:Concept ;
     skos:definition "Commitments to properties computed from the original RLP representation. (EIP-7919)" ;
     skos:prefLabel "From" .
 
+ex:Fusaka a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7935.md> ;
+    skos:definition "A proposed Ethereum upgrade (EIP-7935)" ;
+    skos:prefLabel "Fusaka" .
+
 ex:Gas%20Cost%20Changes%20For%20Io-Heavy%20Operations a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-150.md> ;
     skos:definition "Adjusts the gas costs for several operations (e.g., EXTCODESIZE, BALANCE, SLOAD, etc.) to address inefficiencies and DoS vulnerabilities due to underpricing of IO-heavy operations. (EIP-150)" ;
@@ -992,10 +1102,20 @@ ex:Gas%20Limit%20Cap a skos:Concept ;
     skos:definition "Sets an in-protocol cap for the gas limit at 30,000,000, preventing block proposers from increasing the gas limit beyond this threshold. (EIP-3756)" ;
     skos:prefLabel "Gas Limit Cap" .
 
+ex:Gas%20Limit%20Policy a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7938.md> ;
+    skos:definition "User-configurable settings that override the default automatic increase in gas limits set by clients. (EIP-7938)" ;
+    skos:prefLabel "Gas Limit Policy" .
+
 ex:Gas%20Refunds%20On%20Reverts a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3978.md> ;
     skos:definition "Proposes refunds for reverted SSTORE, CREATE, SELFDESTRUCT, and LOGX operations, only charging for access costs but not modification costs. (EIP-3978)" ;
     skos:prefLabel "Gas Refunds On Reverts" .
+
+ex:Gas%20Voting%20Mechanism a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7938.md> ;
+    skos:definition "A system used to determine the current gas price, which is now being enhanced with an additional feature. (EIP-7938)" ;
+    skos:prefLabel "Gas Voting Mechanism" .
 
 ex:General%20Purpose%20Execution%20Layer%20Requests a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7685.md> ;
@@ -1006,6 +1126,11 @@ ex:Generalized%20Account%20Versioning%20Scheme a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1702.md> ;
     skos:definition "Introduces a scheme for account versioning, allowing multiple versions of virtual machines to coexist, facilitating upgrades to Ethereum’s execution environments. (EIP-1702)" ;
     skos:prefLabel "Generalized Account Versioning Scheme" .
+
+<http://www.consensys.net/ethereum-skos#Generalized%20Calldata%20Compression/Decompression> a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7939.md> ;
+    skos:definition "Not specified (EIP-7939)" ;
+    skos:prefLabel "Generalized Calldata Compression/Decompression" .
 
 ex:Generation%20Length a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7922.md> ;
@@ -1213,6 +1338,16 @@ ex:Jumpf%20Instruction a skos:Concept ;
     skos:definition "Introduces the JUMPF opcode for EOF (EVM Object Format) contracts, enabling efficient tail-call optimizations without adding a return stack frame. (EIP-6206)" ;
     skos:prefLabel "Jumpf Instruction" .
 
+ex:L1%20Execution a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7935.md> ;
+    skos:definition "First-level execution of smart contracts on the Ethereum network (EIP-7935)" ;
+    skos:prefLabel "L1 Execution" .
+
+ex:Lambertw0Wad a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7939.md> ;
+    skos:definition "Not specified (EIP-7939)" ;
+    skos:prefLabel "Lambertw0Wad" .
+
 ex:Leaf-Level%20State%20Expiry%20In%20Verkle%20Trees a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7736.md> ;
     skos:definition "Introduces state expiry at the leaf level in Verkle trees by adding an \"update epoch\" to extension nodes, allowing inactive data to be expired and reactivated via new transactions. (EIP-7736)" ;
@@ -1253,6 +1388,11 @@ ex:Linter%20Scope a skos:Concept ;
     skos:definition "Suggests a policy where EIP lint errors on unchanged lines should not block pull requests, improving the contribution process. (EIP-7199)" ;
     skos:prefLabel "Linter Scope" .
 
+ex:Lnwad a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7939.md> ;
+    skos:definition "Not specified (EIP-7939)" ;
+    skos:prefLabel "Lnwad" .
+
 ex:Log1 a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7889.md> ;
     skos:definition "A special type of log that can be used by reverted transactions.  (EIP-7889)" ;
@@ -1287,6 +1427,11 @@ ex:Max_Initcode_Size a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7830.md> ;
     skos:definition "The maximum size for EOF contract initialization code is set to 128 KiB, reflecting the updated MAX_CODE_SIZE. (EIP-7830)" ;
     skos:prefLabel "Max_Initcode_Size" .
+
+ex:Max_Rlp_Block_Size a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7934.md> ;
+    skos:definition "The maximum allowed total RLP-encoded size of any produced block, which is set at 10 MiB. (EIP-7934)" ;
+    skos:prefLabel "Max_Rlp_Block_Size" .
 
 ex:Mcopy a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-5656.md> ;
@@ -1534,6 +1679,16 @@ ex:Poseidon%20Hash%20Function%20Precompile a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-5988.md> ;
     skos:definition "Adds a precompiled contract for the Poseidon cryptographic hash function, enabling efficient interoperability with ZK-rollups and zero-knowledge proofs on Ethereum. (EIP-5988)" ;
     skos:prefLabel "Poseidon Hash Function Precompile" .
+
+ex:Post%20Quantum%20Signature%20Schemes a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7939.md> ;
+    skos:definition "Not specified (EIP-7939)" ;
+    skos:prefLabel "Post Quantum Signature Schemes" .
+
+ex:Powwad a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7939.md> ;
+    skos:definition "Not specified (EIP-7939)" ;
+    skos:prefLabel "Powwad" .
 
 ex:Pre-State%20Root a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7886.md> ;
@@ -1820,6 +1975,11 @@ ex:Rjumpsub%20And%20Returnsub a skos:Concept ;
     skos:definition "Introduces two opcodes, RJUMPSUB and RETURNSUB, to implement simple subroutines in the EVM, allowing static and efficient control flow. (EIP-2315)" ;
     skos:prefLabel "Rjumpsub And Returnsub" .
 
+ex:Roadmap%20Setting a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7940.md> ;
+    skos:definition "The focus on high-level roadmap (\"why we do things\") rather than individual proposals (\"what we do\").  (EIP-7940)" ;
+    skos:prefLabel "Roadmap Setting" .
+
 ex:Rpc.Discover a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1901.md> ;
     skos:definition "Adds OpenRPC service discovery to Ethereum’s JSON-RPC services, enabling machine-readable API specifications. (EIP-1901)" ;
@@ -1910,6 +2070,11 @@ ex:Sha-256-512 a skos:Concept ;
     skos:definition "Modified SHA-256 algorithm that skips preprocessing, limited to 512-bit inputs (EIP-7797)." ;
     skos:prefLabel "Sha-256-512" .
 
+ex:Shah a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7940.md> ;
+    skos:definition "A person elected to act as a protector for the core devs and the Ethereum protocol. (EIP-7940)" ;
+    skos:prefLabel "Shah" .
+
 ex:Shard%20Blob%20Transactions a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4844.md> ;
     skos:definition "Introduces a new transaction type for blobs of data that improve Ethereum’s data availability, a key step toward full sharding, scaling Ethereum while maintaining backward compatibility. (EIP-4844)" ;
@@ -1974,6 +2139,11 @@ ex:Spurious%20Dragon%20Hard%20Fork a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-607.md> ;
     skos:definition "Specifies changes for the Spurious Dragon hard fork, including replay attack protection, state trie clearing, and contract code size limits. (EIP-607)" ;
     skos:prefLabel "Spurious Dragon Hard Fork" .
+
+ex:Sqrt a skos:Concept ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7939.md> ;
+    skos:definition "Not specified (EIP-7939)" ;
+    skos:prefLabel "Sqrt" .
 
 ex:Sreturn a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7877.md> ;

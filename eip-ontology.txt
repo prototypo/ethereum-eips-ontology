@@ -981,3 +981,78 @@ MSIZE: Returns the current size of the memory space (EIP-7923)
 
 eth/69: over DevP2P protocol (EIP-7927)
 
+
+block_access_list: A list of all addresses and storage keys accessed during a block, along with their post-execution values for writes. (EIP-7928)
+
+computed_balance_diffs: A dictionary tracking every address with a balance change in the block. (EIP-7928)
+
+computed_code_changes: A dictionary recording pre-transaction nonce values for deployed contracts in the block. (EIP-7928)
+
+computed_nonce_diffs: A structure recording pre-transaction nonce values for all deployer accounts and deployed contracts in the block. (EIP-7928)
+
+
+MAX_RLP_BLOCK_SIZE: The maximum allowed total RLP-encoded size of any produced block, which is set at 10 MiB. (EIP-7934)
+
+
+Fusaka: A proposed Ethereum upgrade (EIP-7935)
+
+EL devs: Execution Layer developers (EIP-7935)
+
+L1 execution: First-level execution of smart contracts on the Ethereum network (EIP-7935)
+
+
+C001: 64-bit arithmetic operation (EIP-7937)
+
+C00B: End of multibyte arithmetic operation (EIP-7937)
+
+C010: Multibyte comparison operation (EIP-7937)
+
+C015: End of multibyte comparison operation (EIP-7937)
+
+C016: Bitwise shift left by a multiple of 8 bits (EIP-7937)
+
+C019: Bitwise right shift by a multiple of 8 bits (EIP-7937)
+
+C056: Legacy flow control opcode (EOFv0) (EIP-7937)
+
+C057: Legacy flow control opcode (EOFv1) (EIP-7937)
+
+C0E1: EOFv1 flow control opcode (EIP-7937)
+
+C0E2: EOFv1 flow control opcode (EIP-7937)
+
+
+exponential growth model: An exponential schedule where gas limit increases by a factor of 10 every approximately 2 years. (EIP-7938)
+
+gas voting mechanism: A system used to determine the current gas price, which is now being enhanced with an additional feature. (EIP-7938)
+
+gas limit policy: User-configurable settings that override the default automatic increase in gas limits set by clients. (EIP-7938)
+
+
+CLZ: Opcode to count the number of leading zero bits in a 256-bit word (EIP-7939)
+
+lnWad: Not specified (EIP-7939)
+
+powWad: Not specified (EIP-7939)
+
+lambertW0Wad: Not specified (EIP-7939)
+
+sqrt: Not specified (EIP-7939)
+
+cbrt: Not specified (EIP-7939)
+
+byte string comparisons: Not specified (EIP-7939)
+
+generalized calldata compression/decompression: Not specified (EIP-7939)
+
+bitmaps: Not specified (EIP-7939)
+
+post quantum signature schemes: Not specified (EIP-7939)
+
+
+Shah: A person elected to act as a protector for the core devs and the Ethereum protocol. (EIP-7940)
+
+Roadmap Setting: The focus on high-level roadmap ("why we do things") rather than individual proposals ("what we do").  (EIP-7940)
+
+Core Devs: Not explicitly defined, but refers to the group of developers responsible for maintaining the Ethereum network. (EIP-7940)
+
