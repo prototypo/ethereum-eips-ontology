@@ -1,0 +1,5 @@
+{
+    "Datetime": "2021-08-12 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 070",
+    "Summary": "Call 70 notes\n=============\n\n[[\n## Summary\n]]\n\nThe team discussed the upcoming Merge testnets and mainnet. The goal is to have devnet running by end of week and mainnet in early August.\n\nSeveral issues were identified, including problems with beacon chain block proposers not being able to propose blocks due to a lack of gas for the proposal message. This issue will be addressed before mainnet launch.\n\nThe team also discussed the status of the Merge testnets, which are currently experiencing some difficulties. The devnet is expected to go live by end of week and mainnet in early August.\n\nSeveral tasks were assigned to different members of the team, including resolving issues with beacon chain block proposers not being able to propose blocks due to a lack of gas for the proposal message.\n\nThe Merge testnets are currently experiencing some difficulties. The devnet is expected to go live by end of week and mainnet in early August."
+}

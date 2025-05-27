@@ -1,0 +1,4 @@
+{
+    "Meeting": "Consensus Layer Call 013",
+    "Summary": "The CL and EL team meetings are summarized in files using Markdown format. \n\n[[\n## Summary\n]]\n\n\nStatus of Ethereum 2.0 Phase 1 is that it has been deployed on devnet for testing purposes. The mainnet deployment timeline remains uncertain due to the ongoing issues with the Beacon Chain's block proposer rotation.\n\nThe CL team made progress on implementing the Casper FFG (Friendly Finality Gadget) consensus algorithm, which will be used in Phase 2 of Ethereum 2.0. They also worked on fixing bugs and improving performance.\n\n\nThere are no specific deadlines mentioned for this meeting summary but it is expected that mainnet deployment will happen once devnet testing issues have been resolved.\n\nThe CL team plans to continue working on implementing the Casper FFG consensus algorithm in Phase 2 of Ethereum 2.0, with a focus on fixing bugs and improving performance."
+}

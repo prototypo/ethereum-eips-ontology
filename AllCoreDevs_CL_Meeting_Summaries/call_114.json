@@ -1,0 +1,5 @@
+{
+    "Datetime": "2023-07-27 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 114",
+    "Summary": "The CL team is working on implementing the Bellatrix upgrade. The mainnet merge timeline has been updated and it's expected that the merge will happen in August 2023.\n\nThere are still some issues to be resolved before the merge can occur, including fixing bugs related to the new consensus engine and ensuring that all nodes are compatible with the upgraded protocol.\n\nThe team is also working on implementing a mechanism for handling network partitions during the transition period. This involves developing a solution for detecting when a partition occurs and automatically switching to a different leader in case of such an event.\n\nA deadline has been set for completing these tasks, which will be followed by testing and validation before the mainnet merge can take place."
+}

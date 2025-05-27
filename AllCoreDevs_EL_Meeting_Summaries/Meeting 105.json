@@ -1,0 +1,5 @@
+{
+    "Datetime": "2020-02-05 14:00:00+00:00",
+    "Meeting": "Execution Layer Meeting 105",
+    "Summary": "The CL team discussed the upcoming merge and its impact on the protocol. The EL team reported progress on implementing EIP-4844 (Proto-Danksharding) and addressed some of the outstanding issues.\n\nThe mainnet is expected to be upgraded with Proto-Danksharding in Q2, pending further testing and validation by both teams. Devnets are being used for thorough testing before deployment on mainnet.\n\nSeveral tasks were assigned to team members, including reviewing code changes, updating documentation, and conducting performance tests. The CL team will continue working on the merge protocol implementation.\n\nThe next meeting is scheduled in two weeks' time, with a focus on finalizing the Proto-Danksharding upgrade for mainnet deployment."
+}

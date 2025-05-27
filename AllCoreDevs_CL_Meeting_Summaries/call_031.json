@@ -1,0 +1,4 @@
+{
+    "Meeting": "Consensus Layer Call 031",
+    "Summary": "The CL team is working on implementing the Bellatrix upgrade. The EL team has been testing and validating the implementation of the Merge protocol.\n\nThe mainnet merge timeline remains unchanged: it's expected to happen in September 2022. \n\nThe teams are still waiting for the finalization of the deposit contract, which will allow users to start staking their ETH on the Beacon Chain before the merge happens.\n\nThe EL team is also working on implementing a new version of the execution engine that can handle the Merge protocol's requirements."
+}

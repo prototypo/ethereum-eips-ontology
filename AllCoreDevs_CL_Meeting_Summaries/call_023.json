@@ -1,0 +1,5 @@
+{
+    "Datetime": "2019-08-15 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 023",
+    "Summary": "The CL team is working on implementing the Bellatrix upgrade. The EL team has made progress in testing and fixing issues related to the merge.\n\nThe mainnet merge timeline remains uncertain due to ongoing technical challenges. A new devnet will be launched soon for further testing of the merged protocol.\n\nSeveral tasks are pending, including finalizing the CL's beacon chain implementation and completing the execution layer's transition from PoW to PoS."
+}

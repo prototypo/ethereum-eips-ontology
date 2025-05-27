@@ -1,0 +1,5 @@
+{
+    "Datetime": "2020-05-14 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 039",
+    "Summary": "The CL team is working on implementing the Bellatrix upgrade. The EL team has been testing and validating the implementation of the EIP-4844 sharding proposal.\n\nThe mainnet merge timeline remains unchanged for now. However, there are ongoing discussions about potential changes to the schedule due to various factors such as testnets performance and validator readiness.\n\nThe CL team is also working on implementing a new fork choice algorithm called \"LMD\" (Low-Maintenance Difficulty adjustment). The EL team has been testing this implementation in devnet environments.\n\nThere were no major updates regarding mainnet or devnet status."
+}

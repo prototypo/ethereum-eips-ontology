@@ -1,0 +1,5 @@
+{
+    "Datetime": "2024-11-28 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 146",
+    "Summary": "The team discussed the status of the upcoming Shanghai upgrade. The CL and EL teams are on track to meet their deadlines, with the CL having completed its tasks ahead of schedule.\n\nThe mainnet is expected to be upgraded in April 2023, pending a successful devnet test run scheduled for March 28-29. The team will review the results from this test before proceeding with the upgrade.\n\nSeveral issues were discussed and addressed during the meeting, including concerns about gas costs and potential performance impacts on the network."
+}

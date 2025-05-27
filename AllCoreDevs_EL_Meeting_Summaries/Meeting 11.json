@@ -1,0 +1,4 @@
+{
+    "Meeting": "Execution Layer Meeting 11",
+    "Summary": "CL and EL teams are working together on several projects. The CL team is focusing on improving performance by reducing latency in block propagation and increasing throughput.\n\nThe EL team has made progress on implementing the EVM2 upgrade, which will improve execution efficiency and reduce gas costs. They have also started testing the new VM with a focus on edge cases.\n\nThere are no major updates or changes to mainnet or devnet status at this time. The teams continue to work towards their respective goals without any significant roadblocks.\n\nThe next meeting is scheduled for [insert date]."
+}

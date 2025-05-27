@@ -1,0 +1,5 @@
+{
+    "Datetime": "2021-01-22 14:00:00+00:00",
+    "Meeting": "Execution Layer Meeting 104",
+    "Summary": "call_103.md\n-------------\n\n## Summary\n\nWe discussed the upcoming Shanghai upgrade and its impact on CL. The team is working on implementing EIP-3651 (CLN version bump) and EIP-3860 (difficulty bomb delay). We also reviewed the status of devnet, which has been experiencing issues with block production.\n\nThe main focus for this meeting was to discuss the implementation details of these upgrades and ensure a smooth transition. The team is working on resolving the devnet issues as soon as possible."
+}

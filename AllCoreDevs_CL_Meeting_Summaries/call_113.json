@@ -1,0 +1,5 @@
+{
+    "Datetime": "2023-07-13 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 113",
+    "Summary": "Call 113\n--------\n\nThe team discussed the upcoming merge of CL and EL. The mainnet is expected to be available in mid-October on devnet, pending successful testing.\n\nSeveral issues were identified during testing: \n* A problem was found with the `get_block_by_hash` function.\n* Another issue arose from a discrepancy between the block number and timestamp.\n\nThe team agreed that these problems need to be resolved before mainnet deployment."
+}

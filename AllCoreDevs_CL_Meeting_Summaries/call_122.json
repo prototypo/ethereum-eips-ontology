@@ -1,0 +1,5 @@
+{
+    "Datetime": "2023-11-16 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 122",
+    "Summary": "[[\n## Summary\nThe CL team discussed the upcoming merge and its impact on the protocol. The main focus was on finalizing the implementation of EIP-4844 (Base Fee) in the Consensus Layer.\n\nSeveral tasks were assigned to team members, including reviewing and testing the changes made for Base Fee support. It is expected that these changes will be merged into the CL codebase soon.\n\nThe devnet status remains unchanged from last week's meeting; it continues to run with some minor issues related to gas limits. The mainnet merge timeline was discussed briefly but no concrete decisions were made regarding a specific date or timeframe for the merge.\n\nThere are currently two open PRs (pull requests) in the CL codebase that need review and testing before they can be merged into the protocol. \n\nThe team agreed on reviewing these changes as soon as possible to ensure timely completion of EIP-4844 implementation.\n]]"
+}

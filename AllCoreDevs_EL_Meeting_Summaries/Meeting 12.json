@@ -1,0 +1,4 @@
+{
+    "Meeting": "Execution Layer Meeting 12",
+    "Summary": "CL and EL teams are working together on implementing the new consensus algorithm. The mainnet is currently running with the old algorithm, but it's expected that the transition will happen soon.\n\nThe CL team has made progress in implementing the new algorithm, including completing some of the necessary data structures. However, there are still issues to be resolved regarding the interaction between the CL and EL layers.\n\nA key task for this week is to finalize the implementation of the new consensus algorithm on devnet. The goal is to have a working prototype by the end of the week. \n\nThe mainnet transition deadline has been pushed back due to these ongoing development efforts, but no specific date was mentioned in the summary."
+}

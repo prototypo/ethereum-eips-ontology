@@ -1,0 +1,5 @@
+{
+    "Datetime": "2021-07-01 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 067",
+    "Summary": "The team discussed the status of the Bellatrix upgrade. The CL and EL teams are on track to meet their deadlines. The merge is expected to happen in mid-September 2022.\n\nThe mainnet testnets have been upgraded, but there were some issues with gas limits that need to be addressed before the actual merge can occur. Devnet has also been updated for testing purposes.\n\nSome tasks accomplished include updating the CL and EL codebases, as well as performing thorough testing on both layers. The teams are working together closely to ensure a smooth transition during the upgrade process.\n\nThe next steps involve finalizing any remaining issues with gas limits and completing further testing before the merge can take place."
+}

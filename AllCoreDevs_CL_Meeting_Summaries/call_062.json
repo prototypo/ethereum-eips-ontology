@@ -1,0 +1,5 @@
+{
+    "Datetime": "2021-05-06 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 062",
+    "Summary": "The CL and EL team meetings are summarized in files using the Markdown format.\nHere is the summary of the meeting:\n\nCL:\n- The Merge testnet has been activated on devnet. \n- There were some issues reported by validators but they have since been resolved.\n\nEL:\n- The execution layer's mainnet merge readiness check was completed and it passed all tests, so it will be merged to mainnet.\n- Some minor bugs in the CL/EL interface are being fixed before the Merge on mainnet."
+}

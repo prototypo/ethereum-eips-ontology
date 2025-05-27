@@ -1,0 +1,4 @@
+{
+    "Meeting": "Execution Layer Meeting 103",
+    "Summary": "All Core Devs Meeting 103 Notes\n=============================\n\n### Call 104\n\n\n## Summary\n\nThe team discussed the status of the upcoming Shanghai upgrade. The mainnet deployment is expected to happen in April and devnet will be deployed soon after. There are still some open issues with the CL, but they should not impact the overall timeline.\n\nThe team also reviewed the current state of the Execution Layer (EL) work on EIP-4844, which aims to improve scalability by reducing gas costs for certain operations. The EL is making good progress and a testnet deployment will happen soon.\n\nAdditionally, there was discussion about the need for better documentation and testing infrastructure in both CL and EL. This includes creating more comprehensive guides for developers and improving automated testing tools.\n\n\n### Call 104"
+}

@@ -1,0 +1,5 @@
+{
+    "Datetime": "2024-06-27 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 136",
+    "Summary": "The team discussed the status of the Bellatrix upgrade. The CL is on track to meet its deadline and has completed most tasks required for mainnet deployment.\n\nThe EL reported that they are making progress with their implementation, but some issues remain open. A discussion was held regarding the potential impact of these issues on the overall timeline.\n\nA review of the devnet status showed no major concerns at this time. The team agreed to continue monitoring and addressing any issues as needed.\n\nNo specific deadlines or deliverables were mentioned in relation to other projects besides Bellatrix, but it is expected that they will be addressed soon."
+}

@@ -1,0 +1,5 @@
+{
+    "Datetime": "2024-08-22 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 140",
+    "Summary": "The team discussed the upcoming merge of CL and EL. The mainnet testnets are expected to be available soon. A new version of the consensus layer client is being developed for testing on devnet.\n\nA deadline was set for completing the implementation of the \"merge\" feature, which will allow the two layers to operate together seamlessly. This feature is crucial for enabling a smooth transition between CL and EL.\n\nThe team also discussed ongoing issues with gas costs in certain scenarios. A plan has been proposed to address this issue by adjusting the way gas costs are calculated.\n\nA new version of the execution layer client was released, which includes several bug fixes and performance improvements. The mainnet testnets will be used for testing these changes before they go live on mainnet."
+}

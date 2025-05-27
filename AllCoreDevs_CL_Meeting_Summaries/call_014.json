@@ -1,0 +1,4 @@
+{
+    "Meeting": "Consensus Layer Call 014",
+    "Summary": "The CL team is working on implementing the Bellatrix upgrade. The EL team has made progress in testing and reviewing changes related to EIP-4846.\n\nThe mainnet merge timeline remains uncertain due to ongoing discussions about the optimal timing for the transition from Proof of Work (PoW) to Proof of Stake (PoS). A decision will be made soon, but no specific date is set yet. \n\nIn terms of deliverables and tasks accomplished, both teams have been actively working on their respective components. The CL team has completed some key milestones related to Bellatrix implementation.\n\nThe devnet for the merge testnets was activated recently, allowing developers to start testing the transition from PoW to PoS in a controlled environment."
+}

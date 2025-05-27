@@ -1,0 +1,5 @@
+{
+    "Datetime": "2023-11-02 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 121",
+    "Summary": "The CL team is still working on implementing the Bellatrix upgrade. The mainnet merge timeline remains uncertain due to ongoing testing and potential delays in the execution layer's (EL) readiness.\n\nThere are no new updates regarding the status of devnets or testnets, but it was mentioned that some teams might be ready for a final check before moving forward with the next steps.\n\nThe team is still waiting on EL's completion of their tasks. The CL will continue to work on implementing Bellatrix and other necessary components once they receive confirmation from EL regarding their readiness.\n\nNo specific deadlines were discussed, but it was mentioned that mainnet merge might happen soon if everything goes as planned."
+}

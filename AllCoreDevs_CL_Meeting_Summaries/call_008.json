@@ -1,0 +1,5 @@
+{
+    "Datetime": "2018-12-13 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 008",
+    "Summary": "The CL team is working on implementing the Bellatrix upgrade. The EL team has been testing and validating the implementation of the Altair upgrade.\n\nThe mainnet merge timeline remains unchanged: the target date for the merge is December 1st or earlier if everything goes smoothly, with the goal to have a stable release by mid-December. \n\nThe CL team will continue working on implementing Bellatrix in devnet this week and next. The EL team has been testing the implementation of Altair in devnet.\n\nThere are no major issues reported for either upgrade at this time."
+}

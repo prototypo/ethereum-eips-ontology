@@ -1,0 +1,5 @@
+{
+    "Datetime": "2020-06-25 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 042",
+    "Summary": "The CL team is working on implementing the LMD-GHOST fork choice rule. The EL team has been testing and validating the implementation of the EIP-4844 sharding proposal.\n\nThe mainnet merge timeline remains uncertain due to ongoing discussions about the difficulty bomb delay. A decision on this topic will be made soon, with a possible update in the next week or two.\n\nDevnet is currently running with the LMD-GHOST fork choice rule and EIP-4844 implementation. The EL team plans to continue testing and validating these features before they are deployed to mainnet.\n\nThe CL team has been working on implementing the Bellman protocol, which will be used for beacon chain block proposers. This work is progressing well, with a possible completion in the next few weeks.\n\nA deadline of mid-February was set for completing all necessary changes and testing before deploying them to devnet."
+}

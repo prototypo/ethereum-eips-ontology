@@ -1,0 +1,5 @@
+{
+    "Datetime": "2023-04-06 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 106",
+    "Summary": "The team discussed the status of the upcoming Berlin hardfork. The mainnet is expected to go live on April 15th and devnet has been running smoothly since March 25th.\n\nSeveral issues were addressed, including a fix for the \"missing\" gas optimization bug in the EVMC (Ethereum Virtual Machine Client) library. This change will be included in the Berlin hardfork.\n\nThe team also discussed the status of the CL/EL merge and agreed to continue working on it with an expected completion date by Q2 2021.\n\nAdditionally, a new task was assigned to investigate and implement a more efficient way for the Beacon Chain to communicate with the Execution Layer."
+}

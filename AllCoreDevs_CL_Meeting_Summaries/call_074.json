@@ -1,0 +1,5 @@
+{
+    "Datetime": "2021-10-21 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 074",
+    "Summary": "PoS Implementers\u2019 Call 74 - 2021-10-21\n=====================================\n\n## Summary\nThe CL team is working on implementing the Bellatrix upgrade. The EL team has been testing and validating the implementation of EIP-4844, which includes the Altayer proposal for a new type of transaction called \"blob transactions\". There are no major issues reported with either project.\n\nThe mainnet merge timeline remains unchanged: the target date for the merge is still Q1 2022. The CL team has made significant progress on implementing the Bellatrix upgrade and expects to complete it by mid-November, in time for a devnet test run before the actual mainnet deployment.\n\nIn terms of deliverables, the EL team aims to finalize EIP-4844 implementation this week, while the CL team is working towards completing the Bellatrix upgrade. The teams are also coordinating on testing and validation efforts to ensure smooth integration between both layers.\n\nThe next call will be held in two weeks' time for further updates on these projects."
+}

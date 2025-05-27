@@ -1,0 +1,5 @@
+{
+    "Datetime": "2020-12-11 14:00:00+00:00",
+    "Meeting": "Execution Layer Meeting 102",
+    "Summary": "All Core Devs Meeting 102\n=========================\n\ncall_101.md \n-------------\n\n## Summary\n\nWe discussed the status of the Merge and its timeline. The current plan is to do a devnet test on April 1st and then move forward with mainnet testing if everything goes smoothly.\n\nThe team also talked about the need for more documentation around the Merge process, including how it will be tested and what kind of metrics should be tracked during the transition from PoW to PoS. \n\nIt was agreed that we would have a follow-up meeting in two weeks to discuss progress on these tasks and any other issues that may arise.\n\nThe team also discussed some minor changes needed for the Merge, including updating the protocol specs and making sure all clients are compatible with each other."
+}

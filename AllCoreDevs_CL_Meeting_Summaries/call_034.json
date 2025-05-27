@@ -1,0 +1,4 @@
+{
+    "Meeting": "Consensus Layer Call 034",
+    "Summary": "The CL team is still working on fixing issues related to the fork choice algorithm. The EL team has made progress in implementing the EVM and is currently testing it.\n\nThe mainnet testnets are expected to be launched soon for both teams' implementations, but no specific date was mentioned. \n\nThe next meeting will focus more on discussing the merge process between CL and EL."
+}

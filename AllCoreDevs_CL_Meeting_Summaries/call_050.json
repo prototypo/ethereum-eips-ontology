@@ -1,0 +1,4 @@
+{
+    "Meeting": "Consensus Layer Call 050",
+    "Summary": "The CL and EL team meetings are summarized in files using the Markdown format.\nHere is the summary of the meeting:\n\nWe discussed the status of the Merge testnets. The devnet has been updated to include the new consensus engine, but there have been some issues with block production. We also talked about the mainnet merge timeline and agreed that we need more testing before moving forward.\n\nThe CL team made progress on implementing the Bellatrix upgrade for the Beacon Chain. They are currently working on fixing a few remaining bugs and will start testing soon.\n\nThere is still no clear plan for when to move from devnets to testnets, but it's expected to happen in the next week or two. The mainnet merge timeline remains uncertain due to ongoing issues with block production on devnets."
+}

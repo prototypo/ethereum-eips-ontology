@@ -1,0 +1,5 @@
+{
+    "Datetime": "2021-04-22 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 061",
+    "Summary": "The CL team is working on implementing the Bellatrix upgrade. The EL team has been testing and validating the merge functionality.\n\nThe mainnet merge timeline remains unchanged: it's expected to happen in mid-September 2022. Devnets are being used for testing, with two devnets currently running (Goerli and Sepolia). \n\nThe CL team is focusing on fixing bugs found during testing. The EL team has been working on implementing the \"merge\" functionality.\n\nNo new deadlines were mentioned."
+}

@@ -1,0 +1,4 @@
+{
+    "Meeting": "Execution Layer Meeting 10",
+    "Summary": "CL and EL team meetings were combined. The main topic was the status of the Shanghai upgrade on both devnet and mainnet.\n\nThe CL team is still working on implementing the proposer-duties-on-data (PDoD) feature, which will be used for the upcoming Capella hardfork. They are also reviewing the implementation of the new consensus engine.\n\nOn EL side, there were discussions about the status of the EVM upgrade and its readiness for mainnet deployment. The team is still working on fixing some issues related to gas costs and opcode usage.\n\nThe next meeting will be held in two weeks' time, with a focus on reviewing the progress made so far and discussing any remaining tasks before the Capella hardfork."
+}

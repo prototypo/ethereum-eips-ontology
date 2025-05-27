@@ -1,0 +1,4 @@
+{
+    "Meeting": "Consensus Layer Call 018",
+    "Summary": "The CL and EL team meetings are summarized in files using the Markdown format. \n\n[[\n## Summary\n]]\n\n\nStatus of mainnet merge is still pending due to issues related to \ndifficulty bomb delay and lack of consensus on finalizing it.\n\nCL team has made progress with implementing Bellatrix upgrade, but there's a need for more testing before deployment.\nEL team continues working on the execution layer implementation."
+}

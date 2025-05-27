@@ -1,0 +1,5 @@
+{
+    "Datetime": "2023-06-29 00:00:00",
+    "Meeting": "Consensus Layer Call 111",
+    "Summary": "The CL team is working on implementing the Bellatrix upgrade. The mainnet merge timeline remains unchanged and is still expected in June 2022.\n\nA new version of the Beacon Chain's genesis file has been created to support the upcoming merge. This includes changes such as setting the initial validators' balances, adjusting the difficulty bomb delay, and updating the network parameters for the post-merge environment.\n\nThe team also discussed the status of devnet testing, which is ongoing with some issues still being addressed. The main focus remains on ensuring a smooth transition to the new consensus mechanism after the merge.\n\nA deadline has been set for completing all necessary changes before the end of June 2022."
+}

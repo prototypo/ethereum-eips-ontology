@@ -1,0 +1,4 @@
+{
+    "Meeting": "Consensus Layer Call 038",
+    "Summary": "From now on, versions under V0.11 will be backwards compatible except for v0.11.0 which had a bug and was fixed quickly. This change aims to make versioning more meaningful in the future. \n\nNote: The provided text snippet does not contain any meeting summary starting with '[[' ## Summary ]]'."
+}

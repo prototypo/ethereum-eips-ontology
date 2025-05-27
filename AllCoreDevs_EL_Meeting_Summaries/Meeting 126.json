@@ -1,0 +1,5 @@
+{
+    "Datetime": "2021-11-12 14:00:00+00:00",
+    "Meeting": "Execution Layer Meeting 126",
+    "Summary": "[[\n## Summary\nThe CL team is working on implementing the Casper FFG protocol. The EL team has been testing and iterating on their implementation of EVM2.\n\nCasper FFG is progressing well, but there are still some issues to be resolved with regards to liveness guarantees. The team is aiming for a mainnet launch in Q4 this year.\n\nThe CL/EL interface is being worked on by the EL team, who have made good progress so far. However, they need more time and resources to complete it.\n\nThere was no update from the devnet status as the focus has shifted towards testing EVM2.\n]]"
+}

@@ -1,0 +1,5 @@
+{
+    "Datetime": "2024-05-30 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 134",
+    "Summary": "The team discussed the status of the upcoming Shanghai upgrade. The mainnet deployment is scheduled for June 8th and devnet has been deployed successfully. \n\nA new version of the consensus layer client (CL) was released, which includes bug fixes and performance improvements.\n\nThere are still some issues with the execution layer's (EL) implementation of EIP-4844 that need to be addressed before mainnet deployment can proceed.\n\nThe team is working on a plan for post-Shanghai upgrade testing."
+}

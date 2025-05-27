@@ -1,0 +1,7 @@
+{
+    "Links": {
+        "Eth222": "https://www.eventbrite.com/myevent?eid=90667602239"
+    },
+    "Meeting": "Consensus Layer Call 033",
+    "Summary": "The CL team is working on implementing the Bellatrix upgrade. The EL team has been testing and validating their implementation of the Merge protocol.\n\nThe mainnet merge timeline remains uncertain due to ongoing issues with the execution layer's (EL) testnets, specifically Goerli and Sepolia. These testnets are not yet ready for a successful merge. \n\nA new deadline is set for September 15th for EL team to resolve these issues before proceeding further in the Merge process.\n\nThe CL team will continue working on implementing Bellatrix while waiting for the EL team's progress."
+}

@@ -1,0 +1,4 @@
+{
+    "Meeting": "Consensus Layer Call 053",
+    "Summary": "The CL and EL team meetings are summarized in files using the Markdown format.\nHere is the summary of Ethereum 2.0 Implementers Call 53:\n\nStatus on Merge: The merge status remains unchanged from last week's call,\nwith no new updates to report.\n\nBeacon Chain Status:\n- Bellatrix upgrade has been deployed successfully, and it will be\nretroactively applied to mainnet.\n- Mainnet is currently running with the upgraded Beacon Chain codebase.\n\nShapella Upgrade:\n- The Shapellla testnets are being prepared for deployment on devnet,\nwith a target date of mid-July."
+}

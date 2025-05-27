@@ -1,0 +1,5 @@
+{
+    "Datetime": "2022-03-24 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 084",
+    "Summary": "[\n## Summary\n]\n\nThe team discussed the status of the Shanghai upgrade. The CL is on track to meet its deadline and has completed all necessary tasks. The EL also made progress in implementing the required changes.\n\nA key discussion point was the need for more testing, particularly around the new EIP-4844 functionality. It was agreed that additional testnets would be created to facilitate this process.\n\nThe team confirmed that mainnet deployment is still planned for April 2023 and devnet will go live shortly after."
+}

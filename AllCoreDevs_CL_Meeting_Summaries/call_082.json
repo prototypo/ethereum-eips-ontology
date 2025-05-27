@@ -1,0 +1,5 @@
+{
+    "Datetime": "2022-03-10 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 082",
+    "Summary": "The CL team is working on implementing the Bellatrix upgrade. The mainnet merge testnets are being prepared and will be available soon. There was some discussion about the status of devnet 1.2.0 which has been delayed due to issues with the new network configuration.\n\nThere were also discussions around the upcoming Shanghai hardfork, including its timeline and potential changes to the protocol. The team is working on implementing a fix for the \"difficulty bomb\" issue that will be included in the upgrade.\n\nThe mainnet merge testnets are expected to go live soon, allowing teams to start testing their applications against the new merged network configuration."
+}

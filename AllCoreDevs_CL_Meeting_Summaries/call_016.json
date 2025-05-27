@@ -1,0 +1,4 @@
+{
+    "Meeting": "Consensus Layer Call 016",
+    "Summary": "The CL and EL team meetings are summarized in files using Markdown format. \n\n[[\n## Summary\n]]\n\n\nStatus of Ethereum 2.0 Phase 1 is being finalized before the mainnet launch.\nSeveral issues were discussed regarding the Beacon Chain, including \nthe need to update the deposit contract for Shanghai upgrade.\n\nA new version of the Deposit Contract has been proposed and will be reviewed by the team soon.\n\n\nThe CL/EL meeting was skipped this week due to a scheduling conflict."
+}

@@ -1,0 +1,5 @@
+{
+    "Datetime": "2020-06-11 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 041",
+    "Summary": "The CL team is working on implementing the Bellatrix upgrade. The EL team has been testing and validating the execution layer changes.\n\nThe mainnet merge timeline remains unchanged: the testnets will be upgraded to Altair in mid-October, followed by the mainnet upgrade to Altair around late October or early November. After that, the next step is the Bellatrix upgrade on the Execution Layer, which should happen shortly after the mainnet has been updated.\n\nThe EL team reported progress on implementing the execution layer changes for the Bellatrix upgrade and are working towards a testnet deployment soon. The CL team will continue to work on finalizing the Consensus Layer implementation of Bellatrix.\n\nThere is no specific deadline mentioned in this summary, but it seems that both teams are making good progress toward their goals."
+}

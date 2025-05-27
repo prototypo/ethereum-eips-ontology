@@ -1,0 +1,5 @@
+{
+    "Datetime": "2021-09-09 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 071",
+    "Summary": "The CL team is working on implementing the Bellatrix upgrade. The mainnet merge testnets are being prepared and will be launched soon.\n\nA new version of the consensus layer client (geth) has been released to support the upcoming changes. \n\nThere was discussion about the status of devnet, which should now have a more stable environment for testing.\n\nThe team is also working on implementing the Capy protocol upgrade in preparation for mainnet deployment."
+}

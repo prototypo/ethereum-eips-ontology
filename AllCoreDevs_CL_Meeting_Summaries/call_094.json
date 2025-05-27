@@ -1,0 +1,17 @@
+{
+    "Datetime": "2022-09-08 14:00:00+00:00",
+    "Links": {
+        "https://ethernodes.org/merge": "https://ethernodes.org/merge",
+        "https://ethresear.ch/t/removing-trusted-relays-in-mev-boost-using-threshold-encryption/13449": "https://ethresear.ch/t/removing-trusted-relays-in-mev-boost-using-threshold-encryption/13449",
+        "https://github.com/NethermindEth/sedge": "https://github.com/NethermindEth/sedge",
+        "https://github.com/ethereum/pm/issues/594#issuecomment-1206713478": "https://github.com/ethereum/pm/issues/594#issuecomment-1206713478",
+        "https://github.com/ethereum/pm/issues/594#issuecomment-1211765927": "https://github.com/ethereum/pm/issues/594#issuecomment-1211765927",
+        "https://github.com/ethereum/pm/issues/599": "https://github.com/ethereum/pm/issues/599",
+        "https://hackmd.io/@inphi/SJMXL1P6c#Endpoints": "https://hackmd.io/@inphi/SJMXL1P6c#Endpoints",
+        "https://hackmd.io/_3lpo0FzRNa1l7XB0ELH7Q?view": "https://hackmd.io/_3lpo0FzRNa1l7XB0ELH7Q?view",
+        "https://twitter.com/SomerEsat/status/1562541042120814592": "https://twitter.com/SomerEsat/status/1562541042120814592",
+        "https://twitter.com/nethermindeth/status/1555571498894725123": "https://twitter.com/nethermindeth/status/1555571498894725123"
+    },
+    "Meeting": "Consensus Layer Call 094",
+    "Summary": "[\n## Summary\n]\n\nThe team discussed the status of the upcoming Shanghai upgrade. The CL and EL teams are on track to meet their deadlines, but there were some concerns about the testing process for devnet. It was decided that more thorough testing is needed before moving forward.\n\nThe main focus now shifts to finalizing the implementation details for the proposed changes in the Shanghai hard fork. This includes reviewing and refining the codebase to ensure a smooth transition on both CL and EL sides.\n\nA key takeaway from this meeting is that there are no major roadblocks at present, but careful attention must be paid to testing and validation before deploying any new features or upgrades."
+}

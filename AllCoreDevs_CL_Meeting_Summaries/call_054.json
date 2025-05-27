@@ -1,0 +1,4 @@
+{
+    "Meeting": "Consensus Layer Call 054",
+    "Summary": "The CL team is working on implementing the Bellatrix upgrade. The EL team has made progress in testing and fixing issues related to the merge.\n\nThe mainnet merge timeline remains uncertain due to ongoing discussions about the difficulty bomb delay. A decision needs to be made soon, as it affects the overall schedule for the transition from PoW to PoS.\n\nA deadline of 2 weeks is set for finalizing the Bellatrix upgrade implementation in both CL and EL. The teams are also working on resolving issues related to gas pricing and block proposer selection.\n\nThe devnet merge has been successfully tested, but some minor issues remain that need to be addressed before mainnet can proceed with the transition."
+}

@@ -1,0 +1,5 @@
+{
+    "Datetime": "2021-02-19 14:00:00+00:00",
+    "Meeting": "Execution Layer Meeting 106",
+    "Summary": "call_106.md\n================\n\nThe team discussed the upcoming Shanghai upgrade and its impact on EIP-3651. The current status is that it's still in development, but some issues have been identified.\n\nA deadline was set for reviewing and testing the changes by March 15th to ensure a smooth deployment. \n\nEIP-4844 has made significant progress with several implementations being tested. However, there are concerns about its performance on mainnet due to increased gas costs.\n\nThe team also discussed EVM transition plans and agreed that more information is needed before making any decisions."
+}

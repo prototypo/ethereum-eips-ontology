@@ -1,0 +1,5 @@
+{
+    "Datetime": "2021-12-02 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 076",
+    "Summary": "The CL team is working on implementing the Bellatrix upgrade. The mainnet merge timeline has been updated and it's expected that the merge will happen in August 2022.\n\nA new version of the consensus layer client (spurious dragon) was released, which includes several bug fixes and performance improvements.\n\nThere are still some issues with the devnet environment, specifically with regards to block propagation. The team is working on resolving these issues as soon as possible.\n\nThe Bellatrix upgrade will include a change in how validators propose blocks, from using Beacon Block Builder (BBB) to using the new Proposer Builder. This change requires significant updates across multiple components of the consensus layer client and its dependencies.\n\nA deadline for completing all necessary changes has been set at July 15th."
+}

@@ -1,0 +1,5 @@
+{
+    "Datetime": "2018-11-15 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 006",
+    "Summary": "The CL and EL team meetings are summarized in files using Markdown format. \n\n[[\n## Summary\n]]\n\n\nStatus of Lighthouse beacon chain is good; it's been running on devnet for 3 days now.\nLighthouse has also completed the first round of testing with Prysm, but there were some issues that need to be addressed.\n\nThe CL team will continue working on implementing the Beacon Chain and Casper FFG. \nThere are no new deadlines mentioned in this summary.\n\n\nI cannot produce a meaningful result for other meeting summaries as I do not have access to all files."
+}

@@ -1,0 +1,10 @@
+{
+    "Datetime": "2021-04-16 14:00:00+00:00",
+    "Links": {
+        "33:10": "https://youtu.be/-H8UpqarZ1Y?t=1990",
+        "38:10": "https://youtu.be/-H8UpqarZ1Y?t=2290",
+        "8:00": "https://youtu.be/-H8UpqarZ1Y?t=482"
+    },
+    "Meeting": "Execution Layer Meeting 110",
+    "Summary": "CL and EL team meetings are summarized separately. Please provide one of them so I can proceed with summarizing it in 1-5 paragraphs. \n\nPlease paste either CL or EL summary starting from the line that includes '[[' followed by '## Summary' and then I will be able to assist you further.\n\nOnce provided, I'll extract a concise version of the meeting's key points without any extraneous information."
+}

@@ -1,1058 +1,1030 @@
-EIP (Ethereum Improvement Proposal): A design document providing information about new features, processes, or standards for Ethereum. There are three main types of EIPs: Standards Track: Proposals for changes that affect most or all Ethereum implementations, such as core protocol changes, network rules, or application standards (EIP-1).  Meta: Describes a process surrounding Ethereum, such as decision-making processes or guidelines (EIP-1.md).  Informational: Provides general information or guidelines for the Ethereum community without proposing new features (EIP-1)
+EIP (Ethereum Improvement Proposal): A design document providing information about new features, processes, or standards for Ethereum. There are three main types of EIPs: Standards Track: Proposals for changes that affect most or all Ethereum implementations, such as core protocol changes, network rules, or application standards.  Meta: Describes a process surrounding Ethereum, such as decision-making processes or guidelines Provides general information or guidelines for the Ethereum community without proposing new features (EIP-1)
 
-FORK_BLKNUM: A parameter specifying the block number at which a particular fork, such as the Homestead Hard Fork, becomes active (EIP-2).
+FORK_BLKNUM: A parameter specifying the block number at which a particular fork, such as the Homestead Hard Fork, becomes active.
 
-CALLDEPTH: A proposed opcode to return the remaining available call stack depth during contract execution, introduced in (EIP-3 EIP-3).
+CALLDEPTH: A proposed opcode to return the remaining available call stack depth during contract execution.
 
-Consensus Layer: One of four layers of the Ethereum system standards. It ensures that a particular state and history are valid and provides settlement guarantees. It includes both soft forks and hard forks (EIP-4).
+Consensus Layer: One of four layers of the Ethereum system standards. It ensures that a particular state and history are valid and provides settlement guarantees. It includes both soft forks and hard forks.
 
-CREATE2: A new opcode introduced in EIP-86 that allows contract creation with a specific address based on a combination of sender, salt, and initialization code (EIP-86).
+CREATE2: A new opcode introduced in EIP-86 that allows contract creation with a specific address based on a combination of sender, salt, and initialization code.
 
-DELEGATECALL: A new opcode that is similar to CALLCODE, but it retains the sender and value from the parent scope to the child scope during execution (EIP-7).
+DELEGATECALL: A new opcode that is similar to CALLCODE, but it retains the sender and value from the parent scope to the child scope during execution.
 
-SELFDESTRUCT: A renamed opcode from SUICIDE, introduced in EIP-6, to avoid negative connotations (EIP-6).
+SELFDESTRUCT: A renamed opcode from SUICIDE, introduced in EIP-6, to avoid negative connotations.
 
-devp2p: A networking protocol for Ethereum. EIP-8 introduces forward compatibility requirements for devp2p implementations (EIP-8).
+devp2p: A networking protocol for Ethereum. EIP-8 introduces forward compatibility requirements for devp2p implementations.
 
-Uncle Rate: Refers to the rate of uncles (stale blocks) included in a block, considered in EIP-100's difficulty adjustment formula (EIP-100).
+Uncle Rate: Refers to the rate of uncles (stale blocks) included in a block, considered in EIP-100's difficulty adjustment formula.
 
-Serenity Currency and Crypto Abstraction: Introduces the concept of abstracting away the native Ether storage within accounts. Instead of Ether being stored directly, a contract at address 0 manages all Ether. Transactions no longer use msg.value, and a tx.gas opcode is added to access the original amount of gas. (EIP-101)
+Serenity Currency and Crypto Abstraction: Introduces the concept of abstracting away the native Ether storage within accounts. Instead of Ether being stored directly, a contract at address 0 manages all Ether. Transactions no longer use msg.value, and a tx.gas opcode is added to access the original amount of gas.
 
-Safe Transaction Authorization via HTML Popup: Describes an authorization mechanism that allows web-based dApps to request transactions via eth_sendTransaction by opening an HTML popup for user approval without the need for CORS, enhancing security for user transactions. (EIP-107)
+Safe "eth_sendTransaction" Authorization via HTML Popup: Describes an authorization mechanism that allows web-based dApps to request transactions via eth_sendTransaction by opening an HTML popup for user approval without the need for CORS, enhancing security for user transactions.
 
-REVERT Instruction: Introduces the REVERT opcode (0xfd), which allows contracts to halt execution and revert state changes without consuming all remaining gas. This opcode can return a reason or error message to the caller. (EIP-140)
+REVERT Instruction: Introduces the REVERT opcode (0xfd), which allows contracts to halt execution and revert state changes without consuming all remaining gas. This opcode can return a reason or error message to the caller.
 
-Designated Invalid EVM Instruction: Introduces an explicit INVALID opcode (0xfe), which functions as an abort or fail state for contract execution, distinct from other failure mechanisms. (EIP-141)
+Designated Invalid EVM Instruction: Introduces an explicit INVALID opcode (0xfe), which functions as an abort or fail state for contract execution, distinct from other failure mechanisms.
 
-Bitwise Shifting Instructions: Adds efficient bitwise shift operations: SHL (shift left), SHR (logical shift right), and SAR (arithmetic shift right), improving processing efficiency by lowering gas costs compared to arithmetic-based shifting. (EIP-145)
+Bitwise Shifting Instructions: Adds efficient bitwise shift operations: SHL (shift left), SHR (logical shift right), and SAR (arithmetic shift right), improving processing efficiency by lowering gas costs compared to arithmetic-based shifting.
 
-Gas Cost Changes for IO-heavy Operations: Adjusts the gas costs for several operations (e.g., EXTCODESIZE, BALANCE, SLOAD, etc.) to address inefficiencies and DoS vulnerabilities due to underpricing of IO-heavy operations. (EIP-150)
+Gas Cost Changes for IO-heavy Operations: Adjusts the gas costs for several operations (e.g., EXTCODESIZE, BALANCE, SLOAD, etc.) to address inefficiencies and DoS vulnerabilities due to underpricing of IO-heavy operations.
 
-BLAKE2 Compression Function Precompile: Adds a precompiled contract at address 0x09 for the BLAKE2b cryptographic function, enabling efficient hashing and improved interoperability with other blockchain networks like Zcash. (EIP-152)
+BLAKE2 Compression Function Precompile: Adds a precompiled contract at address 0x09 for the BLAKE2b cryptographic function, enabling efficient hashing and improved interoperability with other blockchain networks like Zcash.
 
-Simple Replay Attack Protection: Introduces a method for protecting Ethereum from replay attacks by adding a chainid field to transaction signing, differentiating transactions across chains and preventing cross-chain replay. (EIP-155)
+Simple Replay Attack Protection: Introduces a method for protecting Ethereum from replay attacks by adding a chainid field to transaction signing, differentiating transactions across chains and preventing cross-chain replay.
 
-State Clearing: Proposes the deletion of empty accounts (accounts with zero balance, nonce, code, and storage) to reduce state size, simplify execution, and enhance client performance. (EIP-158)
+State Clearing: Proposes the deletion of empty accounts (accounts with zero balance, nonce, code, and storage) to reduce state size, simplify execution, and enhance client performance.
 
-EXP Cost Increase: Increases the gas cost of the EXP opcode to better reflect its computational intensity, preventing underpricing. (EIP-160)
+EXP Cost Increase: Increases the gas cost of the EXP opcode to better reflect its computational intensity, preventing underpricing.
 
-State Trie Clearing: Introduces changes to prevent accounts from transitioning from non-existent to empty state and ensures that empty accounts are deleted after transactions. (EIP-161)
+State Trie Clearing: Introduces changes to prevent accounts from transitioning from non-existent to empty state and ensures that empty accounts are deleted after transactions.
 
-Contract Code Size Limit: Sets a hard limit on contract size at 0x6000 bytes, and if a contract exceeds this size during creation, it results in an out-of-gas error. (EIP-170)
+Contract Code Size Limit: Sets a hard limit on contract size at 0x6000 bytes, and if a contract exceeds this size during creation, it results in an out-of-gas error.
 
-Elliptic Curve Operations Precompile: Adds precompiled contracts for elliptic curve addition and scalar multiplication on alt_bn128, enabling efficient zkSNARK verification. (EIP-196)
+Elliptic Curve Operations Precompile: Adds precompiled contracts for elliptic curve addition and scalar multiplication on alt_bn128, enabling efficient zkSNARK verification.
 
-Elliptic Curve Pairing Check Precompile: Introduces a precompiled contract for the optimal ate pairing function, useful for zkSNARK verification in Ethereum. (EIP-197)
+Elliptic Curve Pairing Check Precompile: Introduces a precompiled contract for the optimal ate pairing function, useful for zkSNARK verification in Ethereum.
 
-Big Integer Modular Exponentiation Precompile: Adds a precompiled contract for modular exponentiation, allowing efficient RSA and other number-theory cryptographic operations. (EIP-198)
+Big Integer Modular Exponentiation Precompile: Adds a precompiled contract for modular exponentiation, allowing efficient RSA and other number-theory cryptographic operations.
 
-Blockhash Refactoring: Refactors the way blockhashes are stored in the state to simplify the protocol and enable more efficient light client synchronization. (EIP-210)
+Blockhash Refactoring: Refactors the way blockhashes are stored in the state to simplify the protocol and enable more efficient light client synchronization.
 
-RETURNDATASIZE and RETURNDATACOPY Opcodes: Introduces two new opcodes, RETURNDATASIZE and RETURNDATACOPY, allowing efficient handling of variable-length return data in smart contracts. (EIP-211)
+RETURNDATACOPY Opcode: RETURNDATACOPY allows efficient handling of variable-length return data in smart contracts.
 
-STATICCALL Opcode: Adds the STATICCALL opcode to allow non-state-changing calls to other contracts, improving security by preventing unintended state modifications. (EIP-214)
+RETURNDATASIZE Opcode: RETURNDATASIZE allows efficient handling of variable-length return data in smart contracts.
 
-Clique Proof-of-Authority Consensus Protocol: Proposes a proof-of-authority consensus protocol designed for Ethereum testnets to address issues in low-hashrate PoW networks. (EIP-225)
+STATICCALL Opcode: Adds the STATICCALL opcode to allow non-state-changing calls to other contracts, improving security by preventing unintended state modifications.
 
-Formal Process for Hard Forks: Establishes a formal process for planning and executing Ethereum hard forks, including guidelines for creating a Meta EIP to track the hard fork timeline and included proposals. (EIP-233)
+Clique Proof-of-Authority Consensus Protocol: Proposes a proof-of-authority consensus protocol designed for Ethereum testnets to address issues in low-hashrate PoW networks.
 
-BlockHash Filter Option: Adds a blockHash filter option to the JSON-RPC methods eth_newFilter and eth_getLogs, allowing logs to be fetched for a specific block, ensuring clients can retrieve logs from blocks in the current chain or previously reorged blocks. (EIP-234)
+Formal Process for Hard Forks: Establishes a formal process for planning and executing Ethereum hard forks, including guidelines for creating a Meta EIP to track the hard fork timeline and included proposals.
 
-Homestead Hard Fork: Specifies changes for the Homestead hard fork, including the activation of the hard fork at certain block numbers and the inclusion of EIPs 2, 7, and 8. (EIP-606)
+BlockHash Filter Option: Adds a blockHash filter option to the JSON-RPC methods eth_newFilter and eth_getLogs, allowing logs to be fetched for a specific block, ensuring clients can retrieve logs from blocks in the current chain or previously reorged blocks.
 
-Spurious Dragon Hard Fork: Specifies changes for the Spurious Dragon hard fork, including replay attack protection, state trie clearing, and contract code size limits. (EIP-607)
+Homestead: Specifies changes for the Homestead hard fork, including the activation of the hard fork at certain block numbers and the inclusion of EIPs 2, 7, and 8.
 
-Tangerine Whistle Hard Fork: Details the Tangerine Whistle hard fork, focused on addressing gas cost issues related to IO-heavy operations to mitigate DoS attacks. (EIP-608)
+Spurious Dragon: Specifies changes for the Spurious Dragon hard fork, including replay attack protection, state trie clearing, and contract code size limits.
 
-Byzantium Hard Fork: Specifies the Byzantium hard fork, part of the Metropolis upgrade, introducing features like the REVERT opcode, elliptic curve precompiles, and transaction status codes. (EIP-609)
+Tangerine Whistle: Details the Tangerine Whistle hard fork, focused on addressing gas cost issues related to IO-heavy operations to mitigate DoS attacks.
 
-Subroutines and Static Jumps: Proposes static jumps and subroutines for the EVM to replace dynamic jumps, enhancing performance, formal verification, and code security. (EIP-615)
+Byzantium: Specifies the Byzantium hard fork, part of the Metropolis upgrade, introducing features like the REVERT opcode, elliptic curve precompiles, and transaction status codes.
 
-SIMD Operations for the EVM: Suggests adding SIMD (Single Instruction Multiple Data) operations to the EVM, utilizing 256-bit stack items for parallel computation, boosting performance for certain cryptographic algorithms and vectorized operations. (EIP-616)
+Subroutines and Static Jumps: Proposes static jumps and subroutines for the EVM to replace dynamic jumps, enhancing performance, formal verification, and code security.
 
-Whisper Specification: Defines the Whisper protocol's message format and packet structure used within the ÐΞVp2p Wire Protocol, ensuring compatibility across Whisper clients. (EIP-627)
+SIMD Operations for the EVM: Suggests adding SIMD (Single Instruction Multiple Data) operations to the EVM, utilizing 256-bit stack items for parallel computation, boosting performance for certain cryptographic algorithms and vectorized operations.
 
-Metropolis Difficulty Bomb Delay and Block Reward Reduction: Proposes delaying the Ethereum difficulty bomb (ice age) by 1.4 years and reducing block rewards to 3 ETH as part of the Byzantium hard fork. (EIP-649)
+Whisper Specification: Defines the Whisper protocol's message format and packet structure used within the ÐΞVp2p Wire Protocol, ensuring compatibility across Whisper clients.
 
-Transaction Status Code in Receipts: Replaces the intermediate state root in transaction receipts with a status code (1 for success, 0 for failure), allowing users to easily determine transaction outcomes. (EIP-658)
+Metropolis Difficulty Bomb Delay and Block Reward Reduction: Proposes delaying the Ethereum difficulty bomb (ice age) by 1.4 years and reducing block rewards to 3 ETH as part of the Byzantium hard fork.
 
-SWAPN, DUPN, and EXCHANGE Instructions: Introduces new instructions (SWAPN, DUPN, and EXCHANGE) to access and manipulate deeper stack items beyond the 16-item limit, improving stack management for complex functions and compiler optimizations. (EIP-663)
+Transaction Status Code in Receipts: Replaces the intermediate state root in transaction receipts with a status code (1 for success, 0 for failure), allowing users to easily determine transaction outcomes.
 
-Ed25519 Signature Verification Precompile: Adds a precompiled contract for verifying Ed25519 signatures, improving the efficiency and gas cost of verifying these cryptographic signatures within smart contracts. (EIP-665)
+SWAPN, DUPN, and EXCHANGE Instructions: Introduces new instructions (SWAPN, DUPN, and EXCHANGE) to access and manipulate deeper stack items beyond the 16-item limit, improving stack management for complex functions and compiler optimizations.
 
-Revert Creation on Address Collision: Reverts contract creation if the destination address already contains code or has a non-zero nonce, preventing code replacement attacks and maintaining contract immutability. (EIP-684)
+Ed25519 Signature Verification Precompile: Adds a precompiled contract for verifying Ed25519 signatures, improving the efficiency and gas cost of verifying these cryptographic signatures within smart contracts.
 
-Address Collision Halt: Proposes that contract creation fails if attempted at an address with existing code or a non-zero nonce, simplifying client implementations and ensuring consistency across clients. (EIP-689)
+Revert Creation on Address Collision: Reverts contract creation if the destination address already contains code or has a non-zero nonce, preventing code replacement attacks and maintaining contract immutability.
 
-eth_chainId JSON-RPC Method: Introduces the eth_chainId JSON-RPC method to retrieve the chain ID used in replay-protected transactions, ensuring that users and applications are interacting with the correct blockchain. (EIP-695)
+Address Collision Halt: Proposes that contract creation fails if attempted at an address with existing code or a non-zero nonce, simplifying client implementations and ensuring consistency across clients.
 
-BLOCKREWARD Opcode: Adds a new opcode (0x46 BLOCKREWARD) to the EVM to return the block reward value, facilitating decentralized mining pools and merge-mined token systems. (EIP-698)
+eth_chainId JSON-RPC Method: Introduces the eth_chainId JSON-RPC method to retrieve the chain ID used in replay-protected transactions, ensuring that users and applications are interacting with the correct blockchain.
 
-Snappy Compression for DEVp2p: Introduces Snappy compression to the DEVp2p networking protocol, reducing bandwidth usage by compressing message payloads, particularly benefiting initial sync processes. (EIP-706)
+BLOCKREWARD Opcode: Adds a new opcode (0x46 BLOCKREWARD) to the EVM to return the block reward value, facilitating decentralized mining pools and merge-mined token systems.
 
-Typed Structured Data Hashing and Signing: Standardizes the process for signing typed structured data, allowing users to review human-readable messages before signing, improving security and usability in off-chain message signing. (EIP-712)
+Snappy Compression for DEVp2p: Introduces Snappy compression to the DEVp2p networking protocol, reducing bandwidth usage by compressing message payloads, particularly benefiting initial sync processes.
 
-wallet_watchAsset RPC Method: Introduces the wallet_watchAsset RPC method to allow websites to suggest tokens for users' wallets to track, improving user experience by making it easier to manage assets. (EIP-747)
+Typed Structured Data Hashing and Signing: Standardizes the process for signing typed structured data, allowing users to review human-readable messages before signing, improving security and usability in off-chain message signing.
 
-Completed Transaction Subscriptions and Filters: Proposes subscriptions and filters for completed transactions, allowing external callers to be notified of completed transactions and retrieve function return data when transactions are mined. (EIP-758)
+wallet_watchAsset RPC Method: Introduces the wallet_watchAsset RPC method to allow websites to suggest tokens for users' wallets to track, improving user experience by making it easier to manage assets.
 
-Ethereum Node Records (ENR): Defines an open format for Ethereum node connectivity information, enabling the exchange of data such as IP addresses, ports, and public keys through various methods like node discovery, DNS, or ENS. (EIP-778)
+Completed Transaction Subscriptions and Filters: Proposes subscriptions and filters for completed transactions, allowing external callers to be notified of completed transactions and retrieve function return data when transactions are mined.
 
-DAO Fork: Describes an irregular state change at block 1,920,000, which transferred ether from the DAO and related accounts to a WithdrawDAO contract following the infamous DAO hack. (EIP-779)
+Ethereum Node Records (ENR): Defines an open format for Ethereum node connectivity information, enabling the exchange of data such as IP addresses, ports, and public keys through various methods like node discovery, DNS, or ENS.
 
-Reduce Block Reward and Delay Difficulty Bomb: Proposes reducing the block reward to 1 ETH and delaying the difficulty bomb to mitigate energy consumption and control mining growth. (EIP-858)
+DAO Fork: Describes an irregular state change at block 1,920,000, which transferred ether from the DAO and related accounts to a WithdrawDAO contract following the infamous DAO hack.
 
-Standardized Ethereum Recovery Proposals (ERPs): Suggests a standardized format for recovery proposals involving lost funds, aiming to streamline the process and ensure consistency in handling such cases. (EIP-867)
+Reduce Block Reward and Delay Difficulty Bomb: Proposes reducing the block reward to 1 ETH and delaying the difficulty bomb to mitigate energy consumption and control mining growth.
 
-Node Discovery v4 ENR Extension: Extends Node Discovery Protocol v4 to support Ethereum Node Records (ENR), enabling authoritative retrieval of updated node records through existing discovery protocols. (EIP-868)
+Standardized Ethereum Recovery Proposals (ERPs): Suggests a standardized format for recovery proposals involving lost funds, aiming to streamline the process and ensure consistency in handling such cases.
 
-Reward Clients for a Sustainable Network: Proposes rewarding client developers with transaction fees and newly minted ETH to incentivize client development, aiming for a sustainable Ethereum network. (EIP-908)
+Node Discovery v4 ENR Extension: Extends Node Discovery Protocol v4 to support Ethereum Node Records (ENR), enabling authoritative retrieval of updated node records through existing discovery protocols.
 
-Modifications to Ethash to Invalidate ASIC Hardware: Aims to modify the Ethash algorithm to break existing ASIC miners by changing certain FNV constants, enhancing resistance against hardware centralization. (EIP-969)
+Reward Clients for a Sustainable Network: Proposes rewarding client developers with transaction fees and newly minted ETH to incentivize client development, aiming for a sustainable Ethereum network.
 
-Restore Contract Code at 0x863DF6BFa4469f3ead0bE8f9F2AAE51c91A907b4: Proposes restoring the Parity Wallet's WalletLibrary contract, which was accidentally self-destructed, to unfreeze funds locked in multi-signature wallets. (EIP-999)
+Modifications to Ethash to Invalidate ASIC Hardware: Aims to modify the Ethash algorithm to break existing ASIC miners by changing certain FNV constants, enhancing resistance against hardware centralization.
 
-Ether Redistribution Between Two Addresses: Proposes transferring 100,000 ether from one address to another to improve balance uniformity, justified by decentralized ideals. (EIP-1010)
+Restore Contract Code at 0x863DF6BFa4469f3ead0bE8f9F2AAE51c91A907b4: Proposes restoring the Parity Wallet's WalletLibrary contract, which was accidentally self-destructed, to unfreeze funds locked in multi-signature wallets.
 
-Hybrid Casper FFG: Specifies a hybrid consensus model combining Proof of Work (PoW) and Proof of Stake (PoS), known as Casper FFG, to provide finality and reduce energy consumption in Ethereum's transition to PoS. (EIP-1011)
+Ether Redistribution Between Two Addresses: Proposes transferring 100,000 ether from one address to another to improve balance uniformity, justified by decentralized ideals.
 
-Constantinople Hard Fork: Specifies the changes included in the Constantinople hard fork, such as bitwise shifting instructions, CREATE2, and reducing gas costs for certain operations. (EIP-1013)
+Hybrid Casper FFG: Specifies a hybrid consensus model combining Proof of Work (PoW) and Proof of Stake (PoS), known as Casper FFG, to provide finality and reduce energy consumption in Ethereum's transition to PoS.
 
-Skinny CREATE2: Introduces the CREATE2 opcode, allowing contracts to be created at addresses that depend on a hash of the sender's address, a salt, and the contract's initialization code. (EIP-1014)
+Constantinople: Specifies the changes included in the Constantinople hard fork, such as bitwise shifting instructions, CREATE2, and reducing gas costs for certain operations.
 
-Configurable On-Chain Issuance: Proposes a system where block rewards are controlled by an on-chain governance contract, allowing for dynamic changes in issuance based on governance decisions. (EIP-1015)
+Skinny CREATE2: Introduces the CREATE2 opcode, allowing contracts to be created at addresses that depend on a hash of the sender's address, a salt, and the contract's initialization code.
 
-Overflow Checking for the EVM: Adds overflow detection for arithmetic operations in the EVM, introducing two new opcodes (OFV and SOVF) to check and clear overflow flags. (EIP-1051)
+Configurable On-Chain Issuance: Proposes a system where block rewards are controlled by an on-chain governance contract, allowing for dynamic changes in issuance based on governance decisions.
 
-EXTCODEHASH Opcode: Introduces the EXTCODEHASH opcode, which returns the keccak256 hash of a contract’s code, allowing contracts to verify code without needing the entire bytecode. (EIP-1052)
+Overflow Checking for the EVM: Adds overflow detection for arithmetic operations in the EVM, introducing two new opcodes (OFV and SOVF) to check and clear overflow flags.
 
-ProgPoW: A new Proof-of-Work algorithm designed to be ASIC-resistant by utilizing more parts of commodity GPUs, minimizing the efficiency gap between general-purpose hardware and specialized ASICs. (EIP-1057)
+EXTCODEHASH Opcode: Introduces the EXTCODEHASH opcode, which returns the keccak256 hash of a contract’s code, allowing contracts to verify code without needing the entire bytecode.
 
-Net Gas Metering for SSTORE: Proposes changes to how gas is charged for SSTORE operations, introducing a system that charges based on net changes to storage, reducing gas costs for multiple updates in the same transaction. (EIP-1087)
+ProgPoW: A new Proof-of-Work algorithm designed to be ASIC-resistant by utilizing more parts of commodity GPUs, minimizing the efficiency gap between general-purpose hardware and specialized ASICs.
 
-Opt-in Account Exposure: Describes a protocol where dapps must request account access from the user, enhancing privacy and security by allowing users to approve or deny access to their Ethereum accounts. (EIP-1102)
+Net Gas Metering for SSTORE: Proposes changes to how gas is charged for SSTORE operations, introducing a system that charges based on net changes to storage, reducing gas costs for multiple updates in the same transaction.
 
-Reduced Gas Costs for Elliptic Curve Precompiles: Lowers the gas costs for the ECADD, ECMUL, and pairing check operations on the alt_bn128 elliptic curve, making elliptic curve cryptography more efficient. (EIP-1108)
+Opt-in Account Exposure: Describes a protocol where dapps must request account access from the user, enhancing privacy and security by allowing users to approve or deny access to their Ethereum accounts.
 
-PRECOMPILEDCALL Opcode: Introduces a new opcode that allows direct calls to precompiled contracts without the overhead of the CALL opcode, reducing gas costs for these operations. (EIP-1109)
+Reduced Gas Costs for Elliptic Curve Precompiles: Lowers the gas costs for the ECADD, ECMUL, and pairing check operations on the alt_bn128 elliptic curve, making elliptic curve cryptography more efficient.
 
-Transient Storage Opcodes: Introduces TLOAD and TSTORE opcodes, which behave similarly to storage but discard values after each transaction, allowing more gas-efficient inter-frame communication. (EIP-1153)
+PRECOMPILEDCALL Opcode: Introduces a new opcode that allows direct calls to precompiled contracts without the overhead of the CALL opcode, reducing gas costs for these operations.
 
-eth_getProof: Adds a new RPC method to return account and storage values along with Merkle proofs, allowing offline verification of account and storage data. (EIP-1186)
+Transient Storage Opcodes: Introduces TLOAD and TSTORE opcodes, which behave similarly to storage but discard values after each transaction, allowing more gas-efficient inter-frame communication.
 
-Ethereum Provider JavaScript API: Formalizes a JavaScript API for Ethereum providers to standardize how web applications interact with wallets and clients, enhancing consistency across implementations. (EIP-1193)
+eth_getProof: Adds a new RPC method to return account and storage values along with Merkle proofs, allowing offline verification of account and storage data.
 
-Defuse Difficulty Bomb and Reset Block Reward: Proposes permanently disabling the difficulty bomb and resetting the block reward to 5 ETH to give users more freedom over Ethereum's governance. (EIP-1227)
+Ethereum Provider JavaScript API: Formalizes a JavaScript API for Ethereum providers to standardize how web applications interact with wallets and clients, enhancing consistency across implementations.
 
-Constantinople Difficulty Bomb Delay and Block Reward Adjustment: Proposes delaying the difficulty bomb by 12 months and reducing block rewards to 2 ETH with the Constantinople fork to maintain system stability. (EIP-1234)
+Defuse Difficulty Bomb and Reset Block Reward: Proposes permanently disabling the difficulty bomb and resetting the block reward to 5 ETH to give users more freedom over Ethereum's governance.
 
-Remove Difficulty Bomb: Suggests removing the difficulty bomb and setting a fixed difficulty targeting 15-second block times, providing economic participants with more control over network upgrades. (EIP-1240)
+Constantinople Difficulty Bomb Delay and Block Reward Adjustment: Proposes delaying the difficulty bomb by 12 months and reducing block rewards to 2 ETH with the Constantinople fork to maintain system stability.
 
-Eliminate Difficulty Bomb and Adjust Block Reward: Proposes eliminating the difficulty bomb entirely and reducing block rewards to 2 ETH as part of the Constantinople fork to maintain network efficiency and reduce issuance. (EIP-1276)
+Remove Difficulty Bomb: Suggests removing the difficulty bomb and setting a fixed difficulty targeting 15-second block times, providing economic participants with more control over network upgrades.
 
-Net Gas Metering for SSTORE: Proposes changes to gas metering for SSTORE operations, reducing gas costs for multiple updates to storage within the same transaction and enabling more efficient contract storage usage. (EIP-1283)
+Eliminate Difficulty Bomb and Adjust Block Reward: Proposes eliminating the difficulty bomb entirely and reducing block rewards to 2 ETH as part of the Constantinople fork to maintain network efficiency and reduce issuance.
 
-Increase Gcallstipend Gas in CALL Opcode: Proposes increasing the gas stipend for CALL operations from 2,300 to 3,500 gas units, allowing more complex fallback functions to be executed. (EIP-1285)
+Net Gas Metering for SSTORE: Proposes changes to gas metering for SSTORE operations, reducing gas costs for multiple updates to storage within the same transaction and enabling more efficient contract storage usage.
 
-Modify Ethereum PoW Incentive Structure and Delay Difficulty Bomb: Proposes reducing uncle rewards, removing nephew rewards, and delaying the difficulty bomb while maintaining the current block reward of 3 ETH. (EIP-1295)
+Increase Gcallstipend Gas in CALL Opcode: Proposes increasing the gas stipend for CALL operations from 2,300 to 3,500 gas units, allowing more complex fallback functions to be executed.
 
-ChainID Opcode: Adds the CHAINID opcode to return the current chain’s EIP-155 unique identifier, enabling replay protection when handling signed messages in contracts. (EIP-1344)
+Modify Ethereum PoW Incentive Structure and Delay Difficulty Bomb: Proposes reducing uncle rewards, removing nephew rewards, and delaying the difficulty bomb while maintaining the current block reward of 3 ETH.
 
-Restricted Address Range for Precompiles/System Contracts: Reserves the address range from 0x0000000000000000000000000000000000000000 to 0x000000000000000000000000000000000000ffff for precompiles and system contracts. (EIP-1352)
+ChainID Opcode: Adds the CHAINID opcode to return the current chain’s EIP-155 unique identifier, enabling replay protection when handling signed messages in contracts.
 
-Ethash 1a: Modifies the Ethash algorithm to hinder and delay ASIC-based mining by changing the hash function from fnv() to fnv1a(). (EIP-1355)
+Restricted Address Range for Precompiles/System Contracts: Reserves the address range from 0x0000000000000000000000000000000000000000 to 0x000000000000000000000000000000000000ffff for precompiles and system contracts.
 
-Reduced Gas Cost for Call to Self: Proposes reducing the gas cost for call instructions when the destination address equals the caller’s address, to encourage using CALL for internal function calls in smart contracts. (EIP-1380)
+Ethash 1a: Modifies the Ethash algorithm to hinder and delay ASIC-based mining by changing the hash function from fnv() to fnv1a().
 
-Blockchain Storage Rent Payment: Introduces rent payments for storage used by accounts, with rent deducted based on the quantity of storage each account uses. (EIP-1418)
+Reduced Gas Cost for Call to Self: Proposes reducing the gas cost for call instructions when the destination address equals the caller’s address, to encourage using CALL for internal function calls in smart contracts.
 
-Node Discovery via DNS: Proposes a scheme for authenticated, updateable Ethereum node lists retrievable via DNS, providing an alternative to hard-coded bootstrap node lists. (EIP-1459)
+Blockchain Storage Rent Payment: Introduces rent payments for storage used by accounts, with rent deducted based on the quantity of storage each account uses.
 
-Smart Contract Weakness Classification (SWC): Introduces a classification scheme for security weaknesses in Ethereum smart contracts, aligned with the Common Weakness Enumeration (CWE) scheme. (EIP-1470)
+Node Discovery via DNS: Proposes a scheme for authenticated, updateable Ethereum node lists retrievable via DNS, providing an alternative to hard-coded bootstrap node lists.
 
-Remote Procedure Call Specification: Defines a standard set of RPC methods that an Ethereum node should implement, ensuring consistency and predictability across different client implementations. (EIP-1474)
+Smart Contract Weakness Classification (SWC): Introduces a classification scheme for security weaknesses in Ethereum smart contracts, aligned with the Common Weakness Enumeration (CWE) scheme.
 
-Define a Maximum Block Timestamp Drift: Specifies that block timestamps must be greater than the previous block’s timestamp and no more than 15 seconds ahead of system time. (EIP-1482)
+Remote Procedure Call Specification: Defines a standard set of RPC methods that an Ethereum node should implement, ensuring consistency and predictability across different client implementations.
 
-TEthashV1: Modifies the Ethash PoW algorithm to obsolete current ASIC miners by replacing the deprecated FNV-0 hash with the FNV1A hash function. (EIP-1485)
+Define a Maximum Block Timestamp Drift: Specifies that block timestamps must be greater than the previous block’s timestamp and no more than 15 seconds ahead of system time.
 
-Fee Market Change for ETH 1.0 Chain: Proposes a new transaction pricing mechanism with a base fee per gas, dynamically adjusting based on network congestion, and burned. Aims to reduce volatility, improve efficiency, and prevent miner manipulation of fees. (EIP-1559)
+TEthashV1: Modifies the Ethash PoW algorithm to obsolete current ASIC miners by replacing the deprecated FNV-0 hash with the FNV1A hash function.
 
-EthereumStratum/2.0.0: Defines a new standard for the Stratum protocol used by Ethereum miners to communicate with mining pool servers, providing an efficient two-way communication mechanism over a TCP connection. (EIP-1571)
+Fee Market Change for ETH 1.0 Chain: Proposes a new transaction pricing mechanism with a base fee per gas, dynamically adjusting based on network congestion, and burned. Aims to reduce volatility, improve efficiency, and prevent miner manipulation of fees.
 
-Ethereum ProgPoW Hardfork: A meta-EIP specifying the changes included in the Ethereum ProgPoW hardfork, primarily introducing ProgPoW as the proof-of-work algorithm. (EIP-1588)
+EthereumStratum/2.0.0: Defines a new standard for the Stratum protocol used by Ethereum miners to communicate with mining pool servers, providing an efficient two-way communication mechanism over a TCP connection.
 
-Istanbul Hardfork: A meta-EIP that specifies the changes included in the Istanbul hardfork, incorporating various EIPs aimed at improving performance, security, and cost-efficiency of Ethereum. (EIP-1679)
+Istanbul: A meta-EIP that specifies the changes included in the Istanbul hardfork, incorporating various EIPs aimed at improving performance, security, and cost-efficiency of Ethereum.
 
-Temporal Replay Protection: Introduces a time-based replay protection mechanism for Ethereum transactions, allowing users to set a validity period for their transactions using a valid-until timestamp. (EIP-1681)
+Temporal Replay Protection: Introduces a time-based replay protection mechanism for Ethereum transactions, allowing users to set a validity period for their transactions using a valid-until timestamp.
 
-Storage Rent: Proposes a system where users must pay rent for storing data on the Ethereum blockchain, with accounts becoming inactive if they cannot pay. Inactive accounts can be restored by re-uploading their storage. (EIP-1682)
+Storage Rent: Proposes a system where users must pay rent for storing data on the Ethereum blockchain, with accounts becoming inactive if they cannot pay. Inactive accounts can be restored by re-uploading their storage.
 
-Generalized Account Versioning Scheme: Introduces a scheme for account versioning, allowing multiple versions of virtual machines to coexist, facilitating upgrades to Ethereum’s execution environments. (EIP-1702)
+Generalized Account Versioning Scheme: Introduces a scheme for account versioning, allowing multiple versions of virtual machines to coexist, facilitating upgrades to Ethereum’s execution environments.
 
-Disable SSTORE with Gas Left Below Stipend: Proposes disallowing the use of SSTORE when the remaining gas is lower than the call stipend of 2300 gas, mitigating potential reentrancy attacks. (EIP-1706)
+Disable SSTORE with Gas Left Below Stipend: Proposes disallowing the use of SSTORE when the remaining gas is lower than the call stipend of 2300 gas, mitigating potential reentrancy attacks.
 
-Petersburg Hardfork: A meta-EIP specifying the removal of EIP-1283 from the Constantinople hardfork due to potential security risks, finalizing the changes in the Petersburg hardfork. (EIP-1716)
+Petersburg Hardfork: A meta-EIP specifying the removal of EIP-1283 from the Constantinople hardfork due to potential security risks, finalizing the changes in the Petersburg hardfork.
 
-GraphQL Interface to Ethereum Node Data: Proposes a GraphQL schema for accessing Ethereum node data, replacing the current JSON-RPC interface to improve usability, efficiency, and future-proofing. (EIP-1767)
+GraphQL Interface to Ethereum Node Data: Proposes a GraphQL schema for accessing Ethereum node data, replacing the current JSON-RPC interface to improve usability, efficiency, and future-proofing.
 
-EXTBALANCE: Renames the BALANCE opcode to EXTBALANCE for clarity, aligning with other EXTCODE opcodes. (EIP-1803)
+EXTBALANCE: Renames the BALANCE opcode to EXTBALANCE for clarity, aligning with other EXTCODE opcodes.
 
-EC Linear Combination Precompile: Introduces a precompile to compute elliptic curve linear combinations for arbitrary curves. (EIP-1829)
+EC Linear Combination Precompile: Introduces a precompile to compute elliptic curve linear combinations for arbitrary curves.
 
-Network Upgrade Windows: Defines four annual time windows for scheduling network upgrades (hard forks) to provide predictability. (EIP-1872)
+Network Upgrade Windows: Defines four annual time windows for scheduling network upgrades (hard forks) to provide predictability.
 
-SELFBALANCE: Introduces the SELFBALANCE opcode to fetch the current address balance efficiently, and reprices certain trie-size-dependent opcodes like SLOAD, BALANCE, and EXTCODEHASH. (EIP-1884)
+SELFBALANCE: Introduces the SELFBALANCE opcode to fetch the current address balance efficiently, and reprices certain trie-size-dependent opcodes like SLOAD, BALANCE, and EXTCODEHASH.
 
-DEVFUND_BLOCK_REWARD: Introduces a mechanism to capture a portion of block rewards for ecosystem funding, though initially set to zero. (EIP-1890)
+DEVFUND_BLOCK_REWARD: Introduces a mechanism to capture a portion of block rewards for ecosystem funding, though initially set to zero.
 
-MNT4 Curve Support: Adds precompiles for elliptic curve operations on the MNT4 curve, enabling recursive SNARKs for scalability. (EIP-1895)
+MNT4 Curve Support: Adds precompiles for elliptic curve operations on the MNT4 curve, enabling recursive SNARKs for scalability.
 
-blockHash Parameter: Allows JSON-RPC methods to query blockchain state using a block hash instead of just a block number. (EIP-1898)
+blockHash Parameter: Allows JSON-RPC methods to query blockchain state using a block hash instead of just a block number.
 
-rpc.discover: Adds OpenRPC service discovery to Ethereum’s JSON-RPC services, enabling machine-readable API specifications. (EIP-1901)
+rpc.discover: Adds OpenRPC service discovery to Ethereum’s JSON-RPC services, enabling machine-readable API specifications.
 
-STRICTGASCALL: Proposes a strict gas semantic for CALL, DELEGATECALL, and STATICCALL, ensuring the specified gas is available or reverting otherwise. (EIP-1930)
+VALID_CHAINID: Introduces the VALID_CHAINID opcode, allowing contracts to check if a chainID has been valid at any point in the chain’s history.
 
-VALID_CHAINID: Introduces the VALID_CHAINID opcode, allowing contracts to check if a chainID has been valid at any point in the chain’s history. (EIP-1959)
+EC Arithmetic Precompile: Proposes a precompile for elliptic curve arithmetic and pairings with runtime-defined parameters for Weierstrass curves and pairings on various curve families.
 
-EC Arithmetic Precompile: Proposes a precompile for elliptic curve arithmetic and pairings with runtime-defined parameters for Weierstrass curves and pairings on various curve families. (EIP-1962)
+VALID_CHAINID_BLOCK: A method to check if a specific chainID was valid at a specific block number, providing enhanced replay protection for minority-led forks.
 
-VALID_CHAINID_BLOCK: A method to check if a specific chainID was valid at a specific block number, providing enhanced replay protection for minority-led forks. (EIP-1965)
+EVM Parameter Limits: Introduces explicit value ranges for certain EVM parameters like gas limit, block number, and memory size to help create compatible client implementations.
 
-EVM Parameter Limits: Introduces explicit value ranges for certain EVM parameters like gas limit, block number, and memory size to help create compatible client implementations. (EIP-1985)
+EVMC Precompile Modules: Specifies the use of EVMC modules for implementing precompiled contracts, providing a flexible mechanism for precompiles through the EVMC interface.
 
-EVMC Precompile Modules: Specifies the use of EVMC modules for implementing precompiled contracts, providing a flexible mechanism for precompiles through the EVMC interface. (EIP-2003)
+Extended State Oracle (ESO): Proposes a precompile that allows contracts to query extended data sets, such as chain IDs and block hashes, using an extensible ABI-based interface.
 
-Extended State Oracle (ESO): Proposes a precompile that allows contracts to query extended data sets, such as chain IDs and block hashes, using an extensible ABI-based interface. (EIP-2014)
+wallet_updateEthereumChain: A wallet-namespaced RPC method that allows switching between EVM-compatible chains and registering new chains with wallets.
 
-wallet_updateEthereumChain: A wallet-namespaced RPC method that allows switching between EVM-compatible chains and registering new chains with wallets. (EIP-2015)
+DEVFUND_BLOCK_REWARD: Proposes adding a temporary block reward of 0.0055 ETH per block for 18 months to fund Eth1.x development and repay a community loan.
 
-DEVFUND_BLOCK_REWARD: Proposes adding a temporary block reward of 0.0055 ETH per block for 18 months to fund Eth1.x development and repay a community loan. (EIP-2025)
+State Rent Prepayment: Introduces a fixed one-time rent prepayment for creating or modifying accounts, used to fund future state rent and prevent account hoarding.
 
-State Rent Prepayment: Introduces a fixed one-time rent prepayment for creating or modifying accounts, used to fund future state rent and prevent account hoarding. (EIP-2026)
+Net Contract Size Accounting: Begins tracking the net change in the number of storage slots used by contracts, preparing for future state rent and stateless client improvements.
 
-Net Contract Size Accounting: Begins tracking the net change in the number of storage slots used by contracts, preparing for future state rent and stateless client improvements. (EIP-2027)
+Transaction Data Gas Cost Reduction: Reduces the gas cost for non-zero calldata from 68 to 16 gas per byte to improve on-chain scalability, especially for layer 2 solutions.
 
-Transaction Data Gas Cost Reduction: Reduces the gas cost for non-zero calldata from 68 to 16 gas per byte to improve on-chain scalability, especially for layer 2 solutions. (EIP-2028)
+State Counters Contract: A contract deployed to store state counters (e.g., total transactions, accounts) to track state-related metrics for Ethereum.
 
-State Counters Contract: A contract deployed to store state counters (e.g., total transactions, accounts) to track state-related metrics for Ethereum. (EIP-2029)
+Net Transaction Counter: Introduces a counter in the state counters contract that tracks the number of Ethereum transactions after the change is introduced.
 
-Net Transaction Counter: Introduces a counter in the state counters contract that tracks the number of Ethereum transactions after the change is introduced. (EIP-2031)
+Repricing SLOAD and SSTORE: Increases the gas cost of SLOAD and SSTORE operations to accommodate the additional bandwidth needed for stateless clients using block proofs.
 
-Repricing SLOAD and SSTORE: Increases the gas cost of SLOAD and SSTORE operations to accommodate the additional bandwidth needed for stateless clients using block proofs. (EIP-2035)
+Particle Gas Costs: Introduces a new unit of gas called "particles" (a fraction of gas) to reduce the cost of computational opcodes, enabling more efficient gas pricing.
 
-Particle Gas Costs: Introduces a new unit of gas called "particles" (a fraction of gas) to reduce the cost of computational opcodes, enabling more efficient gas pricing. (EIP-2045)
+Reduced STATICCALL Gas for Precompiles: Lowers the base gas cost for STATICCALL to precompiled contracts from 700 to 40 gas, improving efficiency.
 
-Reduced STATICCALL Gas for Precompiles: Lowers the base gas cost for STATICCALL to precompiled contracts from 700 to 40 gas, improving efficiency. (EIP-2046)
+YAML ABI: Recommends using YAML for ABI descriptions in EIPs and ERCs, allowing comments and improving readability compared to JSON.
 
-YAML ABI: Recommends using YAML for ABI descriptions in EIPs and ERCs, allowing comments and improving readability compared to JSON. (EIP-2069)
+Berlin: Specifies the changes included in the Berlin hardfork.
 
-Berlin Hardfork: Specifies the changes included in the Berlin hardfork. (EIP-2070)
+Fork Identifier: Introduces a mechanism to summarize chain configurations using a FORK_HASH and FORK_NEXT for chain compatibility checks.
 
-Fork Identifier: Introduces a mechanism to summarize chain configurations using a FORK_HASH and FORK_NEXT for chain compatibility checks. (EIP-2124)
+Common Prometheus Metrics: Standardizes names and formats for common metrics across Ethereum clients to ensure compatibility with Prometheus monitoring.
 
-Common Prometheus Metrics: Standardizes names and formats for common metrics across Ethereum clients to ensure compatibility with Prometheus monitoring. (EIP-2159)
+Net Gas Metering for SSTORE: Updates the gas cost for the SSTORE opcode based on the original, current, and new storage values, improving efficiency for contracts with frequent storage updates.
 
-Net Gas Metering for SSTORE: Updates the gas cost for the SSTORE opcode based on the original, current, and new storage values, improving efficiency for contracts with frequent storage updates. (EIP-2200)
+Ethereum Mainnet ID: Specifies that the Ethereum network with network ID 1 and chain ID 1 should be referred to as "Ethereum Mainnet" or just "Mainnet" when the context is clear.
 
-Ethereum Mainnet ID: Specifies that the Ethereum network with network ID 1 and chain ID 1 should be referred to as "Ethereum Mainnet" or just "Mainnet" when the context is clear. (EIP-2228)
+Transaction Postdata: Introduces an optional postdata field in transactions for posting data on-chain, but not readable by the EVM, with a cost of 1 gas per byte.
 
-Transaction Postdata: Introduces an optional postdata field in transactions for posting data on-chain, but not readable by the EVM, with a cost of 1 gas per byte. (EIP-2242)
+wallet_getPermissions: Adds a JSON-RPC method for dApps to retrieve the permissions granted by a wallet for specific actions.
 
-wallet_getPermissions: Adds a JSON-RPC method for dApps to retrieve the permissions granted by a wallet for specific actions. (EIP-2255)
+wallet_getOwnedAssets: Introduces a JSON-RPC method to retrieve a list of assets owned by an Ethereum address, as curated by the user's wallet.
 
-wallet_getOwnedAssets: Introduces a JSON-RPC method to retrieve a list of assets owned by an Ethereum address, as curated by the user's wallet. (EIP-2256)
+Chain ID Bound: Establishes a safe and maximum range for the chain ID parameter to avoid overflow and compatibility issues, particularly for EIP-155 and EIP-712.
 
-Chain ID Bound: Establishes a safe and maximum range for the chain ID parameter to avoid overflow and compatibility issues, particularly for EIP-155 and EIP-712. (EIP-2294)
+RJUMPSUB and RETURNSUB: Introduces two opcodes, RJUMPSUB and RETURNSUB, to implement simple subroutines in the EVM, allowing static and efficient control flow.
 
-RJUMPSUB and RETURNSUB: Introduces two opcodes, RJUMPSUB and RETURNSUB, to implement simple subroutines in the EVM, allowing static and efficient control flow. (EIP-2315)
+BEGINDATA: Introduces the BEGINDATA opcode to mark the start of data in contract bytecode, signaling that the remaining bytes are non-executable.
 
-BEGINDATA: Introduces the BEGINDATA opcode to mark the start of data in contract bytecode, signaling that the remaining bytes are non-executable. (EIP-2327)
+EXTSLOAD: Introduces the EXTSLOAD opcode, allowing contracts to directly read external contract storage data, reducing gas costs and improving efficiency.
 
-EXTSLOAD: Introduces the EXTSLOAD opcode, allowing contracts to directly read external contract storage data, reducing gas costs and improving efficiency. (EIP-2330)
+eth/64 ForkID Handshake: Specifies an update to the Ethereum eth protocol (eth/64) to include the forkid in the handshake, enabling nodes to validate compatibility more efficiently.
 
-eth/64 ForkID Handshake: Specifies an update to the Ethereum eth protocol (eth/64) to include the forkid in the handshake, enabling nodes to validate compatibility more efficiently. (EIP-2364)
+EIPs Eligible for Inclusion: Tracks the status of EIPs that have been vetted by the core developers and marked as eligible for inclusion in future forks or upgrades.
 
-EIPs Eligible for Inclusion: Tracks the status of EIPs that have been vetted by the core developers and marked as eligible for inclusion in future forks or upgrades. (EIP-2378)
+Muir Glacier Difficulty Bomb Delay: Proposes delaying the Ethereum difficulty bomb by 4 million blocks (~611 days) to prevent increasing block times and network congestion.
 
-Muir Glacier Difficulty Bomb Delay: Proposes delaying the Ethereum difficulty bomb by 4 million blocks (~611 days) to prevent increasing block times and network congestion. (EIP-2384)
+Muir Glacier: Specifies the Muir Glacier hardfork, which addresses the impending Ice Age by delaying the difficulty bomb.
 
-Muir Glacier Hardfork: Specifies the Muir Glacier hardfork, which addresses the impending Ice Age by delaying the difficulty bomb. (EIP-2387)
+Updates and Updated-by Header: Adds the updates and updated-by headers to track updates to active EIPs and indicate which EIPs modify other EIPs.
 
-Updates and Updated-by Header: Adds the updates and updated-by headers to track updates to active EIPs and indicate which EIPs modify other EIPs. (EIP-2458)
+eth/65 Transaction Announcements: Introduces new message types in the eth protocol (NewPooledTransactionHashes, GetPooledTransactions, and PooledTransactions) to reduce bandwidth usage and improve transaction propagation efficiency.
 
-eth/65 Transaction Announcements: Introduces new message types in the eth protocol (NewPooledTransactionHashes, GetPooledTransactions, and PooledTransactions) to reduce bandwidth usage and improve transaction propagation efficiency. (EIP-2464)
+Coinbase Calls: Allows the block coinbase (validator) to execute contracts directly without a transaction, where tx.origin = block.coinbase and gas.price = 0.
 
-Coinbase Calls: Allows the block coinbase (validator) to execute contracts directly without a transaction, where tx.origin = block.coinbase and gas.price = 0. (EIP-2474)
+eth/66 Request Identifier: Adds a request ID to all request/response pairs in the eth protocol, improving efficiency and reducing the complexity of matching responses to requests.
 
-eth/66 Request Identifier: Adds a request ID to all request/response pairs in the eth protocol, improving efficiency and reducing the complexity of matching responses to requests. (EIP-2481)
+Deprecate CALLCODE: Proposes deprecating the CALLCODE opcode by making it always return failure, as it has been replaced by DELEGATECALL.
 
-Deprecate CALLCODE: Proposes deprecating the CALLCODE opcode by making it always return failure, as it has been replaced by DELEGATECALL. (EIP-2488)
+Difficulty Freeze: Replaces the difficulty bomb with a difficulty freeze that begins at a specific block height, freezing difficulty and increasing it by 1% after that block.
 
-Difficulty Freeze: Replaces the difficulty bomb with a difficulty freeze that begins at a specific block height, freezing difficulty and increasing it by 1% after that block. (EIP-2515)
+BLS12-381 Precompile: Adds precompiles for BLS12-381 curve operations, allowing efficient cryptographic operations such as BLS signature verification and multiexponentiation.
 
-BLS12-381 Precompile: Adds precompiles for BLS12-381 curve operations, allowing efficient cryptographic operations such as BLS signature verification and multiexponentiation. (EIP-2537)
+BLS12-377 Precompile: Introduces precompiles for BLS12-377 curve operations, enabling efficient cryptographic operations and SNARK verification on the BLS12-377 curve.
 
-BLS12-377 Precompile: Introduces precompiles for BLS12-377 curve operations, enabling efficient cryptographic operations and SNARK verification on the BLS12-377 curve. (EIP-2539)
+TXGASLIMIT and CALLGASLIMIT: Introduces two new opcodes: TXGASLIMIT to push the transaction gas limit and CALLGASLIMIT to push the current execution frame's gas limit onto the stack.
 
-TXGASLIMIT and CALLGASLIMIT: Introduces two new opcodes: TXGASLIMIT to push the transaction gas limit and CALLGASLIMIT to push the current execution frame's gas limit onto the stack. (EIP-2542)
+ModExp Gas Cost: Reprices the ModExp precompile (0x05) to more accurately reflect its computational cost, improving efficiency for cryptographic operations.
 
-ModExp Gas Cost: Reprices the ModExp precompile (0x05) to more accurately reflect its computational cost, improving efficiency for cryptographic operations. (EIP-2565)
+Human Readable Parameters: Proposes a new Ethereum RPC method, eth_sendTransactionToContractFunction, allowing users to see human-readable contract function details when executing transactions.
 
-Human Readable Parameters: Proposes a new Ethereum RPC method, eth_sendTransactionToContractFunction, allowing users to see human-readable contract function details when executing transactions. (EIP-2566)
+Penalty for Account Trie Misses: Adds a gas penalty for trie accesses to non-existent accounts, reducing the discrepancy between normal and worst-case execution paths.
 
-Penalty for Account Trie Misses: Adds a gas penalty for trie accesses to non-existent accounts, reducing the discrepancy between normal and worst-case execution paths. (EIP-2583)
+Trie Format Transition: Proposes a method to convert the Ethereum state trie from hexary to binary using overlay trees, enabling a phased transition.
 
-Trie Format Transition: Proposes a method to convert the Ethereum state trie from hexary to binary using overlay trees, enabling a phased transition. (EIP-2584)
+Escalator Fee Market: Introduces the "escalator" fee model, allowing transactions to specify a start price, maximum price, and escalation over time for dynamic fee pricing.
 
-Escalator Fee Market: Introduces the "escalator" fee model, allowing transactions to specify a start price, maximum price, and escalation over time for dynamic fee pricing. (EIP-2593)
+Ephemeral Testnet Yolo: Specifies the Yolo ephemeral testnet, a short-lived network for testing infrastructure, not meant for dapp deployment or long-term use.
 
-Ephemeral Testnet Yolo: Specifies the Yolo ephemeral testnet, a short-lived network for testing infrastructure, not meant for dapp deployment or long-term use. (EIP-2657)
+Precompile and KECCAK256 Repricing: Reprices the SHA256, RIPEMD, and KECCAK256 functions to better reflect their computational costs.
 
-Precompile and KECCAK256 Repricing: Reprices the SHA256, RIPEMD, and KECCAK256 functions to better reflect their computational costs. (EIP-2666)
+Limit Initcode Size: Proposes limiting the size of initcode to 49,152 bytes, enforcing a 16-bit addressable range for contract creation.
 
-Limit Initcode Size: Proposes limiting the size of initcode to 49,152 bytes, enforcing a 16-bit addressable range for contract creation. (EIP-2677)
+Limit Account Nonce: Limits the account nonce to a maximum value of 2^64-1, improving proof representation and optimizing client storage.
 
-Limit Account Nonce: Limits the account nonce to a maximum value of 2^64-1, improving proof representation and optimizing client storage. (EIP-2681)
+JavaScript request Method: Defines a standard request method on JavaScript Ethereum Providers to enable communication between the provider and Ethereum clients using JSON-RPC.
 
-JavaScript request Method: Defines a standard request method on JavaScript Ethereum Providers to enable communication between the provider and Ethereum clients using JSON-RPC. (EIP-2696)
+JavaScript Provider Event Emitter: Introduces standard event handling methods (on and removeListener) for JavaScript Ethereum Providers to notify clients about blockchain state changes.
 
-JavaScript Provider Event Emitter: Introduces standard event handling methods (on and removeListener) for JavaScript Ethereum Providers to notify clients about blockchain state changes. (EIP-2700)
+Sponsored, Expiring, and Batch Transactions: Proposes a new transaction type that supports sponsored transactions (separate gas payer), batch transactions, and expiring transactions.
 
-Sponsored, Expiring, and Batch Transactions: Proposes a new transaction type that supports sponsored transactions (separate gas payer), batch transactions, and expiring transactions. (EIP-2711)
+Typed Transaction Envelope: Defines a transaction envelope for supporting multiple transaction types, enabling easier addition of future transaction formats.
 
-Typed Transaction Envelope: Defines a transaction envelope for supporting multiple transaction types, enabling easier addition of future transaction formats. (EIP-2718)
+Transaction Package: Introduces a transaction type that allows a package of transactions to be executed serially, with information passed from one transaction to the next.
 
-Transaction Package: Introduces a transaction type that allows a package of transactions to be executed serially, with information passed from one transaction to the next. (EIP-2733)
+Reduce Intrinsic Transaction Gas: Proposes lowering the intrinsic gas cost of a transaction from 21,000 to 7,000 gas, making ETH transactions more affordable.
 
-Reduce Intrinsic Transaction Gas: Proposes lowering the intrinsic gas cost of a transaction from 21,000 to 7,000 gas, making ETH transactions more affordable. (EIP-2780)
+Ethereum Provider Connect/Disconnect Events: Specifies connect and disconnect events for JavaScript Ethereum Providers to notify clients when the provider connects or disconnects from the network.
 
-Ethereum Provider Connect/Disconnect Events: Specifies connect and disconnect events for JavaScript Ethereum Providers to notify clients when the provider connects or disconnects from the network. (EIP-2786)
+Rich Transactions: Enables externally owned accounts (EOAs) to execute EVM bytecode directly, allowing EOAs to perform multiple atomic operations in a single transaction.
 
-Rich Transactions: Enables externally owned accounts (EOAs) to execute EVM bytecode directly, allowing EOAs to perform multiple atomic operations in a single transaction. (EIP-2803)
+Transaction Replacement Message: Adds a new message type to the Ethereum Provider API for notifying clients when a transaction in the mempool is replaced or canceled.
 
-Transaction Replacement Message: Adds a new message type to the Ethereum Provider API for notifying clients when a transaction in the mempool is replaced or canceled. (EIP-2831)
+DID Methods for JSON-RPC: Proposes new JSON-RPC methods (did_authenticate, did_createJWS, and did_decryptJWE) to enable wallets to interact with Decentralized Identifiers (DIDs) and support JOSE encryption.
 
-DID Methods for JSON-RPC: Proposes new JSON-RPC methods (did_authenticate, did_createJWS, and did_decryptJWE) to enable wallets to interact with Decentralized Identifiers (DIDs) and support JOSE encryption. (EIP-2844)
+Chunk-Based Code Merkleization: Splits contract code into fixed-size chunks and stores them in a Merkle tree, reducing witness sizes for stateless Ethereum clients.
 
-Chunk-Based Code Merkleization: Splits contract code into fixed-size chunks and stores them in a Merkle tree, reducing witness sizes for stateless Ethereum clients. (EIP-2926)
+Gas Cost Increases for State Access Opcodes: Increases the gas cost for SLOAD, *CALL, BALANCE, and EXT* opcodes on first access in a transaction, to address underpriced operations.
 
-Gas Cost Increases for State Access Opcodes: Increases the gas cost for SLOAD, *CALL, BALANCE, and EXT* opcodes on first access in a transaction, to address underpriced operations. (EIP-2929)
+Optional Access Lists: Introduces a transaction type that includes an access list specifying addresses and storage keys the transaction plans to access, reducing gas costs for state access.
 
-Optional Access Lists: Introduces a transaction type that includes an access list specifying addresses and storage keys the transaction plans to access, reducing gas costs for state access. (EIP-2930)
+Serve Historical Block Hashes from State: Stores the last 8192 block hashes in a system contract, allowing stateless clients to access historical data without affecting the BLOCKHASH opcode.
 
-Serve Historical Block Hashes from State: Stores the last 8192 block hashes in a system contract, allowing stateless clients to access historical data without affecting the BLOCKHASH opcode. (EIP-2935)
+EXTCLEAR Opcode: Introduces the EXTCLEAR opcode to clear storage for contracts that have been SELFDESTRUCTed, without clearing storage during SELFDESTRUCT.
 
-EXTCLEAR Opcode: Introduces the EXTCLEAR opcode to clear storage for contracts that have been SELFDESTRUCTed, without clearing storage during SELFDESTRUCT. (EIP-2936)
+SET_INDESTRUCTIBLE Opcode: Adds the SET_INDESTRUCTIBLE opcode, preventing a contract from being destroyed via SELFDESTRUCT.
 
-SET_INDESTRUCTIBLE Opcode: Adds the SET_INDESTRUCTIBLE opcode, preventing a contract from being destroyed via SELFDESTRUCT. (EIP-2937)
+Account Abstraction: Allows contracts to be the top-level accounts that pay fees and initiate transactions, enabling new wallet designs, signature schemes, and fee structures.
 
-Account Abstraction: Allows contracts to be the top-level accounts that pay fees and initiate transactions, enabling new wallet designs, signature schemes, and fee structures. (EIP-2938)
+IS_STATIC Opcode: Introduces the IS_STATIC opcode, which indicates if the current context is static (i.e., part of a STATICCALL) to enhance account abstraction and security.
 
-IS_STATIC Opcode: Introduces the IS_STATIC opcode, which indicates if the current context is static (i.e., part of a STATICCALL) to enhance account abstraction and security. (EIP-2970)
+Wrapped Legacy Transactions: Defines two new transaction types that wrap legacy transactions with and without a chain ID, maintaining signature compatibility with older transactions.
 
-Wrapped Legacy Transactions: Defines two new transaction types that wrap legacy transactions with and without a chain ID, maintaining signature compatibility with older transactions. (EIP-2972)
+Typed Transactions Over Gossip: Enables the transmission of typed transactions via devp2p, allowing clients to gossip new transaction types without upgrading the devp2p version.
 
-Typed Transactions Over Gossip: Enables the transmission of typed transactions via devp2p, allowing clients to gossip new transaction types without upgrading the devp2p version. (EIP-2976)
+Serenity Phase 0: The initial phase of Ethereum 2.0, introducing the beacon chain and proof-of-stake consensus without affecting Ethereum mainnet. It lays the foundation for future Ethereum upgrades, including sharding and validator mechanics.
 
-Serenity Phase 0: The initial phase of Ethereum 2.0, introducing the beacon chain and proof-of-stake consensus without affecting Ethereum mainnet. It lays the foundation for future Ethereum upgrades, including sharding and validator mechanics. (EIP-2982)
+IMPERSONATECALL: Introduces the IMPERSONATECALL opcode, allowing a contract to impersonate a sender derived from the real caller and a salt, enabling meta-transactions and native multi-user wallets.
 
-IMPERSONATECALL: Introduces the IMPERSONATECALL opcode, allowing a contract to impersonate a sender derived from the real caller and a salt, enabling meta-transactions and native multi-user wallets. (EIP-2997)
+eth_symbol: Adds the eth_symbol JSON-RPC method, which returns the symbol of the native coin of the connected network (e.g., "ETH" for Ethereum mainnet).
 
-eth_symbol: Adds the eth_symbol JSON-RPC method, which returns the symbol of the native coin of the connected network (e.g., "ETH" for Ethereum mainnet). (EIP-3014)
+BW6-761 Curve Operations: Introduces precompiles for performing elliptic curve operations on the BW6-761 curve, enabling efficient verification of zkSNARK proofs.
 
-BW6-761 Curve Operations: Introduces precompiles for performing elliptic curve operations on the BW6-761 curve, enabling efficient verification of zkSNARK proofs. (EIP-3026)
+BLS Remote Signer HTTP API: Defines an API for a BLS remote signer, allowing validator clients to sign block proposals and attestations using remote keys stored securely.
 
-BLS Remote Signer HTTP API: Defines an API for a BLS remote signer, allowing validator clients to sign block proposals and attestations using remote keys stored securely. (EIP-3030)
+Add baseFee to eth_getBlockByHash: Adds a baseFee field to the eth_getBlockByHash JSON-RPC endpoint, returning the base fee for any block post-EIP-1559.
 
-Add baseFee to eth_getBlockByHash: Adds a baseFee field to the eth_getBlockByHash JSON-RPC endpoint, returning the base fee for any block post-EIP-1559. (EIP-3041)
+Add baseFee to eth_getBlockByNumber: Adds a baseFee field to the eth_getBlockByNumber JSON-RPC endpoint, returning the base fee for any block post-EIP-1559.
 
-Add baseFee to eth_getBlockByNumber: Adds a baseFee field to the eth_getBlockByNumber JSON-RPC endpoint, returning the base fee for any block post-EIP-1559. (EIP-3044)
+Add baseFee to eth_getUncleByBlockHashAndIndex: Adds a baseFee field to the eth_getUncleByBlockHashAndIndex JSON-RPC endpoint, returning the base fee for uncles post-EIP-1559.
 
-Add baseFee to eth_getUncleByBlockHashAndIndex: Adds a baseFee field to the eth_getUncleByBlockHashAndIndex JSON-RPC endpoint, returning the base fee for uncles post-EIP-1559. (EIP-3045)
+Add baseFee to eth_getUncleByBlockNumberAndIndex: Adds a baseFee field to the eth_getUncleByBlockNumberAndIndex JSON-RPC endpoint, returning the base fee for uncles post-EIP-1559.
 
-Add baseFee to eth_getUncleByBlockNumberAndIndex: Adds a baseFee field to the eth_getUncleByBlockNumberAndIndex JSON-RPC endpoint, returning the base fee for uncles post-EIP-1559. (EIP-3046)
+BN256 HashToCurve Algorithms: Introduces a precompile for the BN256 curve to enable efficient hash-to-curve operations, facilitating cheaper BLS signature verification.
 
-BN256 HashToCurve Algorithms: Introduces a precompile for the BN256 curve to enable efficient hash-to-curve operations, facilitating cheaper BLS signature verification. (EIP-3068)
+AUTH and AUTHCALL: Introduces two opcodes, AUTH and AUTHCALL, allowing externally owned accounts (EOAs) to delegate control to a contract, enabling sponsored transactions and other flexible transaction schemes.
 
-AUTH and AUTHCALL: Introduces two opcodes, AUTH and AUTHCALL, allowing externally owned accounts (EOAs) to delegate control to a contract, enabling sponsored transactions and other flexible transaction schemes. (EIP-3074)
+Slashing Protection Interchange Format: Defines a JSON format for proof-of-stake validator slashing protection data to enable secure migration between clients.
 
-Slashing Protection Interchange Format: Defines a JSON format for proof-of-stake validator slashing protection data to enable secure migration between clients. (EIP-3076)
+wallet_addEthereumChain: Adds an RPC method that allows dApps to suggest adding new EVM-compatible chains to wallets, improving multi-chain user experiences.
 
-wallet_addEthereumChain: Adds an RPC method that allows dApps to suggest adding new EVM-compatible chains to wallets, improving multi-chain user experiences. (EIP-3085)
+Block Explorer API Routes: Standardizes API routes for blockchain explorers, such as paths for transactions, blocks, accounts, and tokens, improving consistency across platforms.
 
-Block Explorer API Routes: Standardizes API routes for blockchain explorers, such as paths for transactions, blocks, accounts, and tokens, improving consistency across platforms. (EIP-3091)
+Binary Trie Structure: Proposes a transition from a hexary to a binary trie structure for Ethereum’s account and storage tries, improving stateless Ethereum support and reducing proof sizes.
 
-Binary Trie Structure: Proposes a transition from a hexary to a binary trie structure for Ethereum’s account and storage tries, improving stateless Ethereum support and reducing proof sizes. (EIP-3102)
+Increase Block Rewards to 5 ETH: Increases the block reward for proof-of-work mining from 2 ETH to 5 ETH to stabilize miner incentives during Ethereum’s transition to proof-of-stake.
 
-Increase Block Rewards to 5 ETH: Increases the block reward for proof-of-work mining from 2 ETH to 5 ETH to stabilize miner incentives during Ethereum’s transition to proof-of-stake. (EIP-3143)
+EVM Trace Specification: Introduces a JSON format for tracing EVM execution during state tests, enabling consistent debugging and differential fuzzing across Ethereum clients.
 
-EVM Trace Specification: Introduces a JSON format for tracing EVM execution during state tests, enabling consistent debugging and differential fuzzing across Ethereum clients. (EIP-3155)
+BASEFEE Opcode: Adds the BASEFEE opcode, allowing smart contracts to access the block's base fee, useful for gas-related logic such as gas futures and bounties.
 
-BASEFEE Opcode: Adds the BASEFEE opcode, allowing smart contracts to access the block's base fee, useful for gas-related logic such as gas futures and bounties. (EIP-3198)
+Crosschain Identifier Specification: Defines a self-verifying blockchain identifier, incorporating chain metadata to differentiate blockchains, including forks, for crosschain operations.
 
-Crosschain Identifier Specification: Defines a self-verifying blockchain identifier, incorporating chain metadata to differentiate blockchains, including forks, for crosschain operations. (EIP-3220)
+Difficulty Bomb Delay to Q2/2022: Delays the Ethereum difficulty bomb, pushing back the impact of increasing block times to allow Eth1 and Eth2 development to conclude the merge.
 
-Difficulty Bomb Delay to Q2/2022: Delays the Ethereum difficulty bomb, pushing back the impact of increasing block times to allow Eth1 and Eth2 development to conclude the merge. (EIP-3238)
+Giving Ethereum Fees to Future Salaries: Proposes transferring a portion of Ethereum mining and transfer fees to a Future Salaries contract, which funds common good producers, while also locking ETH to reduce circulating supply.
 
-Giving Ethereum Fees to Future Salaries: Proposes transferring a portion of Ethereum mining and transfer fees to a Future Salaries contract, which funds common good producers, while also locking ETH to reduce circulating supply. (EIP-3267)
+Removal of Refunds: Proposes removing gas refunds for SSTORE and SELFDESTRUCT operations, primarily to reduce block size variance and eliminate the use of GasToken.
 
-Removal of Refunds: Proposes removing gas refunds for SSTORE and SELFDESTRUCT operations, primarily to reduce block size variance and eliminate the use of GasToken. (EIP-3298)
+Phase Out Refunds: Suggests gradually reducing gas refunds for SSTORE and SELFDESTRUCT operations over time to reduce block gas elasticity more smoothly than a sudden removal.
 
-Phase Out Refunds: Suggests gradually reducing gas refunds for SSTORE and SELFDESTRUCT operations over time to reduce block gas elasticity more smoothly than a sudden removal. (EIP-3300)
+Account Gas Storage Opcodes: Introduces new opcodes (SELFGAS, USEGAS, STOREGAS) that allow contracts to store gas for later use, improving gas management without increasing state size.
 
-Account Gas Storage Opcodes: Introduces new opcodes (SELFGAS, USEGAS, STOREGAS) that allow contracts to store gas for later use, improving gas management without increasing state size. (EIP-3322)
+wallet_switchEthereumChain: Adds an RPC method that allows dApps to request that the wallet switches its active Ethereum chain, improving multi-chain dApp interactions.
 
-wallet_switchEthereumChain: Adds an RPC method that allows dApps to request that the wallet switches its active Ethereum chain, improving multi-chain dApp interactions. (EIP-3326)
+MEDGASPRICE Opcode: Introduces the MEDGASPRICE opcode, allowing contracts to access the median gas price of the parent block, useful for setting maximum gas prices and mitigating front-running attacks.
 
-MEDGASPRICE Opcode: Introduces the MEDGASPRICE opcode, allowing contracts to access the median gas price of the parent block, useful for setting maximum gas prices and mitigating front-running attacks. (EIP-3332)
+Paged Memory Allocation: Proposes changing the EVM’s memory model to use paged memory, improving flexibility for smart contract memory management while keeping gas costs manageable.
 
-Paged Memory Allocation: Proposes changing the EVM’s memory model to use paged memory, improving flexibility for smart contract memory management while keeping gas costs manageable. (EIP-3336)
+Frame Pointer Support: Adds four new opcodes (MLOADFP, MSTOREFP, GETFP, SETFP) to support memory operations relative to a frame pointer, improving memory management efficiency for smart contracts.
 
-Frame Pointer Support: Adds four new opcodes (MLOADFP, MSTOREFP, GETFP, SETFP) to support memory operations relative to a frame pointer, improving memory management efficiency for smart contracts. (EIP-3337)
+Limit Account Nonce to 2^52: Proposes limiting Ethereum account nonces to a maximum of 2^52 to simplify state witness handling and optimize transaction processing.
 
-Limit Account Nonce to 2^52: Proposes limiting Ethereum account nonces to a maximum of 2^52 to simplify state witness handling and optimize transaction processing. (EIP-3338)
+Increase Block Rewards to 3 ETH with 2-Year Decay: Increases block rewards to 3 ETH, followed by a gradual decrease over two years to 1 ETH, balancing short-term incentives for miners and long-term deflationary goals.
 
-Increase Block Rewards to 3 ETH with 2-Year Decay: Increases block rewards to 3 ETH, followed by a gradual decrease over two years to 1 ETH, balancing short-term incentives for miners and long-term deflationary goals. (EIP-3368)
+5 FNV Primes for Ethash: Modifies the Ethash algorithm by introducing five new FNV primes to replace the single FNV prime, aiming to disrupt existing ASIC miners and maintain Ethereum’s ASIC resistance.
 
-5 FNV Primes for Ethash: Modifies the Ethash algorithm by introducing five new FNV primes to replace the single FNV prime, aiming to disrupt existing ASIC miners and maintain Ethereum’s ASIC resistance. (EIP-3372)
+Predictable Proof-of-Work Sunsetting: Sets block rewards to 3 ETH and gradually reduces them over one year to 1 ETH, aiming for a predictable phase-out of Proof-of-Work (PoW) mining.
 
-Predictable Proof-of-Work Sunsetting: Sets block rewards to 3 ETH and gradually reduces them over one year to 1 ETH, aiming for a predictable phase-out of Proof-of-Work (PoW) mining. (EIP-3374)
+Hardcoded Block Gas Limit: Hardcodes the block gas limit to 12.5 million gas, preventing miners from adjusting the gas limit and ensuring consistency across blocks.
 
-Hardcoded Block Gas Limit: Hardcodes the block gas limit to 12.5 million gas, preventing miners from adjusting the gas limit and ensuring consistency across blocks. (EIP-3382)
+Partial Removal of Refunds: Removes gas refunds for SELFDESTRUCT and restricts SSTORE refunds to a specific case, targeting the elimination of GasToken while preserving efficiency for certain use cases like anti-reentrancy locks.
 
-Partial Removal of Refunds: Removes gas refunds for SELFDESTRUCT and restricts SSTORE refunds to a specific case, targeting the elimination of GasToken while preserving efficiency for certain use cases like anti-reentrancy locks. (EIP-3403)
+Median Gas Premium: Proposes a transaction pricing mechanism where a fixed base fee is combined with a gas premium based on the median of included transactions, aiming to smooth gas price volatility.
 
-Median Gas Premium: Proposes a transaction pricing mechanism where a fixed base fee is combined with a gas premium based on the median of included transactions, aiming to smooth gas price volatility. (EIP-3416)
+Expanded Clique Block Choice Rule: Introduces a four-step block choice rule for the Clique consensus algorithm to reduce the occurrence of deadlocks in multi-validator environments.
 
-Expanded Clique Block Choice Rule: Introduces a four-step block choice rule for the Clique consensus algorithm to reduce the occurrence of deadlocks in multi-validator environments. (EIP-3436)
+SUDO Opcode: Adds the SUDO opcode, which allows calling from an arbitrary sender address, enabling recovery of assets from addresses with lost keys or bugs.
 
-SUDO Opcode: Adds the SUDO opcode, which allows calling from an arbitrary sender address, enabling recovery of assets from addresses with lost keys or bugs. (EIP-3455)
+Transaction Data Opcodes: Introduces the opcodes ORIGINDATALOAD, ORIGINDATASIZE, and ORIGINDATACOPY to provide access to the original transaction’s data payload, improving efficiency for multi-contract systems.
 
-Transaction Data Opcodes: Introduces the opcodes ORIGINDATALOAD, ORIGINDATASIZE, and ORIGINDATACOPY to provide access to the original transaction’s data payload, improving efficiency for multi-contract systems. (EIP-3508)
+Transaction Destination Opcode: Adds the ENTRYPOINT opcode, allowing contracts to access the original recipient of a transaction, facilitating introspection and new contract interaction patterns.
 
-Transaction Destination Opcode: Adds the ENTRYPOINT opcode, allowing contracts to access the original recipient of a transaction, facilitating introspection and new contract interaction patterns. (EIP-3520)
+Reduce Access List Cost: Reduces the cost of declaring tx.to storage keys in access lists, making access lists more cost-effective for transactions involving storage access.
 
-Reduce Access List Cost: Reduces the cost of declaring tx.to storage keys in access lists, making access lists more cost-effective for transactions involving storage access. (EIP-3521)
+Reduction in Refunds: Reduces gas refunds for SSTORE and eliminates refunds for SELFDESTRUCT, limiting block gas refund to 20% of gas used to reduce block size variance and prevent GasToken exploits.
 
-Reduction in Refunds: Reduces gas refunds for SSTORE and eliminates refunds for SELFDESTRUCT, limiting block gas refund to 20% of gas used to reduce block size variance and prevent GasToken exploits. (EIP-3529)
+Restricted Chain Context Type Transactions: Introduces a new transaction type that restricts its validity based on block context conditions, such as block hash, miner, and block timestamp.
 
-Restricted Chain Context Type Transactions: Introduces a new transaction type that restricts its validity based on block context conditions, such as block hash, miner, and block timestamp. (EIP-3534)
+EOF (EVM Object Format): Introduces a versioned container format for EVM bytecode, enabling separation of code and data, with validation at contract creation time.
 
-EOF (EVM Object Format): Introduces a versioned container format for EVM bytecode, enabling separation of code and data, with validation at contract creation time. (EIP-3540)
+Reject 0xEF Byte: Disallows new contract code starting with the byte 0xEF, reserving it for the future use of EVM Object Format (EOF).
 
-Reject 0xEF Byte: Disallows new contract code starting with the byte 0xEF, reserving it for the future use of EVM Object Format (EOF). (EIP-3541)
+Difficulty Bomb Delay to December 2021: Delays the difficulty bomb, pushing its effects to December 2021 to align with the planned Ethereum upgrades.
 
-Difficulty Bomb Delay to December 2021: Delays the difficulty bomb, pushing its effects to December 2021 to align with the planned Ethereum upgrades. (EIP-3554)
+Block Access List: Proposes building a block’s access_list by collating transaction access lists and including a fingerprint of this list in the block header, improving execution and validation efficiency.
 
-Block Access List: Proposes building a block’s access_list by collating transaction access lists and including a fingerprint of this list in the block header, improving execution and validation efficiency. (EIP-3584)
+Reject Transactions from Deployed Code Addresses: Disallows transactions from addresses that have deployed code, protecting against address collision attacks between contracts and externally owned accounts (EOAs).
 
-Reject Transactions from Deployed Code Addresses: Disallows transactions from addresses that have deployed code, protecting against address collision attacks between contracts and externally owned accounts (EOAs). (EIP-3607)
+Warm COINBASE: Starts the COINBASE address warm at the start of a transaction to reflect its actual cost and promote its use for payments.
 
-Warm COINBASE: Starts the COINBASE address warm at the start of a transaction to reflect its actual cost and promote its use for payments. (EIP-3651)
+EOF - Code Validation: Adds validation for EOF contracts at deployment time, ensuring correctness by rejecting bytecode with undefined instructions or truncated PUSH data.
 
-EOF - Code Validation: Adds validation for EOF contracts at deployment time, ensuring correctness by rejecting bytecode with undefined instructions or truncated PUSH data. (EIP-3670)
+Upgrade Consensus to Proof-of-Stake: Specifies the transition from Proof-of-Work (PoW) to Proof-of-Stake (PoS) on Ethereum Mainnet, deprecating PoW and upgrading the consensus mechanism to PoS.
 
-Upgrade Consensus to Proof-of-Stake: Specifies the transition from Proof-of-Work (PoW) to Proof-of-Stake (PoS) on Ethereum Mainnet, deprecating PoW and upgrading the consensus mechanism to PoS. (EIP-3675)
+EOF - JUMPDEST Table: Introduces a section in the EOF format to store the list of JUMPDEST instructions, removing the need for JUMPDEST-analysis at runtime and validating the table during contract creation.
 
-EOF - JUMPDEST Table: Introduces a section in the EOF format to store the list of JUMPDEST instructions, removing the need for JUMPDEST-analysis at runtime and validating the table during contract creation. (EIP-3690)
+Remove Support for Type 1 Transactions: Deprecates the use of TransactionType 1 by upgrading all transactions to TransactionType 2, enhancing gas fee functionality via EIP-1559.
 
-Remove Support for Type 1 Transactions: Deprecates the use of TransactionType 1 by upgrading all transactions to TransactionType 2, enhancing gas fee functionality via EIP-1559. (EIP-3709)
+Gas Limit Cap: Sets an in-protocol cap for the gas limit at 30,000,000, preventing block proposers from increasing the gas limit beyond this threshold.
 
-Gas Limit Cap: Sets an in-protocol cap for the gas limit at 30,000,000, preventing block proposers from increasing the gas limit beyond this threshold. (EIP-3756)
+Safer Control Flow for the EVM: Defines safety rules for EVM control flow, ensuring that contracts cannot halt due to invalid jumps or stack underflows.
 
-Safer Control Flow for the EVM: Defines safety rules for EVM control flow, ensuring that contracts cannot halt due to invalid jumps or stack underflows. (EIP-3779)
+Strict Enforcement of ChainID: Requires transactions to have an explicit chainId that matches the node's configuration, preventing cross-chain transaction replay attacks.
 
-Strict Enforcement of ChainID: Requires transactions to have an explicit chainId that matches the node's configuration, preventing cross-chain transaction replay attacks. (EIP-3788)
+PUSH0 Instruction: Introduces the PUSH0 instruction, which pushes the constant value 0 onto the stack, reducing gas costs and bytecode size.
 
-PUSH0 Instruction: Introduces the PUSH0 instruction, which pushes the constant value 0 onto the stack, reducing gas costs and bytecode size. (EIP-3855)
+Limit and Meter Initcode: Sets a maximum size limit for initcode at 49,152 bytes and introduces a gas cost of 2 for every 32-byte chunk of initcode.
 
-Limit and Meter Initcode: Sets a maximum size limit for initcode at 49,152 bytes and introduces a gas cost of 2 for every 32-byte chunk of initcode. (EIP-3860)
+Gas Refunds on Reverts: Proposes refunds for reverted SSTORE, CREATE, SELFDESTRUCT, and LOGX operations, only charging for access costs but not modification costs.
 
-Gas Refunds on Reverts: Proposes refunds for reverted SSTORE, CREATE, SELFDESTRUCT, and LOGX operations, only charging for access costs but not modification costs. (EIP-3978)
+Static Relative Jumps (RJUMP): Introduces new instructions (RJUMP, RJUMPI, and RJUMPV) that use relative offsets for static jumps, reducing execution costs and simplifying code analysis.
 
-Static Relative Jumps (RJUMP): Introduces new instructions (RJUMP, RJUMPI, and RJUMPV) that use relative offsets for static jumps, reducing execution costs and simplifying code analysis. (EIP-4200)
+Difficulty Bomb Delay to June 2022: Delays the Ethereum difficulty bomb, making its effects noticeable by June 2022, to allow time for the Merge to Proof-of-Stake.
 
-Difficulty Bomb Delay to June 2022: Delays the Ethereum difficulty bomb, making its effects noticeable by June 2022, to allow time for the Merge to Proof-of-Stake. (EIP-4345)
+Time-Aware Base Fee Calculation: Proposes adjusting the block gas target based on block time to target stable throughput by time, helping to smooth base fee volatility under PoW and missed slots under PoS.
 
-Time-Aware Base Fee Calculation: Proposes adjusting the block gas target based on block time to target stable throughput by time, helping to smooth base fee volatility under PoW and missed slots under PoS. (EIP-4396)
+PREVRANDAO: Supplants the DIFFICULTY opcode with PREVRANDAO, which returns the latest beacon chain randomness in PoS blocks, replacing the former PoW-related difficulty value.
 
-PREVRANDAO: Supplants the DIFFICULTY opcode with PREVRANDAO, which returns the latest beacon chain randomness in PoS blocks, replacing the former PoW-related difficulty value. (EIP-4399)
+Bound Historical Data in Execution Clients: Clients must stop serving and may prune historical headers, bodies, and receipts older than one year, relying on weak subjectivity checkpoints for syncing.
 
-Bound Historical Data in Execution Clients: Clients must stop serving and may prune historical headers, bodies, and receipts older than one year, relying on weak subjectivity checkpoints for syncing. (EIP-4444)
+Transaction Calldata Gas Cost Reduction: Reduces the gas cost for transaction calldata to 3 gas per byte and introduces a cap on the total calldata per block to mitigate the increased network strain.
 
-Transaction Calldata Gas Cost Reduction: Reduces the gas cost for transaction calldata to 3 gas per byte and introduces a cap on the total calldata per block to mitigate the increased network strain. (EIP-4488)
+Multi-byte Opcodes: Reserves 0xEB and 0xEC as prefixes to introduce extended multi-byte opcodes, allowing more opcodes to be defined in a larger opcode space.
 
-Multi-byte Opcodes: Reserves 0xEB and 0xEC as prefixes to introduce extended multi-byte opcodes, allowing more opcodes to be defined in a larger opcode space. (EIP-4520)
+Procedures for the EVM: Introduces ENTERPROC, LEAVEPROC, CALLPROC, and RETURNPROC instructions to define and manage EVM procedures with automatic memory stack management.
 
-Procedures for the EVM: Introduces ENTERPROC, LEAVEPROC, CALLPROC, and RETURNPROC instructions to define and manage EVM procedures with automatic memory stack management. (EIP-4573)
+Consensus Layer Withdrawal Protection: Proposes additional protection for the BLSToExecutionChange operation to mitigate the risk of compromised consensus layer keys, providing a social consensus mechanism to favor legitimate holders.
 
-Consensus Layer Withdrawal Protection: Proposes additional protection for the BLSToExecutionChange operation to mitigate the risk of compromised consensus layer keys, providing a social consensus mechanism to favor legitimate holders. (EIP-4736)
+Simplify EIP-161: Simplifies and retroactively deprecates unused aspects of EIP-161 related to state-clearing mechanisms, removing unnecessary edge cases that cannot occur on Ethereum Mainnet.
 
-Simplify EIP-161: Simplifies and retroactively deprecates unused aspects of EIP-161 related to state-clearing mechanisms, removing unnecessary edge cases that cannot occur on Ethereum Mainnet. (EIP-4747)
+EOF - Functions: Introduces function isolation and CALLF and RETF instructions, allowing separate code sections for each function in EOF contracts and removing the need for dynamic jumps.
 
-EOF - Functions: Introduces function isolation and CALLF and RETF instructions, allowing separate code sections for each function in EOF contracts and removing the need for dynamic jumps. (EIP-4750)
+Deactivate SELFDESTRUCT: Renames the SELFDESTRUCT opcode to SENDALL, allowing contracts to transfer all ETH to a target without deleting code or storage, to prepare for future stateless Ethereum.
 
-Deactivate SELFDESTRUCT: Renames the SELFDESTRUCT opcode to SENDALL, allowing contracts to transfer all ETH to a target without deleting code or storage, to prepare for future stateless Ethereum. (EIP-4758)
+SELFDESTRUCT Bomb: Phases out the SELFDESTRUCT opcode by exponentially increasing its gas cost over time, eventually converting it to SENDALL, which transfers all ETH in the account but no longer deletes code or storage.
 
-SELFDESTRUCT Bomb: Phases out the SELFDESTRUCT opcode by exponentially increasing its gas cost over time, eventually converting it to SENDALL, which transfers all ETH in the account but no longer deletes code or storage. (EIP-4760)
+Statelessness Gas Cost Changes: Revises gas costs to reflect the cost of generating stateless witnesses, updating the gas schedule for access events and storage operations in preparation for Verkle trees.
 
-Statelessness Gas Cost Changes: Revises gas costs to reflect the cost of generating stateless witnesses, updating the gas schedule for access events and storage operations in preparation for Verkle trees. (EIP-4762)
+Beacon Block Root in EVM: Introduces a system to store the hash of the beacon chain block root in the EVM, allowing proofs of beacon chain state for use cases like staking pools, bridges, and MEV mitigations.
 
-Beacon Block Root in EVM: Introduces a system to store the hash of the beacon chain block root in the EVM, allowing proofs of beacon chain state for use cases like staking pools, bridges, and MEV mitigations. (EIP-4788)
+Transaction Gas Limit Cap: Sets a maximum transaction gas limit of 2^63-1, ensuring that gas values are within a reasonable range.
 
-Transaction Gas Limit Cap: Sets a maximum transaction gas limit of 2^63-1, ensuring that gas values are within a reasonable range. (EIP-4803)
+Shard Blob Transactions: Introduces a new transaction type for blobs of data that improve Ethereum’s data availability, a key step toward full sharding, scaling Ethereum while maintaining backward compatibility.
 
-Shard Blob Transactions: Introduces a new transaction type for blobs of data that improve Ethereum’s data availability, a key step toward full sharding, scaling Ethereum while maintaining backward compatibility. (EIP-4844)
+Beacon Chain Push Withdrawals: Implements push-based validator withdrawals from the beacon chain to the EVM via a system-level operation, allowing for seamless withdrawals without user intervention.
 
-Beacon Chain Push Withdrawals: Implements push-based validator withdrawals from the beacon chain to the EVM via a system-level operation, allowing for seamless withdrawals without user intervention. (EIP-4895)
+Deposit Contract Snapshot Interface: Defines a format for transmitting the deposit contract Merkle tree in a compressed form, improving weak subjectivity sync times and reducing storage requirements for consensus clients.
 
-Deposit Contract Snapshot Interface: Defines a format for transmitting the deposit contract Merkle tree in a compressed form, improving weak subjectivity sync times and reducing storage requirements for consensus clients. (EIP-4881)
+eth/67 - Removal of GetNodeData: Removes the GetNodeData and NodeData messages from the Ethereum wire protocol, reflecting changes in how state data is accessed and promoting the use of the snap protocol.
 
-eth/67 - Removal of GetNodeData: Removes the GetNodeData and NodeData messages from the Ethereum wire protocol, reflecting changes in how state data is accessed and promoting the use of the snap protocol. (EIP-4938)
+MULDIV Instruction: Introduces the MULDIV instruction, which performs x * y / z in 512-bit precision, providing an efficient way to perform fixed-point arithmetic and cryptographic calculations in EVM.
 
-MULDIV Instruction: Introduces the MULDIV instruction, which performs x * y / z in 512-bit precision, providing an efficient way to perform fixed-point arithmetic and cryptographic calculations in EVM. (EIP-5000)
+AUTHUSURP: Introduces an opcode that deploys code to an authorized address, allowing externally owned accounts (EOAs) to migrate to contract accounts, effectively revoking the original ECDSA signature authority.
 
-AUTHUSURP: Introduces an opcode that deploys code to an authorized address, allowing externally owned accounts (EOAs) to migrate to contract accounts, effectively revoking the original ECDSA signature authority. (EIP-5003)
+Increase SSTORE Price: Increases the gas cost of the SSTORE opcode from 20,000 to 40,000 when creating new storage (i.e., from zero to non-zero), reflecting the growing cost of adding state.
 
-Increase SSTORE Price: Increases the gas cost of the SSTORE opcode from 20,000 to 40,000 when creating new storage (i.e., from zero to non-zero), reflecting the growing cost of adding state. (EIP-5022)
+Remove Contract Code Size Limit: Removes the 24,576-byte limit on contract code size, allowing contracts to exceed this limit with additional gas costs applied based on the size of the contract.
 
-Remove Contract Code Size Limit: Removes the 24,576-byte limit on contract code size, allowing contracts to exceed this limit with additional gas costs applied based on the size of the contract. (EIP-5027)
+AIRDROP Opcode: Introduces the AIRDROP opcode, which transfers ether to a destination address without handing over execution flow, preventing reentrancy risks during ether transfers.
 
-AIRDROP Opcode: Introduces the AIRDROP opcode, which transfers ether to a destination address without handing over execution flow, preventing reentrancy risks during ether transfers. (EIP-5065)
+EIP Editor Handbook: Outlines the responsibilities and processes of Ethereum Improvement Proposal (EIP) editors, including how decisions are made, the election of a Keeper of Consensus, and editor membership guidelines.
 
-EIP Editor Handbook: Outlines the responsibilities and processes of Ethereum Improvement Proposal (EIP) editors, including how decisions are made, the election of a Keeper of Consensus, and editor membership guidelines. (EIP-5069)
+Expirable Transaction: Adds a transaction type with an expiration defined by a block number, allowing transactions to automatically expire after a certain block height.
 
-Expirable Transaction: Adds a transaction type with an expiration defined by a block number, allowing transactions to automatically expire after a certain block height. (EIP-5081)
+Difficulty Bomb Delay to September 2022: Delays the Ethereum difficulty bomb by 11.4 million blocks, postponing its effects until mid-September 2022.
 
-Difficulty Bomb Delay to September 2022: Delays the Ethereum difficulty bomb by 11.4 million blocks, postponing its effects until mid-September 2022. (EIP-5133)
+Semaphore for Reentrancy Protection: Introduces a precompiled contract at 0x0A to provide reentrancy protection by checking if an address is already present in the call stack, preventing reentrancy attacks without modifying storage.
 
-Semaphore for Reentrancy Protection: Introduces a precompiled contract at 0x0A to provide reentrancy protection by checking if an address is already present in the call stack, preventing reentrancy attacks without modifying storage. (EIP-5283)
+Silent Signing Extension: Adds JSON-RPC methods to enable silent signing of transactions without user interaction for a specified period, improving user experience for high-transaction applications like gaming.
 
-Silent Signing Extension: Adds JSON-RPC methods to enable silent signing of transactions without user interaction for a specified period, improving user experience for high-transaction applications like gaming. (EIP-5345)
+EOF - Stack Validation: Introduces deploy-time validation for EVM Object Format (EOF) functions, ensuring that stack underflows and overflows cannot occur during execution, reducing runtime checks.
 
-EOF - Stack Validation: Introduces deploy-time validation for EVM Object Format (EOF) functions, ensuring that stack underflows and overflows cannot occur during execution, reducing runtime checks. (EIP-5450)
+CREATE2COPY: Introduces the CREATE2COPY opcode to reduce gas costs for creating contracts with identical code by referencing an existing contract’s code, avoiding redeployment gas expenses.
 
-CREATE2COPY: Introduces the CREATE2COPY opcode to reduce gas costs for creating contracts with identical code by referencing an existing contract’s code, avoiding redeployment gas expenses. (EIP-5478)
+Restrict Ethereum Provider API Injection: Provides guidance for wallets to restrict the injection of Ethereum Provider APIs (like window.ethereum) to secure contexts, improving user privacy and security.
 
-Restrict Ethereum Provider API Injection: Provides guidance for wallets to restrict the injection of Ethereum Provider APIs (like window.ethereum) to secure contexts, improving user privacy and security. (EIP-5593)
+MCOPY: Adds the MCOPY opcode to efficiently copy memory within the EVM, reducing the gas cost of memory operations compared to using MLOAD and MSTORE.
 
-MCOPY: Adds the MCOPY opcode to efficiently copy memory within the EVM, reducing the gas cost of memory operations compared to using MLOAD and MSTORE. (EIP-5656)
+window.evmproviders Object: Proposes replacing window.ethereum with window.evmproviders, allowing multiple wallets to be injected simultaneously, improving interoperability and user experience.
 
-window.evmproviders Object: Proposes replacing window.ethereum with window.evmproviders, allowing multiple wallets to be injected simultaneously, improving interoperability and user experience. (EIP-5749)
+External Resource Approval Process: Defines the process for approving and managing external resources linked from EIPs, ensuring immutability, availability, and free access to resources.
 
-External Resource Approval Process: Defines the process for approving and managing external resources linked from EIPs, ensuring immutability, availability, and free access to resources. (EIP-5757)
+Wallet Call API: Introduces new JSON-RPC methods for wallets to process batches of on-chain calls, enabling features like atomic execution of multiple transactions.
 
-Wallet Call API: Introduces new JSON-RPC methods for wallets to process batches of on-chain calls, enabling features like atomic execution of multiple transactions. (EIP-5792)
+eth/68 - Add Transaction Type to Announcements: Extends the NewPooledTransactionHashes message to include transaction types and sizes, allowing nodes to optimize the fetching and propagation of transactions.
 
-eth/68 - Add Transaction Type to Announcements: Extends the NewPooledTransactionHashes message to include transaction types and sizes, allowing nodes to optimize the fetching and propagation of transactions. (EIP-5793)
+Delegate Transaction: Introduces a new transaction type allowing externally owned accounts (EOAs) to execute arbitrary code using a delegate call, expanding EOA capabilities without migrating to contract wallets.
 
-Delegate Transaction: Introduces a new transaction type allowing externally owned accounts (EOAs) to execute arbitrary code using a delegate call, expanding EOA capabilities without migrating to contract wallets. (EIP-5806)
+PAY Opcode: Adds the PAY opcode to transfer ether to an address without executing any code on the recipient’s side, preventing reentrancy attacks and reducing gas costs for simple ether transfers.
 
-PAY Opcode: Adds the PAY opcode to transfer ether to an address without executing any code on the recipient’s side, preventing reentrancy attacks and reducing gas costs for simple ether transfers. (EIP-5920)
+Poseidon Hash Function Precompile: Adds a precompiled contract for the Poseidon cryptographic hash function, enabling efficient interoperability with ZK-rollups and zero-knowledge proofs on Ethereum.
 
-Poseidon Hash Function Precompile: Adds a precompiled contract for the Poseidon cryptographic hash function, enabling efficient interoperability with ZK-rollups and zero-knowledge proofs on Ethereum. (EIP-5988)
+DEACTIVATE: Replaces SELFDESTRUCT, keeping the account’s storage and marking the account as deactivated by setting its nonce to 2^64-1, while transferring the balance and leaving the option to reuse the account via CREATE2.
 
-DEACTIVATE: Replaces SELFDESTRUCT, keeping the account’s storage and marking the account as deactivated by setting its nonce to 2^64-1, while transferring the balance and leaving the option to reuse the account via CREATE2. (EIP-6046)
+Deprecate SELFDESTRUCT: Officially deprecates the SELFDESTRUCT opcode by discouraging its use and signaling that its behavior might change in the future.
 
-Deprecate SELFDESTRUCT: Officially deprecates the SELFDESTRUCT opcode by discouraging its use and signaling that its behavior might change in the future. (EIP-6049)
+Private Key Encapsulation: Defines a method to securely transfer private keys using ECIES encryption, allowing private keys to be moved between applications without exposing the seed.
 
-Private Key Encapsulation: Defines a method to securely transfer private keys using ECIES encryption, allowing private keys to be moved between applications without exposing the seed. (EIP-6051)
+Supply Validator Deposits on Chain: Shifts the responsibility of validator deposit processing to the Execution Layer, removing deposit voting and simplifying the Consensus Layer.
 
-Supply Validator Deposits on Chain: Shifts the responsibility of validator deposit processing to the Execution Layer, removing deposit voting and simplifying the Consensus Layer. (EIP-6110)
+Forkid Checks Based on Timestamps: Modifies the forkid checks to consider timestamps, aligning with the Proof-of-Stake fork scheduling mechanism that is based on time instead of block numbers.
 
-Forkid Checks Based on Timestamps: Modifies the forkid checks to consider timestamps, aligning with the Proof-of-Stake fork scheduling mechanism that is based on time instead of block numbers. (EIP-6122)
+Nonce Cap: Caps account nonce values at 2^64-2, reserving higher values for special contract functionality defined in other EIPs.
 
-Nonce Cap: Caps account nonce values at 2^64-2, reserving higher values for special contract functionality defined in other EIPs. (EIP-6188)
+Alias Contracts: Introduces alias contracts, where a contract with nonce 2^64-1 forwards all calls to another contract, simplifying contract forwarding mechanisms.
 
-Alias Contracts: Introduces alias contracts, where a contract with nonce 2^64-1 forwards all calls to another contract, simplifying contract forwarding mechanisms. (EIP-6189)
+Verkle-Compatible SELFDESTRUCT: Modifies SELFDESTRUCT to make it compatible with Verkle trees by setting the contract to an alias contract instead of deleting all its state.
 
-Verkle-Compatible SELFDESTRUCT: Modifies SELFDESTRUCT to make it compatible with Verkle trees by setting the contract to an alias contract instead of deleting all its state. (EIP-6190)
+JUMPF Instruction: Introduces the JUMPF opcode for EOF (EVM Object Format) contracts, enabling efficient tail-call optimizations without adding a return stack frame.
 
-JUMPF Instruction: Introduces the JUMPF opcode for EOF (EVM Object Format) contracts, enabling efficient tail-call optimizations without adding a return stack frame. (EIP-6206)
+SSZ Transactions: Migrates transaction serialization from RLP to SSZ, aligning the transaction format with consensus and providing extensibility for future transaction features.
 
-SSZ Transactions: Migrates transaction serialization from RLP to SSZ, aligning the transaction format with consensus and providing extensibility for future transaction features. (EIP-6404)
+SSZ Withdrawals Root: Migrates the withdrawal Merkle-Patricia Trie (MPT) root to Simple Serialize (SSZ), aligning the withdrawals_root across consensus and execution layers.
 
-SSZ Withdrawals Root: Migrates the withdrawal Merkle-Patricia Trie (MPT) root to Simple Serialize (SSZ), aligning the withdrawals_root across consensus and execution layers. (EIP-6465)
+SSZ Receipts: Migrates RLP receipts to SSZ, enabling efficient proofs for individual receipt components, simplifying gas calculations, and unifying receipt handling across transaction types.
 
-SSZ Receipts: Migrates RLP receipts to SSZ, enabling efficient proofs for individual receipt components, simplifying gas calculations, and unifying receipt handling across transaction types. (EIP-6466)
+SSZ Optional: Introduces the Optional[T] type in SSZ, allowing compact serialization for optional values without using workaround types like Union.
 
-SSZ Optional: Introduces the Optional[T] type in SSZ, allowing compact serialization for optional values without using workaround types like Union. (EIP-6475)
+SSZ Transaction Signature Scheme: Defines a signature scheme for native SSZ transactions, reducing overhead by avoiding conversions from RLP and ensuring efficient hashing using SSZ.
 
-SSZ Transaction Signature Scheme: Defines a signature scheme for native SSZ transactions, reducing overhead by avoiding conversions from RLP and ensuring efficient hashing using SSZ. (EIP-6493)
+EVMMAX Modular Arithmetic: Adds new EVM opcodes (ADDMODX, SUBMODX, MULMODX, etc.) for modular arithmetic operations, enabling efficient elliptic curve computations and cryptographic applications.
 
-EVMMAX Modular Arithmetic: Adds new EVM opcodes (ADDMODX, SUBMODX, MULMODX, etc.) for modular arithmetic operations, enabling efficient elliptic curve computations and cryptographic applications. (EIP-6690)
+SELFDESTRUCT Only in Same Transaction: Limits SELFDESTRUCT to only fully delete contracts if called in the same transaction as contract creation; otherwise, it transfers ether but keeps the contract intact.
 
-SELFDESTRUCT Only in Same Transaction: Limits SELFDESTRUCT to only fully delete contracts if called in the same transaction as contract creation; otherwise, it transfers ether but keeps the contract intact. (EIP-6780)
+Rename Gas to Mana: Renames "gas" to "mana" across the Ethereum ecosystem to reflect the environmental friendliness of Proof-of-Stake and better represent the concept of resource use.
 
-Rename Gas to Mana: Renames "gas" to "mana" across the Ethereum ecosystem to reflect the environmental friendliness of Proof-of-Stake and better represent the concept of resource use. (EIP-6789)
+Unified Verkle Tree for State: Introduces a new Verkle tree for Ethereum's state, storing all changes in a Verkle structure while freezing the existing MPT. This is the first step towards Ethereum's transition to Verkle trees.
 
-Unified Verkle Tree for State: Introduces a new Verkle tree for Ethereum's state, storing all changes in a Verkle structure while freezing the existing MPT. This is the first step towards Ethereum's transition to Verkle trees. (EIP-6800)
+Ex Post Facto Cascading Revert: Introduces a transaction type that can revert a sender’s previous transactions, along with any subsequent dependent transactions, by cascading state reversion.
 
-Ex Post Facto Cascading Revert: Introduces a transaction type that can revert a sender’s previous transactions, along with any subsequent dependent transactions, by cascading state reversion. (EIP-6810)
+10-Minute Blocks: Increases Ethereum’s block time to 10 minutes to facilitate network synchronization over cosmic distances, enabling validators on the moon or other celestial bodies.
 
-10-Minute Blocks: Increases Ethereum’s block time to 10 minutes to facilitate network synchronization over cosmic distances, enabling validators on the moon or other celestial bodies. (EIP-6811)
+Preimage Retention: Requires execution layer (EL) clients to store the preimages of addresses and slot hashes produced between a fork preceding the verge and the verge itself, ensuring preimage availability for the transition to Verkle trees.
 
-Preimage Retention: Requires execution layer (EL) clients to store the preimages of addresses and slot hashes produced between a fork preceding the verge and the verge itself, ensuring preimage availability for the transition to Verkle trees. (EIP-6873)
+Math Checking in EVM: Adds checks for math underflows, overflows, and division by zero at the EVM level and introduces flags to signal errors.
 
-Math Checking in EVM: Adds checks for math underflows, overflows, and division by zero at the EVM level and introduces flags to signal errors. (EIP-6888)
+SETCODE: Introduces the SETCODE opcode (0xfc) that allows contracts to replace their code in place, avoiding the need for SELFDESTRUCT and preserving internal state.
 
-SETCODE: Introduces the SETCODE opcode (0xfc) that allows contracts to replace their code in place, avoiding the need for SELFDESTRUCT and preserving internal state. (EIP-6913)
+Reuse Withdrawn Validator Indices: Reuses fully withdrawn validator indices after a safe-to-reuse period to prevent unbounded growth of the beacon chain validator list.
 
-Reuse Withdrawn Validator Indices: Reuses fully withdrawn validator indices after a safe-to-reuse period to prevent unbounded growth of the beacon chain validator list. (EIP-6914)
+Automatically Reset Testnet: Proposes a testnet that automatically resets to genesis at periodic intervals, preventing state bloat and providing a fresh environment for short-term testing.
 
-Automatically Reset Testnet: Proposes a testnet that automatically resets to genesis at periodic intervals, preventing state bloat and providing a fresh environment for short-term testing. (EIP-6916)
+Network Upgrade Activation Triggers: Lists and categorizes the various methods used to trigger network upgrades in Ethereum, including block numbers, total difficulty, and timestamps.
 
-Network Upgrade Activation Triggers: Lists and categorizes the various methods used to trigger network upgrades in Ethereum, including block numbers, total difficulty, and timestamps. (EIP-6953)
+Multi Injected Provider Discovery: Proposes a new mechanism for discovering multiple wallet providers in a web page using window events, resolving conflicts caused by window.ethereum injection.
 
-Multi Injected Provider Discovery: Proposes a new mechanism for discovering multiple wallet providers in a web page using window events, resolving conflicts caused by window.ethereum injection. (EIP-6963)
+Contract Secured Revenue: Introduces Contract Secured Revenue (CSR) on EVM-based L2s, allowing smart contracts to claim a portion of transaction fees paid when users interact with them.
 
-Contract Secured Revenue: Introduces Contract Secured Revenue (CSR) on EVM-based L2s, allowing smart contracts to claim a portion of transaction fees paid when users interact with them. (EIP-6968)
+Elected Block Proposer Not Slashed: Ensures that a slashed validator cannot be elected as a block proposer, preventing missed proposals and maintaining network stability.
 
-Elected Block Proposer Not Slashed: Ensures that a slashed validator cannot be elected as a block proposer, preventing missed proposals and maintaining network stability. (EIP-6988)
+Execution Layer Triggerable Withdrawals: Allows validators with execution layer (0x01) withdrawal credentials to trigger exits and partial withdrawals directly from the execution layer, enhancing control over staked ETH.
 
-Execution Layer Triggerable Withdrawals: Allows validators with execution layer (0x01) withdrawal credentials to trigger exits and partial withdrawals directly from the execution layer, enhancing control over staked ETH. (EIP-7002)
+Scheme-Handler Discovery Option (SHADOW): Proposes using custom protocol handlers to initiate connections between web pages and wallets via iframes and the postMessage API, enabling multiple wallets without content script permissions.
 
-Scheme-Handler Discovery Option (SHADOW): Proposes using custom protocol handlers to initiate connections between web pages and wallets via iframes and the postMessage API, enabling multiple wallets without content script permissions. (EIP-7039)
+Perpetually Valid Signed Voluntary Exits: Locks the voluntary exit signature domain on Capella, allowing validator exits to be valid across future forks without needing to be re-signed.
 
-Perpetually Valid Signed Voluntary Exits: Locks the voluntary exit signature domain on Capella, allowing validator exits to be valid across future forks without needing to be re-signed. (EIP-7044)
+Increase Max Attestation Inclusion Slot: Extends the maximum inclusion slot for attestations to the last slot of the next epoch (N+1), improving LMD-GHOST security and enabling faster confirmation rules.
 
-Increase Max Attestation Inclusion Slot: Extends the maximum inclusion slot for attestations to the last slot of the next epoch (N+1), improving LMD-GHOST security and enabling faster confirmation rules. (EIP-7045)
+Revamped CALL Instructions: Introduces EXTCALL, EXTDELEGATECALL, and EXTSTATICCALL with simplified gas semantics and clearer status codes, optimizing call operations in EOF contracts.
 
-Revamped CALL Instructions: Introduces EXTCALL, EXTDELEGATECALL, and EXTSTATICCALL with simplified gas semantics and clearer status codes, optimizing call operations in EOF contracts. (EIP-7069)
+Linter Scope: Suggests a policy where EIP lint errors on unchanged lines should not block pull requests, improving the contribution process.
 
-Linter Scope: Suggests a policy where EIP lint errors on unchanged lines should not block pull requests, improving the contribution process. (EIP-7199)
+Increase the MAX_EFFECTIVE_BALANCE: Raises the maximum effective balance for validators while maintaining the minimum 32 ETH requirement, allowing for compounding rewards and validator consolidation.
 
-Increase the MAX_EFFECTIVE_BALANCE: Raises the maximum effective balance for validators while maintaining the minimum 32 ETH requirement, allowing for compounding rewards and validator consolidation. (EIP-7251)
+Remove BLAKE2 Compression Precompile: Deprecates the blake2f (0x09) precompile by making calls to it result in an exceptional abort, as it has not seen significant use since its introduction.
 
-Remove BLAKE2 Compression Precompile: Deprecates the blake2f (0x09) precompile by making calls to it result in an exceptional abort, as it has not seen significant use since its introduction. (EIP-7266)
+ERC/EIP Repository Split: Proposes separating ERC specifications into a new repository, leaving the EIP repository focused on core protocol changes.
 
-ERC/EIP Repository Split: Proposes separating ERC specifications into a new repository, leaving the EIP repository focused on core protocol changes. (EIP-7329)
+Migration Transaction: Introduces a transaction type allowing EOAs to migrate to smart contracts by deploying code at their own address and setting their storage, facilitating smart contract wallet adoption.
 
-Migration Transaction: Introduces a transaction type allowing EOAs to migrate to smart contracts by deploying code at their own address and setting their storage, facilitating smart contract wallet adoption. (EIP-7377)
+Time-Weighted Averaging for Base Fee: Proposes a modification to the base fee adjustment mechanism using a geometric moving average of past block sizes, reducing oscillations and disincentivizing bribes.
 
-Time-Weighted Averaging for Base Fee: Proposes a modification to the base fee adjustment mechanism using a geometric moving average of past block sizes, reducing oscillations and disincentivizing bribes. (EIP-7378)
+Whisk Proposer Election: Upgrades the block proposer election to the Whisk SSLE protocol, keeping block proposers secret until block publishing to prevent DoS attacks against known proposers.
 
-Whisk Proposer Election: Upgrades the block proposer election to the Whisk SSLE protocol, keeping block proposers secret until block publishing to prevent DoS attacks against known proposers. (EIP-7441)
+EOF Data Access Instructions: Introduces DATALOAD, DATALOADN, DATASIZE, and DATACOPY instructions to enable contracts to access the data section of EOF containers.
 
-EOF Data Access Instructions: Introduces DATALOAD, DATALOADN, DATASIZE, and DATACOPY instructions to enable contracts to access the data section of EOF containers. (EIP-7480)
+SSZ StableContainer: Introduces StableContainer[N] to create flexible, forward-compatible containers with stable serialization and merkleization. It also introduces Profile[B] to support specialized subtypes of StableContainer.
 
-SSZ StableContainer: Introduces StableContainer[N] to create flexible, forward-compatible containers with stable serialization and merkleization. It also introduces Profile[B] to support specialized subtypes of StableContainer. (EIP-7495)
+Zero-Knowledge Wormholes: Proposes a minting function to re-mint Ethers that have been secretly burned, enabling privacy-preserving transfers using ZK proofs without smart contract interactions.
 
-Zero-Knowledge Wormholes: Proposes a minting function to re-mint Ethers that have been secretly burned, enabling privacy-preserving transfers using ZK proofs without smart contract interactions. (EIP-7503)
+Max Epoch Churn Limit: Adds a maximum limit to the validator activation churn per epoch to slow validator growth and allow time for research into long-term solutions.
 
-Max Epoch Churn Limit: Adds a maximum limit to the validator activation churn per epoch to slow validator growth and allow time for research into long-term solutions. (EIP-7514)
+BLOBBASEFEE Instruction: Introduces the BLOBBASEFEE opcode to return the blob base fee of the current block, enabling contracts to account for blob data costs.
 
-BLOBBASEFEE Instruction: Introduces the BLOBBASEFEE opcode to return the blob base fee of the current block, enabling contracts to account for blob data costs. (EIP-7516)
+Atomic Storage Operations (SCREDIT, SDEBIT): Adds SCREDIT and SDEBIT opcodes to atomically increment and decrement storage values, preventing overflow and underflow.
 
-Atomic Storage Operations (SCREDIT, SDEBIT): Adds SCREDIT and SDEBIT opcodes to atomically increment and decrement storage values, preventing overflow and underflow. (EIP-7519)
+Empty Accounts Deprecation: Prohibits empty accounts (with no code, zero nonce, and zero balance) on post-merge networks, eliminating legacy technical debt.
 
-Empty Accounts Deprecation: Prohibits empty accounts (with no code, zero nonce, and zero balance) on post-merge networks, eliminating legacy technical debt. (EIP-7523)
+eth/70 - Available-Blocks-Extended Protocol: Introduces eth/70, which extends the Ethereum protocol with block range information and adds messages for requesting and sending block ranges.
 
-eth/70 - Available-Blocks-Extended Protocol: Introduces eth/70, which extends the Ethereum protocol with block range information and adds messages for requesting and sending block ranges. (EIP-7542)
+EVM Decimal Math: Adds arbitrary precision decimal math opcodes (DECADD, DECNEG, DECMUL, DECINV, DECEXP, DECLN, DECSIN) for high-precision arithmetic and scientific calculations in the EVM.
 
-EVM Decimal Math: Adds arbitrary precision decimal math opcodes (DECADD, DECNEG, DECMUL, DECINV, DECEXP, DECLN, DECSIN) for high-precision arithmetic and scientific calculations in the EVM. (EIP-7543)
+Verkle Proof Verification Precompile: Adds a precompiled contract for verifying verkle proofs in a stateless Ethereum context, supporting multiple proof formats.
 
-Verkle Proof Verification Precompile: Adds a precompiled contract for verifying verkle proofs in a stateless Ethereum context, supporting multiple proof formats. (EIP-7545)
+Inclusion Lists: Introduces a mechanism allowing proposers to specify transactions that must be included in subsequent blocks, improving censorship resistance.
 
-Inclusion Lists: Introduces a mechanism allowing proposers to specify transactions that must be included in subsequent blocks, improving censorship resistance. (EIP-7547)
+Committee Index Outside Attestation: Moves the committee index outside the signed attestation message, allowing aggregation of equal consensus votes and improving Casper FFG efficiency.
 
-Committee Index Outside Attestation: Moves the committee index outside the signed attestation message, allowing aggregation of equal consensus votes and improving Casper FFG efficiency. (EIP-7549)
+Hardfork Meta Backfill: Aggregates specifications for Ethereum network upgrades between the Berlin and Shapella hardforks, listing the included EIPs.
 
-Hardfork Meta Backfill: Aggregates specifications for Ethereum network upgrades between the Berlin and Shapella hardforks, listing the included EIPs. (EIP-7568)
+Hardfork Meta - Dencun: Lists the EIPs included in the Deneb/Cancun network upgrade across both Ethereum's execution and consensus layers.
 
-Hardfork Meta - Dencun: Lists the EIPs included in the Deneb/Cancun network upgrade across both Ethereum's execution and consensus layers. (EIP-7569)
+Versioning Scheme for EIPs: Introduces a semantic versioning scheme for EIPs, allowing clearer tracking of specification changes after they move to the "Review" status.
 
-Versioning Scheme for EIPs: Introduces a semantic versioning scheme for EIPs, allowing clearer tracking of specification changes after they move to the "Review" status. (EIP-7577)
+Reserve Precompile Address Range for RIPs: Reserves a precompile address range for the Rollup Improvement Proposal (RIP) process to avoid conflicts with Ethereum precompiles.
 
-Reserve Precompile Address Range for RIPs: Reserves a precompile address range for the Rollup Improvement Proposal (RIP) process to avoid conflicts with Ethereum precompiles. (EIP-7587)
+BLS Signed Transactions: Introduces a new transaction type signed with BLS signatures, allowing for the aggregation of signatures and reducing chain history growth.
 
-BLS Signed Transactions: Introduces a new transaction type signed with BLS signatures, allowing for the aggregation of signatures and reducing chain history growth. (EIP-7591)
+PeerDAS - Peer Data Availability Sampling: Introduces a networking protocol that allows nodes to perform data availability sampling (DAS) to ensure that blob data is available without downloading all data.
 
-PeerDAS - Peer Data Availability Sampling: Introduces a networking protocol that allows nodes to perform data availability sampling (DAS) to ensure that blob data is available without downloading all data. (EIP-7594)
+Hardfork Meta - Pectra: Lists the EIPs included in the Prague/Electra network upgrade across both Ethereum's execution and consensus layers.
 
-Hardfork Meta - Pectra: Lists the EIPs included in the Prague/Electra network upgrade across both Ethereum's execution and consensus layers. (EIP-7600)
+Hardfork Meta - Fusaka: Lists the EIPs included in the Fulu/Osaka Ethereum network upgrade.
 
-Hardfork Meta - Fusaka: Lists the EIPs included in the Fulu/Osaka Ethereum network upgrade. (EIP-7607)
+Decrease Base Cost of TLOAD/TSTORE: Reduces the base gas cost for TLOAD and TSTORE and introduces a superlinear pricing model, improving the efficiency of transient storage.
 
-Decrease Base Cost of TLOAD/TSTORE: Reduces the base gas cost for TLOAD and TSTORE and introduces a superlinear pricing model, improving the efficiency of transient storage. (EIP-7609)
+Revert Creation in Case of Non-Empty Storage: Reverts contract creation if the target address has non-empty storage, ensuring that contracts cannot overwrite addresses with existing storage.
 
-Revert Creation in Case of Non-Empty Storage: Reverts contract creation if the target address has non-empty storage, ensuring that contracts cannot overwrite addresses with existing storage. (EIP-7610)
+Verkle State Transition via Overlay Tree: Proposes switching from the Merkle Patricia Tree (MPT) to Verkle trees by overlaying the new structure onto the existing state, leaving the MPT untouched until later migration.
 
-Verkle State Transition via Overlay Tree: Proposes switching from the Merkle Patricia Tree (MPT) to Verkle trees by overlaying the new structure onto the existing state, leaving the MPT untouched until later migration. (EIP-7612)
+EOF Contract Creation: Introduces EOFCREATE and RETURNCONTRACT instructions to handle contract creation in the EOF format, replacing legacy CREATE and CREATE2.
 
-EOF Contract Creation: Introduces EOFCREATE and RETURNCONTRACT instructions to handle contract creation in the EOF format, replacing legacy CREATE and CREATE2. (EIP-7620)
+Increase Calldata Cost: Increases the cost of calldata to reduce the maximum block size, making room for more blobs and improving network efficiency.
 
-Increase Calldata Cost: Increases the cost of calldata to reduce the maximum block size, making room for more blobs and improving network efficiency. (EIP-7623)
+Extension of EIP-778 for Client ENR Entry: Adds a new entry to the Ethereum Node Records (ENR) to specify client information, such as client name and version, for network analysis and troubleshooting.
 
-Extension of EIP-778 for Client ENR Entry: Adds a new entry to the Ethereum Node Records (ENR) to specify client information, such as client name and version, for network analysis and troubleshooting. (EIP-7636)
+Optimize EOA EXTCODEHASH: Optimizes the output of EXTCODEHASH for EOAs by returning 0x when an address has no code but has a balance, improving gas efficiency.
 
-Optimize EOA EXTCODEHASH: Optimizes the output of EXTCODEHASH for EOAs by returning 0x when an address has no code but has a balance, improving gas efficiency. (EIP-7637)
+Cease Serving History Before PoS: Execution layer clients will stop serving block data from before the Paris (PoS) upgrade over the p2p network, reducing the data burden.
 
-Cease Serving History Before PoS: Execution layer clients will stop serving block data from before the Paris (PoS) upgrade over the p2p network, reducing the data burden. (EIP-7639)
+Drop Pre-Merge Fields: Removes obsolete fields and messages from the eth protocol that became unnecessary after the Ethereum Merge.
 
-Drop Pre-Merge Fields: Removes obsolete fields and messages from the eth protocol that became unnecessary after the Ethereum Merge. (EIP-7642)
+Historical Hashes Accumulator: A structure committing to all pre-merge headers and their associated total difficulty, facilitating light client verification of historical block data.
 
-Historical Hashes Accumulator: A structure committing to all pre-merge headers and their associated total difficulty, facilitating light client verification of historical block data. (EIP-7643)
+Alias ORIGIN to SENDER: Aliases the ORIGIN opcode to the SENDER opcode, eliminating distinctions between the original transaction initiator and the immediate sender.
 
-Alias ORIGIN to SENDER: Aliases the ORIGIN opcode to the SENDER opcode, eliminating distinctions between the original transaction initiator and the immediate sender. (EIP-7645)
+Prefetch Precompile: Introduces a precompile that allows contracts to add access lists programmatically, reducing gas costs for data access operations.
 
-Prefetch Precompile: Introduces a precompile that allows contracts to add access lists programmatically, reducing gas costs for data access operations. (EIP-7650)
+Sync Committee Slashings: Adds a slashing condition for malicious sync committee messages, deterring sync committee members from signing non-canonical beacon block roots.
 
-Sync Committee Slashings: Adds a slashing condition for malicious sync committee messages, deterring sync committee members from signing non-canonical beacon block roots. (EIP-7657)
+Light Client Data Backfill: Defines a mechanism for syncing historical light client data between beacon nodes, facilitating backward synchronization of light client data.
 
-Light Client Data Backfill: Defines a mechanism for syncing historical light client data between beacon nodes, facilitating backward synchronization of light client data. (EIP-7658)
+Access Key Opcode: Introduces the ACCESS_KEY opcode to read access-list keys of the executing contract, ensuring reliable static input declaration.
 
-Access Key Opcode: Introduces the ACCESS_KEY opcode to read access-list keys of the executing contract, ensuring reliable static input declaration. (EIP-7664)
+Identity Precompile EVM-ification: Replaces the identity precompile with an equivalent piece of EVM code, reducing the number of precompiles in Ethereum.
 
-Identity Precompile EVM-ification: Replaces the identity precompile with an equivalent piece of EVM code, reducing the number of precompiles in Ethereum. (EIP-7666)
+Raise Hash Function Gas Costs: Increases gas costs for hash function opcodes and precompiles to match the computational demands of zero-knowledge proof (ZK-SNARK) systems.
 
-Raise Hash Function Gas Costs: Increases gas costs for hash function opcodes and precompiles to match the computational demands of zero-knowledge proof (ZK-SNARK) systems. (EIP-7667)
+Remove Bloom Filters: Eliminates bloom filters from the execution block and receipt objects, acknowledging their limited utility in practical dapp usage.
 
-Remove Bloom Filters: Eliminates bloom filters from the execution block and receipt objects, acknowledging their limited utility in practical dapp usage. (EIP-7668)
+Retroactively Included EIPs: Lists EIPs introducing backward-compatible consensus changes that were activated independently of network upgrades, such as nonce limits and rejecting transactions from EOAs with deployed code.
 
-Retroactively Included EIPs: Lists EIPs introducing backward-compatible consensus changes that were activated independently of network upgrades, such as nonce limits and rejecting transactions from EOAs with deployed code. (EIP-7675)
+Prepare for Address Space Extension: Modifies EOF operations to avoid trimming addresses during execution, preparing for future extensions to 256-bit addresses.
 
-Prepare for Address Space Extension: Modifies EOF operations to avoid trimming addresses during execution, preparing for future extensions to 256-bit addresses. (EIP-7676)
+Return Deposits for Distinct Credentials: Automatically queues withdrawals for validator deposits where distinct execution withdrawal credentials exist, reducing potential front-running risks in staking.
 
-Return Deposits for Distinct Credentials: Automatically queues withdrawals for validator deposits where distinct execution withdrawal credentials exist, reducing potential front-running risks in staking. (EIP-7684)
+General Purpose Execution Layer Requests: Introduces a framework for contract-triggered requests in the execution layer, exposing these requests to the consensus layer for processing.
 
-General Purpose Execution Layer Requests: Introduces a framework for contract-triggered requests in the execution layer, exposing these requests to the consensus layer for processing. (EIP-7685)
+Linear EVM Memory Limits: Adds a hard memory limit in EVM, ensuring that a transaction with N gas can use at most N bytes of memory.
 
-Linear EVM Memory Limits: Adds a hard memory limit in EVM, ensuring that a transaction with N gas can use at most N bytes of memory. (EIP-7686)
+Forward Compatible Consensus Data Structures: Transitions consensus SSZ data structures to StableContainer, enabling forward compatibility for verifiers and decentralized staking pools.
 
-Forward Compatible Consensus Data Structures: Transitions consensus SSZ data structures to StableContainer, enabling forward compatibility for verifiers and decentralized staking pools. (EIP-7688)
+Blob Throughput Increase: Proposes an increase in the number of blobs per block, aiming to provide more scale to Ethereum's L2 solutions relying on L1 data capacity.
 
-Blob Throughput Increase: Proposes an increase in the number of blobs per block, aiming to provide more scale to Ethereum's L2 solutions relying on L1 data capacity. (EIP-7691)
+EOFv1 Meta: Lists the EIPs that belong to the EVM Object Format (EOFv1) proposal, also known as "Mega EOF", providing structured code and validation improvements.
 
-EOFv1 Meta: Lists the EIPs that belong to the EVM Object Format (EOFv1) proposal, also known as "Mega EOF", providing structured code and validation improvements. (EIP-7692)
+EOF Creation Transaction: Enables the deployment of EOF contracts using creation transactions, allowing the use of initcontainers for deploying EOF contracts.
 
-EOF Creation Transaction: Enables the deployment of EOF contracts using creation transactions, allowing the use of initcontainers for deploying EOF contracts. (EIP-7698)
+Native Account Abstraction with EOF: Proposes a variant of native account abstraction relying on EOF, separating validation and execution code sections for smart contract accounts.
 
-Native Account Abstraction with EOF: Proposes a variant of native account abstraction relying on EOF, separating validation and execution code sections for smart contract accounts. (EIP-7701)
+Set EOA Account Code: Introduces a new transaction type that allows EOAs to set code during execution, enabling features like batching, sponsorship, and privilege de-escalation.
 
-Set EOA Account Code: Introduces a new transaction type that allows EOAs to set code during execution, enabling features like batching, sponsorship, and privilege de-escalation. (EIP-7702)
+Increase Calldata Cost: Increases the gas cost for calldata to reduce the maximum possible block size and allow for a higher block gas limit.
 
-Increase Calldata Cost: Increases the gas cost for calldata to reduce the maximum possible block size and allow for a higher block gas limit. (EIP-7703)
+NONREENTRANT and REENTRANT Opcodes: Introduces two new opcodes, NONREENTRANT and REENTRANT, to control a contract’s reentrancy status, preventing reentrancy attacks.
 
-NONREENTRANT and REENTRANT Opcodes: Introduces two new opcodes, NONREENTRANT and REENTRANT, to control a contract’s reentrancy status, preventing reentrancy attacks. (EIP-7705)
+Separate Gas Type for Calldata: Creates a separate gas market for calldata, with its own base fee and gas limit, to better manage block size without making calldata more scarce.
 
-Separate Gas Type for Calldata: Creates a separate gas market for calldata, with its own base fee and gas limit, to better manage block size without making calldata more scarce. (EIP-7706)
+Incentivize Access List Provisioning: Reduces the gas cost of access lists, encouraging their use and improving the data load efficiency for execution layer clients.
 
-Incentivize Access List Provisioning: Reduces the gas cost of access lists, encouraging their use and improving the data load efficiency for execution layer clients. (EIP-7707)
+ETH Transfers Emit a Log: Automatically generates a log for every ETH transfer, including via transactions, CALL, and SELFDESTRUCT, enabling easier tracking of ETH movement.
 
-ETH Transfers Emit a Log: Automatically generates a log for every ETH transfer, including via transactions, CALL, and SELFDESTRUCT, enabling easier tracking of ETH movement. (EIP-7708)
+Read BLOCKHASH from Storage: Modifies the BLOCKHASH opcode to retrieve the block hash from storage, adjusting its gas cost to reflect the storage access.
 
-Read BLOCKHASH from Storage: Modifies the BLOCKHASH opcode to retrieve the block hash from storage, adjusting its gas cost to reflect the storage access. (EIP-7709)
+Box Type for EIP-712 Messages: Introduces a box type for EIP-712 messages, allowing parameters of arbitrary struct types while ensuring wallets can display the underlying data to users.
 
-Box Type for EIP-712 Messages: Introduces a box type for EIP-712 messages, allowing parameters of arbitrary struct types while ensuring wallets can display the underlying data to users. (EIP-7713)
+Anti-Correlation Attestation Penalties: Adjusts penalties for missed attestations based on their correlation with other missed attestations, encouraging validator diversification.
 
-Anti-Correlation Attestation Penalties: Adjusts penalties for missed attestations based on their correlation with other missed attestations, encouraging validator diversification. (EIP-7716)
+Network Upgrade Inclusion Stages: Formalizes the stages that Core EIPs go through before inclusion in network upgrades, providing better clarity on the upgrade process.
 
-Network Upgrade Inclusion Stages: Formalizes the stages that Core EIPs go through before inclusion in network upgrades, providing better clarity on the upgrade process. (EIP-7723)
+EVM Transaction Bundles: Introduces two new transaction types and an opcode, enabling EVM-native transaction bundles that delegate local sequencing rights to off-chain entities.
 
-EVM Transaction Bundles: Introduces two new transaction types and an opcode, enabling EVM-native transaction bundles that delegate local sequencing rights to off-chain entities. (EIP-7727)
+Enshrined Proposer-Builder Separation: Decouples the execution and consensus parts of an Ethereum block by allowing the proposer to delegate block construction to a builder, adding new validation mechanisms like Payload Timeliness Committees.
 
-Enshrined Proposer-Builder Separation: Decouples the execution and consensus parts of an Ethereum block by allowing the proposer to delegate block construction to a builder, adding new validation mechanisms like Payload Timeliness Committees. (EIP-7732)
+Leaf-Level State Expiry in Verkle Trees: Introduces state expiry at the leaf level in Verkle trees by adding an "update epoch" to extension nodes, allowing inactive data to be expired and reactivated via new transactions.
 
-Leaf-Level State Expiry in Verkle Trees: Introduces state expiry at the leaf level in Verkle trees by adding an "update epoch" to extension nodes, allowing inactive data to be expired and reactivated via new transactions. (EIP-7736)
+Uncouple Blob Count Between CL and EL: Separates blob count verification between the consensus and execution layers, allowing the consensus layer to verify blob targets while the execution layer dynamically receives the target from the consensus layer.
 
-Uncouple Blob Count Between CL and EL: Separates blob count verification between the consensus and execution layers, allowing the consensus layer to verify blob targets while the execution layer dynamically receives the target from the consensus layer. (EIP-7742)
+Two-Dimensional Log Filter Data Structure: Replaces per-block bloom filters with a two-dimensional log filter structure to improve the efficiency and precision of searching for log events, enabling light-client-friendly Merkle proofs.
 
-Two-Dimensional Log Filter Data Structure: Replaces per-block bloom filters with a two-dimensional log filter structure to improve the efficiency and precision of searching for log events, enabling light-client-friendly Merkle proofs. (EIP-7745)
+State Conversion to Verkle Tree: Describes a procedure to gradually convert key-values from the Merkle Patricia Tree (MPT) to the Verkle Tree, allowing the migration of the Ethereum state in a manageable timeframe.
 
-State Conversion to Verkle Tree: Describes a procedure to gradually convert key-values from the Merkle Patricia Tree (MPT) to the Verkle Tree, allowing the migration of the Ethereum state in a manageable timeframe. (EIP-7748)
+wallet_signIntendedValidatorData Method: Adds a new RPC method for signing data with an intended validator address using ERC-191 version 0x00, providing a simpler, more secure alternative to EIP-712 for smart contract accounts.
 
-wallet_signIntendedValidatorData Method: Adds a new RPC method for signing data with an intended validator address using ERC-191 version 0x00, providing a simpler, more secure alternative to EIP-712 for smart contract accounts. (EIP-7749)
+EOF/EVM Trace Specification: Updates the EIP-3155 JSON tracing specification to add support for EOF (EVM Object Format), enhancing the traceability of EOF contracts with new fields for sections and function depth.
 
-EOF/EVM Trace Specification: Updates the EIP-3155 JSON tracing specification to add support for EOF (EVM Object Format), enhancing the traceability of EOF contracts with new fields for sections and function depth. (EIP-7756)
+HASCODE Opcode: Introduces the HASCODE opcode to discriminate between externally owned accounts (EOAs) and contract accounts, helping implement ERC-721 and ERC-1155 standards in EOF contracts.
 
-HASCODE Opcode: Introduces the HASCODE opcode to discriminate between externally owned accounts (EOAs) and contract accounts, helping implement ERC-721 and ERC-1155 standards in EOF contracts. (EIP-7761)
+Increase MIN_BASE_FEE_PER_BLOB_GAS: Proposes increasing the MIN_BASE_FEE_PER_BLOB_GAS to speed up price discovery on blob space, enhancing the Ethereum network’s efficiency during high demand.
 
-Increase MIN_BASE_FEE_PER_BLOB_GAS: Proposes increasing the MIN_BASE_FEE_PER_BLOB_GAS to speed up price discovery on blob space, enhancing the Ethereum network’s efficiency during high demand. (EIP-7762)
+Amsterdam Hardfork Meta: Lists the EIPs formally proposed, considered, and scheduled for inclusion in the Amsterdam network upgrade.
 
-Amsterdam Hardfork Meta: Lists the EIPs formally proposed, considered, and scheduled for inclusion in the Amsterdam network upgrade. (EIP-7773)
+Prevent Block Gas Smuggling: Modifies gas accounting to exclude discounts and refunds from block gas calculations, ensuring block gas usage aligns with the actual workload.
 
-Prevent Block Gas Smuggling: Modifies gas accounting to exclude discounts and refunds from block gas calculations, ensuring block gas usage aligns with the actual workload. (EIP-7778)
+Reduce Slot Time for Lower Peak Bandwidth: Proposes reducing Ethereum's slot time from 12 seconds to 8 seconds, increasing throughput by ~33% and improving bandwidth distribution.
 
-Reduce Slot Time for Lower Peak Bandwidth: Proposes reducing Ethereum's slot time from 12 seconds to 8 seconds, increasing throughput by ~33% and improving bandwidth distribution. (EIP-7782)
+Controlled Gas Limit Increase Strategy: Introduces a controlled gas limit increase mechanism, gradually raising the gas limit by a fixed rate to scale network capacity predictably.
 
-Controlled Gas Limit Increase Strategy: Introduces a controlled gas limit increase mechanism, gradually raising the gas limit by a fixed rate to scale network capacity predictably. (EIP-7783)
+GETCONTRACT: Introduces the GETCONTRACT opcode to return the address containing the bytecode by its hash, allowing contracts to identify and interact based on deterministic and tamper-proof bytecode identifiers. This opcode enhances security, auditability, and efficiency in the Ethereum ecosystem by enabling deterministic references to contract code, bypassing the mutability and opacity of contract addresses.
 
-GETCONTRACT: Introduces the GETCONTRACT opcode to return the address containing the bytecode by its hash, allowing contracts to identify and interact based on deterministic and tamper-proof bytecode identifiers. This opcode enhances security, auditability, and efficiency in the Ethereum ecosystem by enabling deterministic references to contract code, bypassing the mutability and opacity of contract addresses. (EIP-7784)
+Dynamic target blob count: Adjusts the target blob count dynamically to maintain constant blob costs, aiming to optimize network resources and economic incentives related to blob space utilization, making L2 transactions costs predictable and stable.
 
-Dynamic target blob count: Adjusts the target blob count dynamically to maintain constant blob costs, aiming to optimize network resources and economic incentives related to blob space utilization, making L2 transactions costs predictable and stable. (EIP-7788)
+Controlled Gas Limit Increase Guidelines: Provides specific parameters for a controlled and gradual increase in the Ethereum gas limit, aiming to ensure stable and predictable network scalability by outlining the start block, rate of increase, and gas cap.
 
-Controlled Gas Limit Increase Guidelines: Provides specific parameters for a controlled and gradual increase in the Ethereum gas limit, aiming to ensure stable and predictable network scalability by outlining the start block, rate of increase, and gas cap. (EIP-7790)
+Verifiable logs: Introduces a scheme to make the eth_getLogs response verifiable, enhancing the security and reliability of log information used by applications, by verifying log entries against accumulative commitments stored in a dedicated contract.
 
-Verifiable logs: Introduces a scheme to make the eth_getLogs response verifiable, enhancing the security and reliability of log information used by applications, by verifying log entries against accumulative commitments stored in a dedicated contract. (EIP-7792)
+SHA-256-512: Modified SHA-256 algorithm that skips preprocessing, limited to 512-bit inputs.
 
-SHA-256-512: Modified SHA-256 algorithm that skips preprocessing, limited to 512-bit inputs (EIP-7797).
+system_logs: List tracking block-level logs for system events, separate from transaction logs.
 
-system_logs: List tracking block-level logs for system events, separate from transaction logs (EIP-7799).
+system_logs_root: Field in the block header storing the root hash of system_logs for validation.
 
-system_logs_root: Field in the block header storing the root hash of system_logs for validation (EIP-7799).
+PriorityRewards: Log entry in system_logs recording total priority fees after block transactions.
 
-PriorityRewards: Log entry in system_logs recording total priority fees after block transactions (EIP-7799).
+Withdrawal: Log entry in system_logs for tracking withdrawals under EIP-4895.
 
-Withdrawal: Log entry in system_logs for tracking withdrawals under EIP-4895 (EIP-7799).
+Genesis: Log entry in system_logs for initial balances at network genesis.
 
-Genesis: Log entry in system_logs for initial balances at network genesis (EIP-7799).
+FOCIL: Fork-choice enforced inclusion list (IL) mechanism to ensure transactions' inclusion by a validator committee.
 
-FOCIL: Fork-choice enforced inclusion list (IL) mechanism to ensure transactions' inclusion by a validator committee. (EIP-7805)
+IL (Inclusion List): List of prioritized transactions selected by validators for forced inclusion in a block to counter censorship.
 
-IL (Inclusion List): List of prioritized transactions selected by validators for forced inclusion in a block to counter censorship. (EIP-7805)
+IL Committee: A set of validators chosen each slot to create, gossip, and enforce inclusion lists.
 
-IL Committee: A set of validators chosen each slot to create, gossip, and enforce inclusion lists. (EIP-7805)
+IL Equivocation: Occurs when a committee member submits multiple differing ILs, leading to the member being disregarded in voting.
 
-IL Equivocation: Occurs when a committee member submits multiple differing ILs, leading to the member being disregarded in voting. (EIP-7805)
+CL P2P Validation Rules: A set of rules to validate ILs on the consensus layer to prevent denial-of-service attacks and ensure efficient propagation.
 
-CL P2P Validation Rules: A set of rules to validate ILs on the consensus layer to prevent denial-of-service attacks and ensure efficient propagation. (EIP-7805)
+engine_getInclusionList: An API endpoint in the execution engine for retrieving an IL.
 
-engine_getInclusionList: An API endpoint in the execution engine for retrieving an IL. (EIP-7805)
+engine_newPayload: API endpoint modified to support transactions within ILs in the payload.
 
-engine_newPayload: API endpoint modified to support transactions within ILs in the payload. (EIP-7805)
+engine_forkchoiceUpdated: API endpoint modified to include IL transactions as part of payload attributes.
 
-engine_forkchoiceUpdated: API endpoint modified to include IL transactions as part of payload attributes. (EIP-7805)
+SSZ Execution Block Header: A normalized SSZ container representation for execution blocks in Ethereum.
 
-SSZ Execution Block Header: A normalized SSZ container representation for execution blocks in Ethereum. (EIP-7807)
+Requests Hash: A hash computed using ExecutionRequests.hash_tree_root() in the Consensus Layer.
 
-Requests Hash: A hash computed using ExecutionRequests.hash_tree_root() in the Consensus Layer. (EIP-7807)
+Execution Block Hash: A hash derived from hash_tree_root, replacing the traditional keccak256-based block hash in various contexts.
 
-Execution Block Hash: A hash derived from hash_tree_root, replacing the traditional keccak256-based block hash in various contexts. (EIP-7807)
+Transaction-Type Range for RIPs: A reserved range (0x40 to 0x7f) for transaction types used by the Rollup Improvement Proposal process.
 
-Transaction-Type Range for RIPs: A reserved range (0x40 to 0x7f) for transaction types used by the Rollup Improvement Proposal process. (EIP-7808)
+CREATE_DELEGATE: A new EVM instruction at 0xf6 allowing contracts to create clones using EIP-7702 delegation designations.
 
-CREATE_DELEGATE: A new EVM instruction at 0xf6 allowing contracts to create clones using EIP-7702 delegation designations. (EIP-7819)
+MAGIC: A constant value set as 0xef0100 used in the CREATE_DELEGATE instruction.
 
-MAGIC: A constant value set as 0xef0100 used in the CREATE_DELEGATE instruction. (EIP-7819)
+EMPTY_ACCOUNT_COST: A constant gas cost set as 25000 for executing the CREATE_DELEGATE instruction.
 
-EMPTY_ACCOUNT_COST: A constant gas cost set as 25000 for executing the CREATE_DELEGATE instruction. (EIP-7819)
+BASE_COST: A constant gas cost set as 12500 for calculating refunds during the CREATE_DELEGATE process.
 
-BASE_COST: A constant gas cost set as 12500 for calculating refunds during the CREATE_DELEGATE process. (EIP-7819)
+MODEXP Limit: Introduces an upper bound of 8192 bits (1024 bytes) for the length_of_BASE, length_of_EXPONENT, and length_of_MODULUS inputs in the MODEXP precompile. If these inputs exceed the limit, the execution halts, returns an error, and consumes all gas.
 
-MODEXP Limit: Introduces an upper bound of 8192 bits (1024 bytes) for the length_of_BASE, length_of_EXPONENT, and length_of_MODULUS inputs in the MODEXP precompile. If these inputs exceed the limit, the execution halts, returns an error, and consumes all gas. (EIP-7823)
+Transaction Gas Limit Cap: A protocol-level cap on the maximum gas used by a single transaction, set to 30 million gas. Transactions exceeding this limit are invalidated.
 
-Transaction Gas Limit Cap: A protocol-level cap on the maximum gas used by a single transaction, set to 30 million gas. Transactions exceeding this limit are invalidated. (EIP-7825)
+MAX_CODE_SIZE: The maximum size of EOF contract code is increased to 64 KiB, allowing more complex contracts to be deployed.
 
-MAX_CODE_SIZE: The maximum size of EOF contract code is increased to 64 KiB, allowing more complex contracts to be deployed. (EIP-7830)
+MAX_INITCODE_SIZE: The maximum size for EOF contract initialization code is set to 128 KiB, reflecting the updated MAX_CODE_SIZE.
 
-MAX_INITCODE_SIZE: The maximum size for EOF contract initialization code is set to 128 KiB, reflecting the updated MAX_CODE_SIZE. (EIP-7830)
+OFFERCALL: A new EVM opcode that allows contracts to schedule function calls by offering ETH to block producers as an incentive to prioritize their execution. Unfulfilled offers result in the bot's deactivation until manually reignited by the owner.
+metadata_section: A new optional section in the Ethereum Object Format (EOF) body that is distinct from the executable code and data sections, allowing metadata changes without affecting code behavior or source verification.
 
-OFFERCALL: A new EVM opcode that allows contracts to schedule function calls by offering ETH to block producers as an incentive to prioritize their execution. Unfulfilled offers result in the bot's deactivation until manually reignited by the owner. (EIP-7833)​
-metadata_section: A new optional section in the Ethereum Object Format (EOF) body that is distinct from the executable code and data sections, allowing metadata changes without affecting code behavior or source verification. (EIP-7834)​
+SLOT: The SLOT precompile returns the current slot number as an 8-byte unsigned long in big-endian encoding.
 
-SLOT: The SLOT precompile returns the current slot number as an 8-byte unsigned long in big-endian encoding. (EIP-7843)
+PRECOMPILE_ADDRESS: The address of the new precompiled contract for deactivating or reactivating a delegated EOA's private key.
 
-PRECOMPILE_ADDRESS: The address of the new precompiled contract for deactivating or reactivating a delegated EOA's private key. (EIP-7851)
+PRECOMPILE_GAS_COST: The gas cost for executing the new precompiled contract, tentatively set at 5000.
 
-PRECOMPILE_GAS_COST: The gas cost for executing the new precompiled contract, tentatively set at 5000. (EIP-7851)
+DELEGATED_CODE_PREFIX: The prefix (0xef0100) used in the delegated code for EOAs as per EIP-7702.
 
-DELEGATED_CODE_PREFIX: The prefix (0xef0100) used in the delegated code for EOAs as per EIP-7702. (EIP-7851)
+Active state: A state where the private key of the EOA is active and can sign transactions (0xef0100 || address).
 
-Active state: A state where the private key of the EOA is active and can sign transactions (0xef0100 || address). (EIP-7851)
+Deactivated state: A state where the private key of the EOA is deactivated, appended with 0x00 (0xef0100 || address || 0x00).
 
-Deactivated state: A state where the private key of the EOA is deactivated, appended with 0x00 (0xef0100 || address || 0x00). (EIP-7851)
+Delayed Execution Layer State Root: The state_root in block n's ExecutionPayload now references the post-state of block n-1, eliminating the need to compute and verify the post-state root for block n, reducing block production latency.
 
-Delayed Execution Layer State Root: The state_root in block n's ExecutionPayload now references the post-state of block n-1, eliminating the need to compute and verify the post-state root for block n, reducing block production latency. (EIP-7862)
+Block-level Warming: Addresses and storage keys remain "warm" throughout an entire block’s execution, reducing redundant cold access costs for frequently accessed storage slots.
 
-Block-level Warming: Addresses and storage keys remain "warm" throughout an entire block’s execution, reducing redundant cold access costs for frequently accessed storage slots. (EIP-7863)
+Unified Binary Tree: A new Ethereum state structure that replaces hexary Patricia trees with a single binary tree, merging account and storage tries into one, improving proof efficiency and state organization.
 
-Unified Binary Tree: A new Ethereum state structure that replaces hexary Patricia trees with a single binary tree, merging account and storage tries into one, improving proof efficiency and state organization. (EIP-7864)
+TXCREATE: A new instruction that allows contracts to create EOF contracts using initcode from transaction data.
 
-TXCREATE: A new instruction that allows contracts to create EOF contracts using initcode from transaction data. (EIP-7873)
+InitcodeTransaction: A new transaction type that enables the deployment of EOF contracts using the TXCREATE instruction.
 
-InitcodeTransaction: A new transaction type that enables the deployment of EOF contracts using the TXCREATE instruction. (EIP-7873)
+SRETURN: A new opcode that allows returning data directly from storage without first copying it to memory.
 
-SRETURN: A new opcode that allows returning data directly from storage without first copying it to memory. (EIP-7877)
+TRETURN: A new opcode that allows returning data directly from transient storage without first copying it to memory.
 
-TRETURN: A new opcode that allows returning data directly from transient storage without first copying it to memory. (EIP-7877)
+RRETURN: A new opcode that allows returning data directly from the existing RETURNDATA buffer.
 
-RRETURN: A new opcode that allows returning data directly from the existing RETURNDATA buffer. (EIP-7877)
+MRETURN: A renamed version of the existing RETURN opcode, which returns sequential bytes from memory.
 
-MRETURN: A renamed version of the existing RETURN opcode, which returns sequential bytes from memory. (EIP-7877)
+ModExp Gas Cost Increase: A change in the pricing formula of the ModExp precompile to ensure it is not underpriced for its resource consumption.
 
-ModExp Gas Cost Increase: A change in the pricing formula of the ModExp precompile to ensure it is not underpriced for its resource consumption. (EIP-7883)
+Delayed Execution: A mechanism allowing block validation without executing transactions by deferring execution-related fields and charging the COINBASE upfront for inclusion costs.
 
-Delayed Execution: A mechanism allowing block validation without executing transactions by deferring execution-related fields and charging the COINBASE upfront for inclusion costs. (EIP-7886)
+Skipped Transaction: A transaction included in a block but not executed due to insufficient funds, gas limits, incorrect nonce, or invalid sender type, with its inclusion cost still paid by COINBASE.
 
-Skipped Transaction: A transaction included in a block but not executed due to insufficient funds, gas limits, incorrect nonce, or invalid sender type, with its inclusion cost still paid by COINBASE. (EIP-7886)
+Coinbase Signature: A cryptographic signature from the COINBASE over the block header, authorizing the upfront payment of inclusion costs and ensuring commitment to the block.
 
-Coinbase Signature: A cryptographic signature from the COINBASE over the block header, authorizing the upfront payment of inclusion costs and ensuring commitment to the block. (EIP-7886)
+Inclusion Cost: The upfront fee paid by COINBASE for each transaction, covering base cost, calldata, and blob fees, which is refunded if the transaction executes successfully.
+Pre-State Root: The state root of the blockchain before executing the current block, replacing state_root in the header to allow deferred execution validation.
 
-Inclusion Cost: The upfront fee paid by COINBASE for each transaction, covering base cost, calldata, and blob fees, which is refunded if the transaction executes successfully. (EIP-7886)
-Pre-State Root: The state root of the blockchain before executing the current block, replacing state_root in the header to allow deferred execution validation. (EIP-7886)
+Parent Requests Hash: A deferred execution field in the block header that commits to the execution layer requests from the parent block instead of the current one.
 
-Parent Requests Hash: A deferred execution field in the block header that commits to the execution layer requests from the parent block instead of the current one. (EIP-7886)
+REVERT: All calls to this opcode must emit a log with revert data.
 
-REVERT: All calls to this opcode must emit a log with revert data. (EIP-7889)
+LOG1: A special type of log that can be used by reverted transactions. 
 
-LOG1: A special type of log that can be used by reverted transactions.  (EIP-7889)
+Blob Parameter Only (BPO): A mechanism for scaling Ethereum's blob capacity through targeted hard forks that modify only blob-related parameters.
 
+blob target: The maximum amount of data allowed in blobs on a given block.
 
-Blob Parameter Only (BPO): A mechanism for scaling Ethereum's blob capacity through targeted hard forks that modify only blob-related parameters. (EIP-7892)
+blob limit: The total number of blocks that can be stored as blobs before the network is full.
 
-blob target: The maximum amount of data allowed in blobs on a given block. (EIP-7892)
+baseFeeUpdateFraction: The fraction by which base fees are updated when updating the blob capacity.
 
-blob limit: The total number of blocks that can be stored as blobs before the network is full. (EIP-7892)
+interfaces: contract interface specifications (ABIs) that a wallet needs to reliably decode calldata in requests
 
-baseFeeUpdateFraction: The fraction by which base fees are updated when updating the blob capacity. (EIP-7892)
+ABI attachment: capability to enable calldata decoding in wallets. 
 
+ExecutionPayloadHeader: Replaces ExecutionPayload in BeaconBlockBody
 
-interfaces: contract interface specifications (ABIs) that a wallet needs to reliably decode calldata in requests (EIP-7896)
+ExecutionPayloadWithInclusionProof: Independent transmission of execution payload and inclusion proof 
 
-ABI attachment: capability to enable calldata decoding in wallets.  (EIP-7896)
+initcode: The code executed by a contract at its initialization, which must be within 49152 bytes in size before EIP-3860.
 
+calldata: Data passed as part of an instruction call or memory expansion operation, which must be within 24576 bytes in size before EIP-170.
 
-ExecutionPayloadHeader: Replaces ExecutionPayload in BeaconBlockBody (EIP-7898)
+memory expansion: An operation that expands the contract's memory space to accommodate additional data.
 
-ExecutionPayloadWithInclusionProof: Independent transmission of execution payload and inclusion proof  (EIP-7898)
+excess_contract_size: max(0, contract_size - 0x6000)
 
+eth_config JSON-RPC Method: 
 
-initcode: The code executed by a contract at its initialization, which must be within 49152 bytes in size before EIP-3860. (EIP-7903)
+JSON: A format chosen for its ubiquity, machine and human readability, and a standardized canonical form via RFC-8785.
 
-calldata: Data passed as part of an instruction call or memory expansion operation, which must be within 24576 bytes in size before EIP-170. (EIP-7903)
+CRC-32: A hash function used instead of cryptographic hashes due to reasons including node lying, convenience reduction, and widespread implementation.
 
-memory expansion: An operation that expands the contract's memory space to accommodate additional data. (EIP-7903)
+blob base fee: the base fee for blob gas usage
 
+excess blob gas update: a mechanism to adjust the blob base fee based on current demand
 
-excess_contract_size: max(0, contract_size - 0x6000) (EIP-7907)
+long-run average: the long-term average of the blob base fee, used as a reference point
 
+ProgressiveList[T]: A SSZ type representing lists of arbitrary length with stable merkleization.
 
-eth_config JSON-RPC Method:  (EIP-7910)
+gindices: Generalized indices for individual elements in a list. 
 
-JSON: A format chosen for its ubiquity, machine and human readability, and a standardized canonical form via RFC-8785. (EIP-7910)
+proposer_lookahead: a deterministic value pre-calculated and stored in the beacon state at the start of every epoch
 
-CRC-32: A hash function used instead of cryptographic hashes due to reasons including node lying, convenience reduction, and widespread implementation. (EIP-7910)
+MIN_SEED_LOOKAHEAD: an integer constant representing the minimum number of epochs for which lookahead is considered predictable
 
+TARGET_BLOB_GAS_PER_BLOCK: targeted number of blobs to be carried by a block
 
-blob base fee: the base fee for blob gas usage (EIP-7915)
+TX_BASE_COST: base cost of a simple blob-carrying transaction
 
-excess blob gas update: a mechanism to adjust the blob base fee based on current demand (EIP-7915)
+calc_excess_blob_gas(): function that checks fee parity
 
-long-run average: the long-term average of the blob base fee, used as a reference point (EIP-7915)
+StableContainer: A container that stores data in a single SSZ format, forward compatible across forks. 
 
+contract_address: Commitments to contract addresses included in receipt data.
 
-ProgressiveList[T]: A SSZ type representing lists of arbitrary length with stable merkleization. (EIP-7916)
+SSZ transaction signature scheme: A new signature scheme for native use of SSZ transactions without conversion through trusted API gateways.
 
-gindices: Generalized indices for individual elements in a list.  (EIP-7916)
+CODECOPY: Data spans used to invalidate subsequent JUMPDEST checks 
 
-N: The fixed capacity imposed by existing List types, which can lead to inefficient hashing and unnecessary bounds checks. (EIP-7916)
+generation length: 256 epochs (~27 hours)
 
+churn limit: The maximum number of validators allowed to exit within a given time frame.
 
-proposer_lookahead: a deterministic value pre-calculated and stored in the beacon state at the start of every epoch (EIP-7917)
+ALLOCATE_PAGE_COST: Cost of allocating a page in memory
 
-MIN_SEED_LOOKAHEAD: an integer constant representing the minimum number of epochs for which lookahead is considered predictable (EIP-7917)
+THRASH_PAGE_COST: Cost of thrashing (reusing) a page in memory
 
+MSIZE: Returns the current size of the memory space
 
-TARGET_BLOB_GAS_PER_BLOCK: targeted number of blobs to be carried by a block (EIP-7918)
+eth/69: over DevP2P protocol
 
-TX_BASE_COST: base cost of a simple blob-carrying transaction (EIP-7918)
+block_access_list: A list of all addresses and storage keys accessed during a block, along with their post-execution values for writes.
 
-calc_excess_blob_gas(): function that checks fee parity (EIP-7918)
+computed_balance_diffs: A dictionary tracking every address with a balance change in the block.
 
+computed_code_changes: A dictionary recording pre-transaction nonce values for deployed contracts in the block.
 
-StableContainer: A container that stores data in a single SSZ format, forward compatible across forks.  (EIP-7919)
+computed_nonce_diffs: A structure recording pre-transaction nonce values for all deployer accounts and deployed contracts in the block.
 
-from: Commitments to properties computed from the original RLP representation. (EIP-7919)
+MAX_RLP_BLOCK_SIZE: The maximum allowed total RLP-encoded size of any produced block, which is set at 10 MiB.
 
-contract_address: Commitments to contract addresses included in receipt data. (EIP-7919)
+Fusaka: A proposed Ethereum upgrade
 
-SSZ transaction signature scheme: A new signature scheme for native use of SSZ transactions without conversion through trusted API gateways. (EIP-7919)
+EL devs: Execution Layer developers
 
+L1 execution: First-level execution of smart contracts on the Ethereum network
 
+C001: 64-bit arithmetic operation
 
-CODECOPY: Data spans used to invalidate subsequent JUMPDEST checks  (EIP-7921)
+C00B: End of multibyte arithmetic operation
 
+C010: Multibyte comparison operation
 
+C015: End of multibyte comparison operation
 
-generation length: 256 epochs (~27 hours) (EIP-7922)
+C016: Bitwise shift left by a multiple of 8 bits
 
-churn limit: The maximum number of validators allowed to exit within a given time frame. (EIP-7922)
+C019: Bitwise right shift by a multiple of 8 bits
 
+C056: Legacy flow control opcode (EOFv0)
 
-ALLOCATE_PAGE_COST: Cost of allocating a page in memory (EIP-7923)
+C057: Legacy flow control opcode (EOFv1)
 
-THRASH_PAGE_COST: Cost of thrashing (reusing) a page in memory (EIP-7923)
+C0E1: EOFv1 flow control opcode
 
-MSIZE: Returns the current size of the memory space (EIP-7923)
+C0E2: EOFv1 flow control opcode
 
 
-eth/69: over DevP2P protocol (EIP-7927)
+exponential growth model: An exponential schedule where gas limit increases by a factor of 10 every approximately 2 years.
 
+gas voting mechanism: A system used to determine the current gas price, which is now being enhanced with an additional feature.
 
-block_access_list: A list of all addresses and storage keys accessed during a block, along with their post-execution values for writes. (EIP-7928)
+gas limit policy: User-configurable settings that override the default automatic increase in gas limits set by clients.
 
-computed_balance_diffs: A dictionary tracking every address with a balance change in the block. (EIP-7928)
 
-computed_code_changes: A dictionary recording pre-transaction nonce values for deployed contracts in the block. (EIP-7928)
+CLZ: Opcode to count the number of leading zero bits in a 256-bit word
 
-computed_nonce_diffs: A structure recording pre-transaction nonce values for all deployer accounts and deployed contracts in the block. (EIP-7928)
+lnWad: Not specified
 
+powWad: Not specified
 
-MAX_RLP_BLOCK_SIZE: The maximum allowed total RLP-encoded size of any produced block, which is set at 10 MiB. (EIP-7934)
+lambertW0Wad: Not specified
 
+sqrt: Not specified
 
-Fusaka: A proposed Ethereum upgrade (EIP-7935)
+cbrt: Not specified
 
-EL devs: Execution Layer developers (EIP-7935)
+byte string comparisons: Not specified
 
-L1 execution: First-level execution of smart contracts on the Ethereum network (EIP-7935)
+generalized calldata compression/decompression: Not specified
 
+bitmaps: Not specified
 
-C001: 64-bit arithmetic operation (EIP-7937)
+post quantum signature schemes: Not specified
 
-C00B: End of multibyte arithmetic operation (EIP-7937)
+Shah: A person elected to act as a protector for the core devs and the Ethereum protocol.
 
-C010: Multibyte comparison operation (EIP-7937)
+Roadmap Setting: The focus on high-level roadmap ("why we do things") rather than individual proposals ("what we do"). 
 
-C015: End of multibyte comparison operation (EIP-7937)
-
-C016: Bitwise shift left by a multiple of 8 bits (EIP-7937)
-
-C019: Bitwise right shift by a multiple of 8 bits (EIP-7937)
-
-C056: Legacy flow control opcode (EOFv0) (EIP-7937)
-
-C057: Legacy flow control opcode (EOFv1) (EIP-7937)
-
-C0E1: EOFv1 flow control opcode (EIP-7937)
-
-C0E2: EOFv1 flow control opcode (EIP-7937)
-
-
-exponential growth model: An exponential schedule where gas limit increases by a factor of 10 every approximately 2 years. (EIP-7938)
-
-gas voting mechanism: A system used to determine the current gas price, which is now being enhanced with an additional feature. (EIP-7938)
-
-gas limit policy: User-configurable settings that override the default automatic increase in gas limits set by clients. (EIP-7938)
-
-
-CLZ: Opcode to count the number of leading zero bits in a 256-bit word (EIP-7939)
-
-lnWad: Not specified (EIP-7939)
-
-powWad: Not specified (EIP-7939)
-
-lambertW0Wad: Not specified (EIP-7939)
-
-sqrt: Not specified (EIP-7939)
-
-cbrt: Not specified (EIP-7939)
-
-byte string comparisons: Not specified (EIP-7939)
-
-generalized calldata compression/decompression: Not specified (EIP-7939)
-
-bitmaps: Not specified (EIP-7939)
-
-post quantum signature schemes: Not specified (EIP-7939)
-
-
-Shah: A person elected to act as a protector for the core devs and the Ethereum protocol. (EIP-7940)
-
-Roadmap Setting: The focus on high-level roadmap ("why we do things") rather than individual proposals ("what we do").  (EIP-7940)
-
-Core Devs: Not explicitly defined, but refers to the group of developers responsible for maintaining the Ethereum network. (EIP-7940)
+Core Devs: Not explicitly defined, but refers to the group of developers responsible for maintaining the Ethereum network.
 

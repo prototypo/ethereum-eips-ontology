@@ -1,0 +1,4 @@
+{
+    "Meeting": "Consensus Layer Call 010",
+    "Summary": "The CL and EL team meetings are summarized in files using Markdown format. \n\n[[\n## Summary\n]]\n\n\nStatus of Ethereum 2.0 Phase 1 is that it has been deployed on devnet for testing purposes. The mainnet deployment date was discussed, but no specific timeline was agreed upon yet.\n\n\nSeveral tasks were accomplished during the meeting including reviewing and discussing the implementation details of the Bellman algorithm in the CL codebase. Additionally, a discussion about the status of the Lighthouse client's integration with the Beacon Chain took place."
+}

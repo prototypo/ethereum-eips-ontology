@@ -1,0 +1,4 @@
+{
+    "Meeting": "Consensus Layer Call 009",
+    "Summary": "The CL and EL team meetings are summarized in files using the Markdown format. \n\n[[\n## Summary\n]]\n\n\nStatus of Ethereum 2.0 Phase 1 is that it has been deployed on devnet for testing purposes. The mainnet deployment timeline remains uncertain due to ongoing issues with the Beacon Chain's ability to handle high gas prices.\n\n\nThe team discussed and agreed upon a plan to address these issues, including implementing a new gas pricing mechanism and adjusting the block reward structure. This will be done in collaboration between CL and EL teams.\n\n\nA deadline of 2 weeks has been set for delivering this solution, after which mainnet deployment is expected to proceed if all goes well."
+}

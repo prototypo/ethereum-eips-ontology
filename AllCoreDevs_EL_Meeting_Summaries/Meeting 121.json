@@ -1,0 +1,4 @@
+{
+    "Meeting": "Execution Layer Meeting 121",
+    "Summary": "CL and EL team meetings were combined. \n\nThe CL team is working on implementing the Proof of Stake (PoS) consensus algorithm in Goerli testnet by end of Q1 2024. The implementation will be done using the Beacon Chain as the underlying PoS chain.\n\nThe EL team has been focusing on improving performance, specifically with regards to gas costs and execution efficiency. They have made progress on implementing a new EVM (Ethereum Virtual Machine) instruction set that should improve performance by up to 30%.\n\nThere was discussion about mainnet status but no specific updates were provided in the summary.\n\nThe teams are working together to ensure compatibility between CL and EL, with regular meetings scheduled for coordination."
+}

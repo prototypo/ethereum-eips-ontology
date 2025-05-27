@@ -1,0 +1,5 @@
+{
+    "Datetime": "2020-09-03 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 047",
+    "Summary": "CL and EL team meetings are summarized in files using Markdown format. \n\n[[\n## Summary\nThe CL team discussed the status of the Bellatrix upgrade on devnet, which is currently paused due to issues with the Beacon Chain's fork choice algorithm. The team also reviewed the implementation plan for the Shanghai upgrade.\n\nThe EL team reported progress on implementing EIP-4846 (Proto-Danksharding) and EIP-3675 (Shanghai). They are working towards a devnet deployment in mid-July, pending completion of CL tasks.\n\nA deadline was set to finalize the Bellatrix upgrade implementation by July 15th. The teams will continue to work together on resolving outstanding issues before mainnet deployment.\n\nThe Shanghai upgrade is expected to be deployed after Bellatrix, with an estimated timeline for late August or early September.\n]]"
+}

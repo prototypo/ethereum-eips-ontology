@@ -1,0 +1,4 @@
+{
+    "Meeting": "Consensus Layer Call 059",
+    "Summary": "The CL and EL team meetings are summarized in files using the Markdown format.\nHere is the summary of the meeting:\n\nWe discussed the status of the Merge testnets. The devnet has been updated to include the new consensus engine, but it's still not fully functional due to some issues with the execution layer. We also talked about the mainnet merge timeline and agreed that we need more time for testing before moving forward.\n\nThe team is working on fixing the remaining bugs in the Merge implementation, including a critical issue related to block proposers. The goal is to have all these fixes implemented by the end of this week so that we can move ahead with further testing.\n\nWe also discussed some minor issues and agreed to prioritize them based on their impact on the overall merge process."
+}

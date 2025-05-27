@@ -1,0 +1,8 @@
+{
+    "Datetime": "2021-11-26 14:00:00+00:00",
+    "Links": {
+        "Agenda": "https://github.com/ethereum/pm/issues/428"
+    },
+    "Meeting": "Execution Layer Meeting 127",
+    "Summary": "CL and EL team meetings are summarized separately. Please provide one of them so I can proceed with summarizing it in 1-5 paragraphs. \n\n(Note: If only CL or EL meeting summary is provided, the response will be limited to that specific layer.)"
+}

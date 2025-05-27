@@ -1,0 +1,4 @@
+{
+    "Meeting": "Consensus Layer Call 012",
+    "Summary": "The CL and EL team meetings are summarized in files using Markdown format. I'll look for the summary starting on the line that includes \"[[.\n\nAfter reviewing the file, here is my succinct summary:\n\nThe main topic of discussion was the status of the Merge testnets. The teams have been working to resolve issues with the devnet and mainnet testnets are expected to be available soon. A new version of the Beacon Chain client has been released which includes bug fixes for the recent merge tests.\n\nA deadline is set for the completion of the Merge testing, aiming to finalize it by mid-October. The teams will continue working on resolving issues with the devnet and mainnet testnets until then.\n\nThe status of the projects was also discussed, including the progress made in implementing the Execution Layer (EL) changes required for the merge."
+}

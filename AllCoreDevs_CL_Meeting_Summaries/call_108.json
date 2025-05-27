@@ -1,0 +1,5 @@
+{
+    "Datetime": "2023-05-18 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 108",
+    "Summary": "The CL team is working on implementing the Bellatrix upgrade. The mainnet merge timeline remains unchanged and will proceed as planned unless unforeseen issues arise.\n\nSeveral tasks were accomplished during this meeting including reviewing the implementation of the Beacon Chain's new fork choice rules, discussing potential solutions for handling edge cases in the execution layer, and updating documentation to reflect recent changes.\n\nThe team is still waiting on a few external dependencies before proceeding with further development. The mainnet merge timeline remains unchanged but it was noted that there may be some minor adjustments needed once those dependencies are resolved.\n\nDevnet testing will continue as planned until the upgrade is ready for deployment."
+}

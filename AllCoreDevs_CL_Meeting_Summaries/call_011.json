@@ -1,0 +1,4 @@
+{
+    "Meeting": "Consensus Layer Call 011",
+    "Summary": "The CL and EL team meetings are summarized in files using the Markdown format. \n\n[[\n## Summary\n]]\n\n\nStatus of Lighthouse beacon chain is good, but there's an issue with the \nvalidator set size being too small for mainnet.\n\n\nLighthouse has been upgraded to support 64-bit integers which will be used by \nthe Execution Layer (EL) in its upcoming upgrade.\n\n\nThe EL team plans to start testing on devnet soon and expects it to take a few weeks."
+}

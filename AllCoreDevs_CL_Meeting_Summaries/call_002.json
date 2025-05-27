@@ -1,0 +1,5 @@
+{
+    "Datetime": "2018-08-30 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 002",
+    "Summary": "The CL and EL team meetings are summarized in files using Markdown format. \n\n[[\n## Summary\n]]\n\n\nStatus of mainnet merge is still pending due to issues related to \ndifficulty bomb delay. The difficulty bomb will be delayed by 4 epochs, \nand the target date for mainnet merge remains uncertain.\n\nDevnet status: CL and EL teams are working on resolving devnet testnets' \nissues with regards to block proposer selection.\n\n\nThe team is also discussing a plan to implement an \"exit\" mechanism in \nthe Beacon Chain. This will allow validators to exit from the network, \nwhich could be useful for testing purposes or other scenarios.\n\nNo specific deadlines were mentioned during this meeting."
+}

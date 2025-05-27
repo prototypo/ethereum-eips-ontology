@@ -1,0 +1,5 @@
+{
+    "Datetime": "2018-08-02 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 000",
+    "Summary": "The CL and EL team meetings are summarized in files using the Markdown format. \n\n[[\n## Summary\n]]\n\n\nSharding is being implemented on Ethereum's mainnet. The current status of sharding implementation was discussed during this meeting.\n\nA new version of the shard proposal has been released, which includes a revised design for the shard data structure and an updated protocol specification.\n\n\nThe team also reviewed the progress made so far in implementing sharding on devnet."
+}

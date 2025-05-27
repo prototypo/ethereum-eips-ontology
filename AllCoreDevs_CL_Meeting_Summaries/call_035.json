@@ -1,0 +1,9 @@
+{
+    "Datetime": "2020-03-12 14:00:00+00:00",
+    "Links": {
+        "A write-up for improving BLS signature performance": "https://ethresear.ch/t/fast-verification-of-multiple-bls-signatures/5407",
+        "Previous networking call": "https://hackmd.io/@benjaminion/rk2OEQ64L"
+    },
+    "Meeting": "Consensus Layer Call 035",
+    "Summary": "The CL team is working on implementing the Bellatrix upgrade. The EL team has been testing and validating the implementation of EIP-4844 (Proto-Danksharding). \n\nThere are no specific deadlines mentioned for these tasks but they should be completed before mainnet activation.\n\nBoth teams have made progress in their respective areas, with CL having implemented some key components and EL nearing completion on Proto-Dankshard."
+}

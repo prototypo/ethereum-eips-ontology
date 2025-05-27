@@ -1,0 +1,5 @@
+{
+    "Datetime": "2019-06-13 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 019",
+    "Summary": "The CL and EL team meetings are summarized in files using the Markdown format. \n\n[[\n## Summary\n]]\n\n\nStatus of Ethereum 2.0 Phase 1 is that it has been deployed on devnet for testing purposes. The mainnet deployment timeline remains uncertain due to ongoing issues with the Beacon Chain's block proposer rotation mechanism.\n\n\nThe CL team continues working on implementing the Casper FFG consensus algorithm, which will be used in Phase 2 of Ethereum 2.0. They are also addressing a bug that causes the chain to fork when there is an invalid vote from a validator.\n\n\nIn other news, the EL team has been making progress with their implementation and have completed several tasks including implementing the EVM (Ethereum Virtual Machine) for execution on the Beacon Chain."
+}

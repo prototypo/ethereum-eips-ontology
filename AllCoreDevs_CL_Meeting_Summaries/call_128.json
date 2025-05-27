@@ -1,0 +1,4 @@
+{
+    "Meeting": "Consensus Layer Call 128",
+    "Summary": "The team discussed the status of the upcoming Shanghai upgrade. The mainnet deployment is expected on April 12th and devnet has been deployed successfully. \n\nA new version of the CL client (v1.2) was released, which includes bug fixes for the recent issues with block proposers.\n\nThere are still some open tasks related to the Shanghai upgrade, including implementing EIP-4844 in the CL client and finalizing the mainnet deployment plan.\n\nThe team is also working on a new version of the EL client (v1.2) that will include support for EVM 2.0 features.\n\nA deadline was set for completing the implementation of EIP-4844, which should be done by March 15th to ensure timely completion of the Shanghai upgrade."
+}

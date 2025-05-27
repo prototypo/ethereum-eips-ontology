@@ -1,0 +1,5 @@
+{
+    "Datetime": "2020-05-28 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 040",
+    "Summary": "The CL and EL team meetings are summarized in files using the Markdown format. \n\n[[\n## Summary\n]]\n\n\nStatus of Lighthouse beacon chain: 1/3 validators synced to block #1430000.\nLighthouse is working on improving its performance, specifically with regards \nto syncing large numbers of new validators.\n\nDevnet status:\n- Beacon Chain devnet has been upgraded to the latest version (v.2).\n- Execution Layer testnets are being set up for testing and validation.\n\n\nNo specific deadlines or deliverables mentioned in this summary.\nLighthouse beacon chain is working on improving performance, specifically \nwith regards syncing large numbers of new validators.\n\nDevnet status: Beacon Chain devnet has been upgraded to the latest version (v.2)."
+}

@@ -1,0 +1,4 @@
+{
+    "Meeting": "Consensus Layer Call 048",
+    "Summary": "The CL team is working on implementing the Bellatrix upgrade. The EL team has been testing and validating the merge functionality.\n\nThe mainnet merge timeline remains uncertain due to ongoing issues with the execution layer's ability to handle high gas prices during the transition period from proof-of-work (PoW) to proof-of-stake (PoS). \n\nA new testnet, Zinken, is being set up for testing and validation of the Bellatrix upgrade. The EL team will continue working on resolving issues related to gas pricing.\n\nThe CL team has made progress in implementing the Beacon Chain's fork choice rule, which allows it to select the correct block during a chain split."
+}

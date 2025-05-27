@@ -1,0 +1,4 @@
+{
+    "Meeting": "Consensus Layer Call 026",
+    "Summary": "The CL and EL team meetings are summarized in files using the Markdown format. \n\n[[\n## Summary\n]]\n\n\nStatus of Lighthouse beacon chain: \n- 1/3 validators online.\n- Beacon Chain is running on devnet.\n\nLighthouse:\n- Working on implementing I2P support for network communication.\n\n\nShasper fork status update:\n- Shasper fork will be activated in the next week, after a successful test run."
+}

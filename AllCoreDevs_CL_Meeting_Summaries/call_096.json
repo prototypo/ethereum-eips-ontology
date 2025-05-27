@@ -1,0 +1,5 @@
+{
+    "Datetime": "2022-09-22 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 096",
+    "Summary": "CL Layer call 96\n================\n\n[[\n## Summary\nThe CL team discussed the status of the upcoming Merge. The Beacon Chain is currently at block number 13 million and has been running smoothly on devnet for several weeks.\n\nThe main focus was on finalizing the last few outstanding issues before the merge, including a fix for the proposer index issue in the consensus engine. This will be done by the end of this week to ensure that everything is ready for the Merge.\n\nThere are no major concerns regarding the Beacon Chain's readiness for the Merge at this point. The team has been working diligently on resolving any issues and ensuring that all components are functioning as expected.\n\nThe next CL call will focus on finalizing the last-minute details before the merge, including a review of the upgrade plan and testing procedures.\n]]"
+}

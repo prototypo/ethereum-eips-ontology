@@ -1,0 +1,5 @@
+{
+    "Datetime": "2018-09-27 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 004",
+    "Summary": "The CL and EL team meetings are summarized in files using Markdown format. \n\n[[\n## Summary\n]]\n\n\nStatus of mainnet merge is still pending due to issues related to execution layer's (EL) readiness for the transition from proof-of-work to proof-of-stake consensus mechanism.\n\n\nSeveral tasks were accomplished, including a review of the current state of EL and CL implementations by both teams, as well as discussions on how to improve communication between them."
+}

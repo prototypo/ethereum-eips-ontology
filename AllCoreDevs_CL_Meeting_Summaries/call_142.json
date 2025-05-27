@@ -1,0 +1,5 @@
+{
+    "Datetime": "2024-09-19 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 142",
+    "Summary": "The CL team is working on implementing the Bellatrix upgrade. The mainnet merge timeline remains unchanged and is still expected in September 2022.\n\nA new testnet has been set up to help with testing of the upcoming upgrades. This will allow for more thorough testing before deployment to devnet or mainnet.\n\nThere are no major updates regarding the status of the Execution Layer (EL) at this time, but it's noted that there is still work needed on some EL components in order to support the Bellatrix upgrade.\n\nThe next CL meeting will be held soon."
+}

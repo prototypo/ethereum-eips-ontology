@@ -1,0 +1,4 @@
+{
+    "Meeting": "Consensus Layer Call 021",
+    "Summary": "The CL and EL team meetings are summarized in files using the Markdown format. \n\n[\n## Summary\n]\n\nStatus of Lighthouse beacon chain: 1/3 validators synced to block 6.\nLighthouse is still experiencing issues syncing due to incorrect \nblock hash being used by some nodes.\n\nDeliverables for this week:\n- Implementing a fix for the issue with block hashes in Lighthouse."
+}

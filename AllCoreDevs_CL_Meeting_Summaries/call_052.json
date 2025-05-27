@@ -1,0 +1,5 @@
+{
+    "Datetime": "2020-11-12 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 052",
+    "Summary": "The CL team is working on implementing the Bellatrix upgrade. The mainnet merge timeline has been updated and it's now expected that the merge will happen in mid-September.\n\nThe EL team discussed the status of their work on the execution layer, including the implementation of EIP-4844 (Proto-Danksharding). They are making good progress but still have some issues to resolve before they can complete the upgrade. \n\nThere is a need for more testing and validation of the merge process in devnet.\n\nThe CL team will continue working on implementing Bellatrix and the EL team will focus on completing EIP-4844 implementation."
+}

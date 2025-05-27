@@ -1,0 +1,8 @@
+{
+    "Links": {
+        "**@cryptomental**": "https://github.com/cryptomental",
+        "Muskoka": "https://github.com/protolambda/muskoka-client"
+    },
+    "Meeting": "Consensus Layer Call 030",
+    "Summary": "The CL and EL team meetings are summarized in files using Markdown format. \n\n[[\n## Summary\n]]\n\n\nStatus of Ethereum 2.0 Phase 1 was discussed as it is expected to be completed by the end of Q3 this year, which includes Beacon Chain launch on mainnet.\n\n\nPhase 2 development has started with a focus on shard chains and execution environments for shards. The team aims to have a working prototype in about six months' time.\n\n\nThe CL/EL teams are collaborating closely as they need each other's input before proceeding further."
+}

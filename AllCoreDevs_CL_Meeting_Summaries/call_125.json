@@ -1,0 +1,5 @@
+{
+    "Datetime": "2024-01-11 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 125",
+    "Summary": "The CL team is working on implementing the Casper FFG protocol. The mainnet deployment of Shanghai upgrade has been completed and the devnet is being used for testing.\n\nThere are several tasks to be accomplished in the coming weeks including finalizing the implementation, running tests, and preparing documentation. \n\nA deadline was set for completing these tasks by mid-January so that it can be merged into Goerli testnet before a mainnet deployment later this year."
+}

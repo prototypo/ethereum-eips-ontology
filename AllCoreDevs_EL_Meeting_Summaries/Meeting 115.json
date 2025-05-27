@@ -1,0 +1,14 @@
+{
+    "Datetime": "2021-06-11 14:00:00+00:00",
+    "Links": {
+        "1:02:32": "https://youtu.be/XYhN26UrJ5o?t=3752",
+        "34:56": "https://youtu.be/XYhN26UrJ5o?t=2096",
+        "54:20": "https://youtu.be/XYhN26UrJ5o?t=3260",
+        "Agenda": "https://github.com/ethereum/pm/issues/337",
+        "https://github.com/ethereum/EIPs/pull/3607": "https://github.com/ethereum/EIPs/pull/3607",
+        "https://github.com/ethereum/pm/issues/245#issuecomment-832122309": "https://github.com/ethereum/pm/issues/245#issuecomment-832122309",
+        "https://github.com/ethereum/pm/issues/334": "https://github.com/ethereum/pm/issues/334"
+    },
+    "Meeting": "Execution Layer Meeting 115",
+    "Summary": "CL and EL team meetings are summarized separately. Please provide one of them so I can proceed with summarizing it in 1-5 paragraphs. \n\nPlease paste either CL or EL summary starting from the line that includes:\n[[\n## Summary\n]]"
+}

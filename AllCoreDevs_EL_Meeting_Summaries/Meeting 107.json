@@ -1,0 +1,16 @@
+{
+    "Datetime": "2021-03-05 14:00:00+00:00",
+    "Links": {
+        "14:34": "https://youtu.be/xWfR-WxjmYg?t=874",
+        "18:08": "https://youtu.be/xWfR-WxjmYg?t=1088",
+        "1:16:09": "https://youtu.be/xWfR-WxjmYg?t=4569",
+        "1:25:24": "https://youtu.be/xWfR-WxjmYg?t=5124",
+        "32:41": "https://youtu.be/xWfR-WxjmYg?t=1961",
+        "38:16": "https://youtu.be/xWfR-WxjmYg?t=2296",
+        "51:12": "https://youtu.be/xWfR-WxjmYg?t=3072",
+        "53:27": "https://youtu.be/xWfR-WxjmYg?t=3207",
+        "56:41": "https://youtu.be/xWfR-WxjmYg?t=3401"
+    },
+    "Meeting": "Execution Layer Meeting 107",
+    "Summary": "CL and EL team meetings are summarized separately. Please provide one of them so I can proceed with summarizing it in 1-5 paragraphs. \n\n(Note: If only CL or EL meeting summary is provided, the response will be limited to that specific layer's information.)"
+}

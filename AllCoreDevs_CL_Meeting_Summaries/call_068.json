@@ -1,0 +1,7 @@
+{
+    "Links": {
+        "GitHub Agenda": "https://github.com/ethereum/eth2.0-pm/issues/226"
+    },
+    "Meeting": "Consensus Layer Call 068",
+    "Summary": "The CL team is working on implementing the Bellatrix upgrade and testing it. The EL team has been making progress on the execution engine and is planning to start integration tests soon.\n\nThe mainnet merge timeline remains uncertain due to ongoing issues with the Beacon Chain's block proposer rotation, which needs to be resolved before a successful merge can occur. \n\nA deadline of July 21st was set for resolving these issues so that testing can proceed on schedule. The teams will continue working together to ensure a smooth transition.\n\nThe devnet is currently running and being used for testing purposes."
+}

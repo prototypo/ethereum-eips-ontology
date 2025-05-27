@@ -1,0 +1,5 @@
+{
+    "Datetime": "1400-11-07 00:00:00",
+    "Meeting": "Consensus Layer Call 027",
+    "Summary": "The CL and EL team meetings are summarized in files using the Markdown format. \n\n[[\n## Summary\n]]\n\n\nStatus of Lighthouse beacon chain: 1/3 validators synced to block 1500000.\nLighthouse is working on fixing issues related to validator set changes.\n\nDevnet status:\n- Beacon Chain devnet at block 1499999, with some minor issues reported by Teku and Prysm clients.\n- Execution layer (Goerli) devnet: no major updates or concerns mentioned.\n\n\nNo specific deadlines were discussed in the meeting."
+}

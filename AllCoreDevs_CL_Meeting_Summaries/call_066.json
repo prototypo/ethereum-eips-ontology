@@ -1,0 +1,5 @@
+{
+    "Datetime": "2021-06-17 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 066",
+    "Summary": "The CL team is working on implementing the Bellatrix upgrade. The EL team has been testing and validating the implementation of the Merge protocol.\n\nThe mainnet merge timeline remains uncertain due to ongoing issues with the execution layer's ability to handle high gas prices during the transition period. A new devnet will be launched soon for further testing, but no specific date was mentioned.\n\nA few tasks were accomplished in this meeting: a patch for the Bellatrix upgrade is being reviewed and tested by the CL team; some minor changes are needed before it can proceed with its implementation on mainnet. \n\nThe EL team has been working to resolve issues related to gas prices during the transition period, but no specific solution was mentioned.\n\nA new devnet will be launched soon for further testing of the Merge protocol."
+}

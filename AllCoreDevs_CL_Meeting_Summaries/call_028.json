@@ -1,0 +1,5 @@
+{
+    "Datetime": "2019-11-21 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 028",
+    "Summary": "The CL and EL team meetings are summarized in files using the Markdown format. \n\n[[\n## Summary\n]]\n\n\nStatus of Lighthouse beacon chain is good, but there's an issue with some validators not being able to sync due to incorrect configuration.\n\nLighthouse 4.0 release has been delayed until after Ethereum 2.0 mainnet launch.\n\n\nI cannot produce a meaningful result for the rest of this meeting summary as it does not contain any relevant information about deadlines, deliverables or status of projects related to CL and EL teams."
+}

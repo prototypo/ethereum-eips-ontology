@@ -1,0 +1,28 @@
+{
+    "Datetime": "2019-08-29 14:00:00+00:00",
+    "Links": {
+        "Timestamp 11:03": "https://youtu.be/sz87_i5Uy1I?t=661",
+        "Timestamp 13:29": "https://youtu.be/sz87_i5Uy1I?t=809",
+        "Timestamp 14:54": "https://youtu.be/sz87_i5Uy1I?t=894",
+        "Timestamp 16:11": "https://youtu.be/sz87_i5Uy1I?t=971",
+        "Timestamp 18:42": "https://youtu.be/sz87_i5Uy1I?t=1122",
+        "Timestamp 1:12:53": "https://youtu.be/sz87_i5Uy1I?t=4373",
+        "Timestamp 20:18": "https://youtu.be/sz87_i5Uy1I?t=1218",
+        "Timestamp 22:16": "https://youtu.be/sz87_i5Uy1I?t=1335",
+        "Timestamp 22:25": "https://youtu.be/sz87_i5Uy1I?t=1345",
+        "Timestamp 23:11": "https://youtu.be/sz87_i5Uy1I?t=1391",
+        "Timestamp 27:15": "https://youtu.be/sz87_i5Uy1I?t=1635",
+        "Timestamp 27:53": "https://youtu.be/sz87_i5Uy1I?t=1673",
+        "Timestamp 30:57": "https://youtu.be/sz87_i5Uy1I?t=1857",
+        "Timestamp 32:46": "https://youtu.be/sz87_i5Uy1I?t=1966",
+        "Timestamp 33:32": "https://youtu.be/sz87_i5Uy1I?t=2012",
+        "Timestamp 35:18": "https://youtu.be/sz87_i5Uy1I?t=2118",
+        "Timestamp 41:13": "https://youtu.be/sz87_i5Uy1I?t=2473",
+        "Timestamp 51:35": "https://youtu.be/sz87_i5Uy1I?t=3095",
+        "Timestamp 5:38": "https://youtu.be/sz87_i5Uy1I?t=338",
+        "Timestamp 7:36": "https://youtu.be/sz87_i5Uy1I?t=456",
+        "Timestamp 7:39": "https://youtu.be/sz87_i5Uy1I?t=459"
+    },
+    "Meeting": "Consensus Layer Call 024",
+    "Summary": "The CL and EL team meetings are summarized in files using the Markdown format. I will look for the meeting summary starting on the line that includes \"[[.\n\nAfter reviewing the file, here is my attempt at summarizing the meeting:\n\nStatus of mainnet merge: still ongoing with some issues to be resolved.\nDevnet status: no updates provided.\nThe CL team has been working on fixing bugs and improving performance,\nwith a focus on reducing latency. \nA new version of the Beacon Chain client was released, which includes\nimprovements for devnets.\n\nI hope this summary meets your requirements!"
+}

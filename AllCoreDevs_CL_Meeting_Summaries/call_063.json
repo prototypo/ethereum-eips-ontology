@@ -1,0 +1,5 @@
+{
+    "Datetime": "2021-05-20 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 063",
+    "Summary": "The CL and EL team meetings are summarized in files using the Markdown format.\nHere is the summary of the meeting:\n\nStatus on Merge: The merge status remains unchanged. There have been no new updates or changes to the timeline.\n\nDevnet Status: Devnets for both Goerli and Sepolia testnets will be available soon, with a focus on testing the execution layer's functionality in these environments.\n\nCL/EL Interoperability Testing: Progress has been made on CL/EL interoperability testing. The team is working towards completing this task by the end of Q2 2023.\n\nMainnet Merge Timeline: There are no updates to provide regarding the mainnet merge timeline, and it remains uncertain when exactly the merge will occur."
+}

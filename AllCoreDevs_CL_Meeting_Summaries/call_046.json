@@ -1,0 +1,5 @@
+{
+    "Datetime": "2020-08-20 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 046",
+    "Summary": "The CL team is working on implementing the Bellatrix upgrade. The mainnet merge timeline has been updated and it's expected that the merge will happen in September 2022.\n\nThe EL team is making progress on the execution layer implementation for Ethereum 2.0, including work on the Beacon Chain and shard chains. \n\nThere are no major updates or changes to report regarding devnets at this time."
+}

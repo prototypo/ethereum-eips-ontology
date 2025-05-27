@@ -1,0 +1,5 @@
+{
+    "Datetime": "2021-10-21 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 073",
+    "Summary": "The team discussed the upcoming Merge activation. The current status is that devnet has been activated and mainnet is expected to follow soon. A timeline was proposed with key milestones for testing and deployment.\n\nSeveral tasks were assigned, including finalizing the execution layer's (EL) implementation of the Beacon Chain merge proposal, completing a test plan for the EL-CL integration, and conducting thorough testing on devnets before activation on mainnet.\n\nThe team also discussed potential issues related to gas limits and block times after the Merge. A decision was made to revisit these parameters post-Merge based on actual performance data.\n\nA deadline of 2 weeks is set for completing all necessary tasks prior to mainnet deployment, with a target date in early August for activation."
+}

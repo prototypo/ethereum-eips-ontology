@@ -1,0 +1,5 @@
+{
+    "Datetime": "2019-09-19 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 025",
+    "Summary": "The CL and EL team meetings are summarized in files using Markdown format. \n\n[[\n## Summary\n]]\n\n\nStatus of Ethereum 2.0 Phase 1 is that it has been deployed on devnet for testing purposes. The mainnet deployment date was discussed, but no specific timeline was agreed upon.\n\n\nSeveral tasks were accomplished during the meeting including reviewing and discussing various proposals related to the Beacon Chain's functionality and performance improvements. Additionally, a discussion took place regarding the implementation of the 'hardfork' mechanism which would allow for changes in protocol rules without requiring an upgrade on all nodes at once.\n\n\nThe team also discussed several open issues that need resolution before mainnet deployment can occur including implementing the finalization process and resolving some outstanding bugs related to the Beacon Chain's functionality."
+}

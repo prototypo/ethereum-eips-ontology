@@ -1,0 +1,5 @@
+{
+    "Datetime": "2018-09-13 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 003",
+    "Summary": "The CL and EL team meetings are summarized in files using the Markdown format. \n\n[[\n## Summary\n]]\n\n\nStatus of Ethereum 2.0 Phase 1 is that it has been deployed on devnet for testing purposes. The mainnet deployment timeline remains uncertain due to ongoing issues with the Beacon Chain's block proposer rotation mechanism.\n\n\nThe CL team made progress in resolving these issues, and a new implementation was proposed as an alternative solution. However, further discussion and review are required before any changes can be implemented.\n\n\nNo specific deadlines or deliverables were mentioned for this meeting. The main focus remains on addressing the current technical challenges to ensure successful deployment of Ethereum 2.0 Phase 1 on mainnet."
+}

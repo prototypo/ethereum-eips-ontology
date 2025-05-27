@@ -1,0 +1,5 @@
+{
+    "Datetime": "2018-10-11 14:00:00+00:00",
+    "Meeting": "Consensus Layer Call 005",
+    "Summary": "The CL and EL team meetings are summarized in files using Markdown format. \n\n[[\n## Summary\n]] \nstarts on line 34 of the file.\n\nHere is the summary:\n\nNo significant updates were reported from the Execution Layer (EL) side, but it was mentioned that they're still working through some issues with their testnet setup.\nThe Consensus Layer (CL) team made progress in implementing the Bellatrix upgrade for devnets. They also started testing the merge transition on a private network and are planning to run more tests soon.\nThere were no updates reported regarding mainnet timelines or specific deadlines, but it was mentioned that they're aiming to have everything ready by mid-summer.\nThe CL team is still working through some issues with their testnet setup."
+}
