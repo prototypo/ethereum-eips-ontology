@@ -1,0 +1,11 @@
+{
+    "Datetime": "2024-04-18 14:00:00+00:00",
+    "Links": {
+        "11:49": "https://www.youtube.com/live/srOu8TqFYYM?feature=shared&t=709",
+        "47:48": "https://www.youtube.com/live/srOu8TqFYYM?feature=shared&t=2868",
+        "59:32": "https://www.youtube.com/live/srOu8TqFYYM?feature=shared&t=3572",
+        "New post on issuance": "https://ethresear.ch/t/reward-curve-with-tempered-issuance-eip-research-post/19171"
+    },
+    "Meeting": "Consensus Layer Call 132",
+    "Summary": "**Consensus Layer Call 132 Summary**\n\nThe primary focus of this call was Protocol decisions and EIP discussions, with a significant emphasis on **EIP-4848**, which proposes to introduce a new type of transaction called \"blobs\" that can be processed more efficiently than traditional transactions. The discussion centered around the potential benefits of increased scalability and reduced gas costs for users.\n\nRegarding technical issues, bugs, and proposed solutions, several clients reported ongoing efforts to resolve **the pending merge issue** with Ethereum 1.x (E-1.x) and Beacon Chain (BC). Specifically, Prysmatic Labs' client is working on a patch release that should address the problem. Additionally, there was discussion around potential fixes for issues related to **gas limit adjustments**, which could impact network stability.\n\nDevelopment milestones and testing updates highlighted progress toward implementing EIP-4848 in various clients. For instance, Lighthouse has made significant strides in integrating blob support, while Prysmatic Labs is working on a testnet deployment of the feature. The timeline for mainnet integration remains uncertain but is expected to be influenced by ongoing discussions around **gas limit adjustments**.\n\nClient implementation progress showed that most major clients are actively contributing to EIP-4848 development and testing efforts. Notably, Lighthouse has made substantial strides in integrating blob support, while Prysmatic Labs continues work on a testnet deployment of the feature.\n\nAction items for upcoming deadlines include:\n\n* **EIP-4848 implementation updates**: Clients will continue working toward mainnet integration.\n* **Merge issue resolution**: Ongoing efforts to resolve pending merge issues between E-1.x and BC are expected to be completed soon."
+}

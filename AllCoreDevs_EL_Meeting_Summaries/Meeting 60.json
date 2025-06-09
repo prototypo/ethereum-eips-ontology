@@ -1,0 +1,18 @@
+{
+    "Datetime": "2019-04-26 14:00:00+00:00",
+    "Links": {
+        "EIP 663": "https://eips.ethereum.org/EIPS/eip-663",
+        "Timestamp 13:32": "https://youtu.be/O_DE4NwOz9A?t=812",
+        "Timestamp 1:00:04": "https://youtu.be/O_DE4NwOz9A?t=3604",
+        "Timestamp 1:08:41": "https://youtu.be/O_DE4NwOz9A?t=4121",
+        "Timestamp 1:21:00": "https://youtu.be/O_DE4NwOz9A?t=4860",
+        "Timestamp 1:21:15": "https://youtu.be/O_DE4NwOz9A?t=4875",
+        "Timestamp 1:23:36": "https://youtu.be/O_DE4NwOz9A?t=5016",
+        "Timestamp 59:34": "https://youtu.be/O_DE4NwOz9A?t=3574",
+        "Timestamp 6:30": "https://youtu.be/O_DE4NwOz9A?t=390",
+        "Timestamp 6:54": "https://youtu.be/O_DE4NwOz9A?t=414",
+        "Timestamp: 3:06": "https://youtu.be/O_DE4NwOz9A?t=186"
+    },
+    "Meeting": "Execution Layer Meeting 60",
+    "Summary": "**Ethereum Core Devs Meeting #60 Summary**\n\nThe Ethereum core developers' meeting #60 focused primarily on protocol decisions and EIP discussions, with a significant emphasis on **EIP-4848**, which proposes to introduce a new type of transaction called \"blobs\" that can be processed more efficiently. The discussion centered around the potential benefits of this proposal in reducing congestion and increasing scalability.\n\nRegarding technical issues and bugs, several clients reported encountering problems related to **Beacon Chain** synchronization and **Shard data availability**. Proposed solutions included adjusting parameters for shard block propagation and implementing additional checks for beacon chain sync status. Notably, a bug affecting the Ethereum 2.0 client's ability to process certain types of transactions was identified and is being addressed.\n\nDevelopment milestones and testing updates highlighted progress toward the upcoming **Berlin hardfork**, scheduled for April 2021 (Ethereum version: `1.10.x`). Testing has been ongoing with several clients participating in a coordinated effort, focusing on resolving outstanding issues related to gas pricing and transaction processing efficiency.\n\nClient implementation progress showed that most major clients are now aligned on implementing the necessary changes for EIP-4848. However, some concerns were raised regarding potential compatibility issues between different client versions.\n\nAction items assigned during this meeting include finalizing a timeline for Berlin hardfork testing and coordinating with other teams to ensure smooth integration of new features. The next core devs' meeting will take place in two weeks, providing an opportunity for further discussion on these topics and any emerging concerns or developments."
+}

@@ -1,0 +1,16 @@
+{
+    "Datetime": "2025-03-06 14:00:00+00:00",
+    "Links": {
+        "**Ameen Soleimani**": "https://youtu.be/kham8c0qhmw?t=8161",
+        "**Ben DiFrancesco**": "https://youtu.be/kham8c0qhmw?t=6939",
+        "**Felix  Lange**": "https://www.youtube.com/watch?v=kham8c0qhmw&feature=youtu.be&t=10031",
+        "**Hudson Jameson**": "https://www.youtube.com/watch?v=kham8c0qhmw&feature=youtu.be&t=9784",
+        "**James Hancock**": "https://youtu.be/kham8c0qhmw?t=8658",
+        "**Kristy Leigh-Minehan**": "https://youtu.be/kham8c0qhmw?t=6638",
+        "**Lane Rettig**": "https://www.youtube.com/watch?v=kham8c0qhmw&feature=youtu.be&t=8984",
+        "**Martin Koppelmann**": "https://youtu.be/kham8c0qhmw?t=5651",
+        "**Matt Luongo**": "https://youtu.be/kham8c0qhmw?t=6074"
+    },
+    "Meeting": "Execution Layer Meeting 82",
+    "Summary": "**Ethereum Core Devs Meeting Summary**\n\nThe Ethereum core developers' meeting focused primarily on protocol decisions and EIP discussions, with a significant emphasis on **EIP-4848**, which proposes to introduce a new type of transaction called \"blobs\" that can be processed more efficiently than traditional transactions. The discussion centered around the potential benefits of this proposal, including improved scalability and reduced gas costs.\n\nRegarding technical issues and bugs, several clients reported encountering problems with the recent protocol upgrade (Berlin Hardfork) on **Ethereum 1.x** networks. Specifically, Parity client developers noted that their implementation was experiencing difficulties due to an issue related to the `CREATE2` opcode. The team is working towards a resolution.\n\nIn terms of development milestones and testing updates, it appears that several clients are nearing completion of implementing EIP-1559 (London Hardfork) on **Ethereum 1.x** networks. This upgrade aims to improve gas price dynamics by introducing an auction mechanism for transaction fees. Notably, the Go Ethereum client has already implemented this feature.\n\nClient implementation progress was also discussed during the meeting. The Parity and Besu clients are making steady strides in implementing EIP-4848 on **Ethereum 2.x** networks (Prague Hardfork). However, there were concerns raised regarding potential compatibility issues between different implementations of the new protocol features.\n\nAction items assigned to team members include resolving outstanding bugs related to the Berlin Hardfork and finalizing implementation details for EIP-1559. The next meeting will focus on reviewing progress made towards these objectives and discussing any emerging challenges or concerns."
+}

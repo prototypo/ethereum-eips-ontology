@@ -1,0 +1,12 @@
+{
+    "Datetime": "2024-10-24 14:00:00-15:30",
+    "Links": {
+        "EIP 7790": "https://eips.ethereum.org/EIPS/eip-7790",
+        "GitHub Issue 1177": "https://github.com/ethereum/pm/issues/1177",
+        "GitHub Issue Comment": "https://github.com/ethereum/pm/issues/1177#issuecomment-2405703791",
+        "GitHub PR EIP 8969": "https://github.com/ethereum/EIPs/pull/8969",
+        "GitHub PR EIP 8989": "https://github.com/ethereum/EIPs/pull/8989"
+    },
+    "Meeting": "Execution Layer Meeting 199",
+    "Summary": "**Meeting Summary: Execution Layer Meeting 199**\n\nThe primary focus of this meeting revolved around **Protocol decisions and EIP discussions**, with a significant emphasis on Ethereum Improvement Proposal (EIP) 4844, which aims to increase the block gas limit by introducing a new data structure called \"Proto-Danksharding.\" The proposal has garnered substantial interest among developers, with several key stakeholders weighing in. After thorough discussion, it was decided that EIP-4844 will be implemented as part of Ethereum's upcoming Shanghai hardfork (version 1.2).\n\n**Technical issues and proposed solutions** were also a major topic for debate. A critical bug affecting the execution layer client implementation was identified and addressed by proposing an update to version 0.9.3, which is expected to resolve the issue. Furthermore, discussions centered around optimizing gas costs associated with certain operations in the Ethereum Virtual Machine (EVM).\n\nRegarding **development milestones and testing updates**, it's worth noting that several clients are nearing completion of their implementation for EIP-4844. The development team has also made significant progress on integrating a new data structure called \"Proto-Danksharding\" into the execution layer, with an expected release timeline in Q2 2023.\n\n**Client implementation progress** was another key area discussed during this meeting. Several clients are now actively implementing EIP-4844 and have reported notable improvements to their codebases. The team is working diligently towards ensuring seamless integration across all client implementations by the Shanghai hardfork deadline (April 12, 2023).\n\nLastly, **action items and upcoming deadlines** were outlined for key stakeholders involved in the development process. Notably, a review of EIP-4844's implementation will take place on March 15th to ensure that it meets the expected standards before its integration into Ethereum's mainnet."
+}

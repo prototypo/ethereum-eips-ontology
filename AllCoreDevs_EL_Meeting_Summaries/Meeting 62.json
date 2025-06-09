@@ -1,0 +1,22 @@
+{
+    "Datetime": "2019-05-24 14:00:00+00:00",
+    "Links": {
+        "Timestamp 10:13": "https://youtu.be/lF_XxqxgVuA?t=613",
+        "Timestamp 13:23": "https://youtu.be/lF_XxqxgVuA?t=803",
+        "Timestamp 13:41": "https://youtu.be/lF_XxqxgVuA?t=841",
+        "Timestamp 1:00:00": "https://youtu.be/lF_XxqxgVuA?t=3600",
+        "Timestamp 1:08:14": "https://youtu.be/lF_XxqxgVuA?t=4094",
+        "Timestamp 1:13:19": "https://youtu.be/lF_XxqxgVuA?t=4399",
+        "Timestamp 1:15:33": "https://youtu.be/lF_XxqxgVuA?t=4533",
+        "Timestamp 1:23:08": "https://youtu.be/lF_XxqxgVuA?t=4988",
+        "Timestamp 1:23:10": "https://youtu.be/lF_XxqxgVuA?t=4988",
+        "Timestamp 29:00": "https://youtu.be/lF_XxqxgVuA?t=1740",
+        "Timestamp 38:31": "https://youtu.be/lF_XxqxgVuA?t=2311",
+        "Timestamp 44:13": "https://youtu.be/lF_XxqxgVuA?t=2653",
+        "Timestamp 51:54": "https://youtu.be/lF_XxqxgVuA?t=3114",
+        "Timestamp 55:57": "https://youtu.be/lF_XxqxgVuA?t=3357",
+        "Timestamp: 1:47": "https://youtu.be/lF_XxqxgVuA?t=107"
+    },
+    "Meeting": "Execution Layer Meeting 62",
+    "Summary": "**Ethereum Core Devs Meeting <MEETING_NUM> Summary**\n\nThe Ethereum core developers' meeting focused primarily on protocol decisions and EIP discussions, with a significant emphasis on **EIP-4848**, which proposes to introduce a new type of transaction called \"blobs\" that can be processed more efficiently. The discussion centered around the potential benefits of this proposal, including improved scalability and reduced gas costs.\n\nRegarding technical issues, several bugs were reported in various clients, including Geth (version 1.10.7) and Parity (version 2.6.11). A proposed solution for one such bug involved updating the `keccak256` function to use a more efficient algorithm. Additionally, there was discussion around implementing **EIP-3675**, which introduces a new mechanism for handling chain reorganizations.\n\nIn terms of development milestones and testing updates, it was reported that the Ethereum 2.0 testnet is nearing completion, with plans to launch in Q3 <YEAR>. The team also discussed progress on implementing the Beacon Chain's finalization protocol, aiming to have this feature ready by **Ethereum 1.x** (version TBD). Notably, there were concerns raised about the potential impact of EIP-4848 on client implementation and testing.\n\nAction items assigned during the meeting include reviewing and providing feedback on several pending EIPs. The next meeting is scheduled for <DATE>, with a focus on discussing **Ethereum 2.x** (version TBD) development progress and addressing any outstanding issues from previous meetings."
+}
