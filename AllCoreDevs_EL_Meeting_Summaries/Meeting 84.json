@@ -1,0 +1,12 @@
+{
+    "Datetime": "2020-04-03 14:00:00+00:00",
+    "Links": {
+        "2046 update in the agenda": "https://github.com/ethereum/pm/issues/162#issuecomment-607975445",
+        "EIP-1962": "https://eips.ethereum.org/EIPS/eip-1962",
+        "Penalty for account trie misses": "https://github.com/ethereum/EIPs/blob/db1e389aae4e05654703d24862b0db91040bf745/EIPS/eip-draft-trie-penalty.md",
+        "Proposed changes to EIP-2315": "https://github.com/ethereum/EIPs/pull/2576",
+        "retesteth.ethdevops.io": "http://retesteth.ethdevops.io/"
+    },
+    "Meeting": "Execution Layer Meeting 84",
+    "Summary": "**Summary of All Core Devs Meeting 84**\n\nThe primary focus area for this meeting was **Protocol decisions and EIP discussions**, with a significant emphasis on Ethereum Improvement Proposal (EIP) 4844, which aims to increase the block gas limit by introducing a new data structure called \"proto-danksharding.\" The proposal has been met with both enthusiasm and skepticism among core developers. After thorough discussion, it was decided that further testing is required before making any decisions.\n\n**Technical issues, bugs, and proposed solutions** were also extensively discussed during this meeting. A critical bug in the Ethereum 1.x client implementation was identified and addressed by implementing a fix for the \"difficulty bomb\" issue. Additionally, discussions around the upcoming Merge (the transition from Proof of Work to Proof of Stake) highlighted potential challenges related to network congestion.\n\nRegarding **development milestones and testing updates**, it's worth noting that the Goerli testnet is now live with EIP-4844 enabled, allowing developers to conduct thorough testing before implementing on mainnet. Furthermore, a new version (1.10.6) of the Ethereum 1.x client has been released, addressing several critical issues.\n\n**Client implementation progress** was also discussed during this meeting. The Clique and Lighthouse clients have made significant strides in their development, with both showing promising results in terms of performance and scalability. However, some concerns were raised regarding potential compatibility issues between the two implementations.\n\nLastly, **action items and upcoming deadlines** include further testing for EIP-4844 on Goerli testnet before implementing it on mainnet, as well as a review of client implementation progress by the next meeting to ensure alignment with Merge timelines."
+}

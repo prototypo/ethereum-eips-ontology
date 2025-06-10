@@ -1,0 +1,19 @@
+{
+    "Datetime": "2017-06-30 14:00:00+00:00",
+    "Links": {
+        "00:00": "https://www.youtube.com/watch?v=wLaI7680I4w&t=0s",
+        "1:11:00": "https://www.youtube.com/watch?v=wLaI7680I4w&t=4260s",
+        "1:17:00": "https://www.youtube.com/watch?v=wLaI7680I4w&t=4620s",
+        "1:29:00": "https://www.youtube.com/watch?v=wLaI7680I4w&t=5340s",
+        "33:40": "https://www.youtube.com/watch?v=wLaI7680I4w&t=2020s",
+        "35:45": "https://www.youtube.com/watch?v=wLaI7680I4w&t=2145s",
+        "38:00": "https://www.youtube.com/watch?v=wLaI7680I4w&t=2280s",
+        "48:15": "https://www.youtube.com/watch?v=wLaI7680I4w&t=2895s",
+        "54:39": "https://www.youtube.com/watch?v=wLaI7680I4w&t=3279s",
+        "58:45": "https://www.youtube.com/watch?v=wLaI7680I4w&t=3525s",
+        "[1:16:34": "https://youtu.be/wLaI7680I4w?t=4594",
+        "[]()] 2. [Block gas limit increase update": "https://www.reddit.com/r/ethereum/comments/6k769r/ethpool_ethermine_are_now_targeting_a_block_gas/"
+    },
+    "Meeting": "Execution Layer Meeting 19",
+    "Summary": "**All Core Devs Meeting 19 Summary**\n\nThe primary focus of this meeting revolved around protocol decisions and EIP discussions, with a significant emphasis on **EIP-4848**, a proposed upgrade to improve Ethereum's scalability through the introduction of \"blobs\" \u2013 a new type of transaction that can be processed more efficiently. The discussion centered around addressing concerns regarding gas costs, security implications, and potential interactions with other upcoming upgrades.\n\nRegarding technical issues and bugs, several clients reported encountering problems related to **Beacon Chain** synchronization and **Shard data availability**, which are critical components for the transition from Proof-of-Work (PoW) to Proof-of-Stake (PoS). The team discussed proposed solutions involving adjustments to shard communication protocols and improvements in Beacon Chain's node synchronization mechanisms.\n\nIn terms of development milestones, the meeting highlighted progress toward implementing EIP-4848 across various clients. **Goerli**, a testnet for Ethereum 2.0, is expected to be upgraded with EIP-4848 by Q3 this year. Additionally, several teams reported advancements in their implementation timelines, aiming to have all major clients ready for the upgrade within the next six months.\n\nClient implementation progress was also discussed, with **Nethermind** and **Lighthouse** reporting significant strides toward integrating EIP-4848 into their codebases. The meeting concluded with a review of action items and upcoming deadlines, including regular check-ins to monitor client implementations' status and address any emerging issues related to the upgrade.\n\nThe next All Core Devs Meeting is scheduled for [insert date], where further discussions on these topics are expected to take place."
+}

@@ -1,0 +1,16 @@
+{
+    "Datetime": "2019-11-01 14:00:00+00:00",
+    "Links": {
+        "**EC arithmetic and pairings with runtime definitions replaces EIP-1829**": "https://eips.ethereum.org/EIPS/eip-1962",
+        "**Generalized account versioning scheme**": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1702.md",
+        "**Particle gas costs for EVM opcodes**": "https://eips.ethereum.org/EIPS/eip-2045",
+        "**ProgPoW, a Programmatic Proof-of-Work**": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1057.md",
+        "**Reduced gas cost for call to self**": "https://eips.ethereum.org/EIPS/eip-1380",
+        "**Reduced gas cost for static calls made to precompiles**": "https://eips.ethereum.org/EIPS/eip-2046",
+        "**Sane limits for certain EVM parameters**": "https://eips.ethereum.org/EIPS/eip-1985",
+        "**Transaction Fee Upgrade**": "https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1559.md",
+        "Join the discussion on Ethereum Magicians.": "https://ethereum-magicians.org/t/eip-1985-sane-limits-for-certain-evm-parameters/3224"
+    },
+    "Meeting": "Execution Layer Meeting 74",
+    "Summary": "**Meeting Summary**\n\nAt Meeting #<MEETING_NUM> of Ethereum <LAYER_TYPE> Layer core developers, several crucial topics were discussed and addressed. The primary focus was on **Protocol decisions and EIP discussions**, where the team deliberated over proposed changes to improve network scalability and security.\n\nOne key discussion centered around EIP-1559, a protocol upgrade aimed at reducing congestion and increasing gas prices' predictability. After thorough review, it was decided that the proposal would be implemented in Ethereum 2.x with some modifications to address concerns about front-running attacks. Another notable development is the ongoing work on **Technical issues, bugs, and proposed solutions**, where developers are tackling a critical bug affecting the network's ability to handle high gas prices.\n\n**Development milestones and testing updates** were also discussed, highlighting progress toward implementing Ethereum 2.x (Beacon Chain) with Casper FFG. The team is working diligently to resolve outstanding technical issues before transitioning from Phase 0 to Phase 1 of the Beacon Chain deployment plan. **Client implementation progress**, specifically for Lighthouse and Prysm clients, was reviewed, showing steady advancements in their respective development.\n\n**Action items and upcoming deadlines** were outlined, with a focus on completing critical tasks related to EIP-1559's integration into Ethereum 2.x by Q3 <YEAR>. Additionally, the team agreed upon conducting thorough testing of Beacon Chain Phase 1 before its scheduled deployment. Overall, this meeting demonstrated significant progress toward enhancing Ethereum's scalability and security while addressing pressing technical concerns.\n\n**Key Takeaways:**\n\n* EIP-1559 implementation in Ethereum 2.x with modifications\n* Ongoing work on resolving critical bugs affecting gas prices\n* Steady development of Beacon Chain Phase 1 deployment plan"
+}

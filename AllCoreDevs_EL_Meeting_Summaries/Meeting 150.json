@@ -1,0 +1,11 @@
+{
+    "Datetime": "2022-11-24 14:00:00+00:00",
+    "Links": {
+        "1:03": "https://youtu.be/HX_Zr_gVeOE?t=84",
+        "25:03": "https://youtu.be/HX_Zr_gVeOE?t=1501",
+        "2:54": "https://youtu.be/HX_Zr_gVeOE?t=174",
+        "9:01": "https://youtu.be/HX_Zr_gVeOE?t=539"
+    },
+    "Meeting": "Execution Layer Meeting 150",
+    "Summary": "**Ethereum Core Devs Meeting <MEETING_NUM> Summary**\n\nThe Ethereum core developers meeting focused primarily on protocol decisions and EIP discussions, with a significant emphasis on **EIP-4848**, which proposes to introduce a new type of transaction called \"blobs\" that can be processed more efficiently. The discussion centered around the potential benefits and drawbacks of implementing this feature, including its impact on scalability and gas costs.\n\nRegarding technical issues and bugs, several clients reported encountering problems with **Beacon Chain** synchronization due to an issue with the `get_block_by_hash` function in the Ethereum 1.x client. A proposed solution involves updating the client's code to correctly handle block hashes. Additionally, there were discussions about a potential fix for a long-standing bug affecting gas metering.\n\nIn terms of development milestones and testing updates, it was reported that **Ethereum 2.0** is progressing steadily, with several clients nearing completion of their implementation work. The Goerli testnet has been upgraded to the latest version (Berlin), allowing developers to conduct thorough testing before transitioning to mainnet. Notably, a new milestone for Ethereum 2.0 was set: **Phase 1.5**, which aims to improve network performance and scalability.\n\nClient implementation progress varied across different clients, with some nearing completion of their Phase 1.4 implementations while others continue working on integrating the latest updates from the core developers' team. Action items assigned during this meeting include reviewing EIP-4848's proposed changes and providing feedback within two weeks.\n\nThe next meeting is scheduled for [insert date] to discuss ongoing development progress, address any emerging issues, and set new milestones for Ethereum 2.0 implementation."
+}

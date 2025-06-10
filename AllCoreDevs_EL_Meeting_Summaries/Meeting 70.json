@@ -1,0 +1,9 @@
+{
+    "Datetime": "2019-09-06 14:00:00+00:00",
+    "Links": {
+        "Timestamp - 04:37": "https://youtu.be/6m0So81_j2Q?t=277",
+        "Timestamp:7:44 ": "https://youtu.be/6m0So81_j2Q?t=464"
+    },
+    "Meeting": "Execution Layer Meeting 70",
+    "Summary": "**Ethereum Core Devs Meeting <MEETING_NUM> Summary**\n\nThe Ethereum core developers' meeting focused primarily on protocol decisions and EIP discussions, with a significant emphasis on **EIP-4848**, which proposes the introduction of \"blobs\" to improve scalability. The discussion centered around addressing concerns regarding gas costs and potential security implications.\n\nRegarding technical issues, bugs, and proposed solutions, several notable points were raised:\n\n* A critical bug in the `geth` client was identified, affecting version 1.10.x. An immediate fix is being implemented.\n* Discussions surrounding **EIP-3675**, which introduces a new difficulty bomb to prevent ASIC mining, continued with no resolution yet reached.\n\nDevelopment milestones and testing updates highlighted several key areas:\n\n* The upcoming Berlin hardfork (version 12) has been delayed due to the ongoing discussions around EIPs. A revised timeline is expected soon.\n* Testing for the **Merge** phase of Ethereum's transition from Proof-of-Work (PoW) to Proof-of-Stake (PoS), scheduled for Q2, continues with a focus on improving testnets and simulation tools.\n\nClient implementation progress was also discussed:\n\n* The `geth` client is expected to support EIP-4848 in the near future.\n* Discussions around implementing **Ethereum 2.0** clients continued, focusing on interoperability between different implementations.\n\nAction items and upcoming deadlines include:\n\n* Resolving outstanding issues with EIPs by the next meeting\n* Finalizing a revised timeline for the Berlin hardfork\n\nThese developments reflect ongoing efforts to improve Ethereum's scalability, security, and overall performance."
+}

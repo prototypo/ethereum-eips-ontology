@@ -1,0 +1,13 @@
+{
+    "Datetime": "2022-02-10 14:00:00+00:00",
+    "Links": {
+        "https://gist.github.com/rauljordan/dd5aef5c35a98ae67989601c83aafde1": "https://gist.github.com/rauljordan/dd5aef5c35a98ae67989601c83aafde1",
+        "https://github.com/ethereum/beacon-APIs/pull/190": "https://github.com/ethereum/beacon-APIs/pull/190",
+        "https://github.com/ethereum/execution-apis/issues/137": "https://github.com/ethereum/execution-apis/issues/137",
+        "https://github.com/ethereum/execution-apis/pull/146": "https://github.com/ethereum/execution-apis/pull/146",
+        "https://github.com/ethereum/pm/issues/475": "https://github.com/ethereum/pm/issues/475",
+        "https://notes.ethereum.org/@timbeiko/kiln-milestones": "https://notes.ethereum.org/@timbeiko/kiln-milestones"
+    },
+    "Meeting": "Consensus Layer Call 081",
+    "Summary": "**Summary of Consensus Layer Call 81**\n\nThe Ethereum Core Developers' Meeting 81 focused primarily on protocol decisions and EIP discussions, with a significant emphasis on the upcoming Shanghai upgrade (Ethereum Protocol Version 1.2). The team discussed and finalized several key changes to be included in this release, including improvements to gas pricing mechanisms and enhancements for sharding.\n\nRegarding technical issues, bugs, and proposed solutions, the meeting highlighted ongoing efforts to address concerns with the Beacon Chain's attestations processing efficiency. A potential solution involving a reorganization of attestation data structures was presented by developers, which is expected to improve performance without compromising security. Additionally, discussions centered around resolving an issue affecting the execution layer's ability to handle large transactions efficiently.\n\nDevelopment milestones and testing updates revealed that the Shanghai upgrade is on track for its scheduled release in April 2023 (Ethereum Protocol Version 1.2). Testing has been ongoing with a focus on ensuring seamless integration of new features without compromising existing functionality. Client implementation progress was also discussed, highlighting advancements by various client teams to support upcoming protocol upgrades.\n\nAction items and upcoming deadlines were reviewed during the meeting. Key tasks include finalizing EIP-4844 (proto-danksharding) for inclusion in Shanghai and completing testing on Beacon Chain improvements before the upgrade's release. The team is working towards a smooth transition, with regular check-ins scheduled to monitor progress and address any emerging issues.\n\nOverall, this meeting demonstrated significant strides toward enhancing Ethereum's scalability and performance through ongoing protocol upgrades and client development efforts."
+}

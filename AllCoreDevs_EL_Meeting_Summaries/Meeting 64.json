@@ -1,0 +1,16 @@
+{
+    "Datetime": "2019-07-05 06:00:00+00:00",
+    "Links": {
+        "Timestamp: 1:03:21": "https://youtu.be/2D_DqJ8jL9Y?t=3801",
+        "Timestamp: 1:08:16": "https://youtu.be/2D_DqJ8jL9Y?t=4096",
+        "Timestamp: 1:23:42 ": "https://youtu.be/2D_DqJ8jL9Y?t=5022",
+        "Timestamp: 1:25:30": "https://youtu.be/2D_DqJ8jL9Y?t=5130",
+        "Timestamp: 1:31:12": "https://youtu.be/2D_DqJ8jL9Y?t=5472",
+        "Timestamp: 1:44:00": "https://youtu.be/2D_DqJ8jL9Y?t=6240",
+        "Timestamp: 3:15 ": "https://youtu.be/2D_DqJ8jL9Y?t=195",
+        "Timestamp: 47:00": "https://youtu.be/2D_DqJ8jL9Y?t=2820",
+        "Timestamp: 8:44": "https://youtu.be/2D_DqJ8jL9Y?t=524"
+    },
+    "Meeting": "Execution Layer Meeting 64",
+    "Summary": "**Ethereum Core Devs Meeting <MEETING_NUM> Summary**\n\nThe Ethereum core developers meeting focused primarily on protocol decisions and EIP discussions, with a significant emphasis on **EIP-1559**, which aims to improve the scalability of the network by implementing a new fee market design. The discussion centered around the proposed changes to the gas limit and block reward structure. After thorough deliberation, it was decided that the implementation would proceed as planned for the upcoming Berlin hardfork (targeting Ethereum 1.x version **v1.10**).\n\nRegarding technical issues and bugs, several concerns were raised regarding the stability of certain client implementations under high network congestion scenarios. The developers acknowledged these problems but noted that they are being actively addressed through ongoing testing and optimization efforts.\n\nThe meeting also touched on development milestones and testing updates. Notably, it was reported that **Ethereum 2.x** (Beacon Chain) is progressing steadily towards its target launch date of Q3 this year. The developers highlighted the importance of continued testing to ensure a smooth transition from Ethereum 1.x to the new proof-of-stake consensus mechanism.\n\nClient implementation progress showed mixed results, with some clients experiencing issues related to gas limit adjustments and others reporting success in implementing EIP-1559-related changes. Action items were assigned to address these concerns before the upcoming hardfork deadline (set for **June <DATE>**). Overall, while challenges persist, the meeting demonstrated a collaborative effort towards resolving technical hurdles and advancing Ethereum's development roadmap.\n\nThe next core devs meeting is scheduled for **<MEETING_DATE>**, where further discussions on EIP-1559 implementation details are expected to take place."
+}

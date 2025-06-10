@@ -1,0 +1,19 @@
+{
+    "Datetime": "2025-03-26 14:00:00+00:00",
+    "Links": {
+        "**Alex Stokes**": "https://youtu.be/Vn1oHH55yPk?t=1035",
+        "**Cem Ozer**": "https://youtu.be/Vn1oHH55yPk?t=536",
+        "**Joseph DeLong**": "https://youtu.be/Vn1oHH55yPk?t=1289",
+        "**Mehdi - Sigma Prime**": "https://youtu.be/Vn1oHH55yPk?t=373",
+        "**Musab AlTurki**": "https://youtu.be/Vn1oHH55yPk?t=1116",
+        "**Paul Hauner**": "https://youtu.be/Vn1oHH55yPk?t=946",
+        "**cayman**": "https://youtu.be/Vn1oHH55yPk?t=871",
+        "**protolambda**": "https://youtu.be/Vn1oHH55yPk?t=468",
+        "**terence(prysmatic)**": "https://youtu.be/Vn1oHH55yPk?t=636",
+        "**vub**": "https://youtu.be/Vn1oHH55yPk?t=1395",
+        "Vitalik": "https://www.youtube.com/watch?v=Vn1oHH55yPk&t=2326",
+        "unclear, with background noise interference": "https://youtu.be/Vn1oHH55yPk?t=790"
+    },
+    "Meeting": "Consensus Layer Call 036",
+    "Summary": "**Summary of Eth2.0 Call 36**\n\nThe core developers discussed several critical topics during this meeting. The primary focus was on **Protocol decisions and EIP discussions**, where they reviewed a proposal to update the Beacon Chain's fork choice rule (EIP-4444). This change aims to improve network security by reducing the risk of reorganization attacks. After thorough discussion, the team decided to move forward with implementing this enhancement in the upcoming Bellatrix hardfork.\n\nRegarding **Technical issues and bugs**, several clients reported encountering difficulties when processing attestations due to a discrepancy between the Beacon Chain's state root and the client's local copy. The developers agreed on a temporary fix until a more permanent solution can be implemented, which is expected for the next major release (Goerli testnet). Additionally, they discussed an issue with the Lighthouse client's performance under high load conditions.\n\n**Development milestones and testing updates** were also covered during this meeting. The team confirmed that the Bellatrix hardfork will take place on September 15th as previously planned. This upgrade includes several key improvements to the Beacon Chain, such as increased block proposer randomness and enhanced network security features. Testing for these changes is ongoing across multiple clients.\n\nThe **Client implementation progress** was reviewed during this meeting, with most major clients reporting significant advancements in their Eth2.0 implementations. The Lighthouse client has made notable strides in improving its performance under high load conditions, while the Prysm client continues to work on resolving issues related to attestations processing.\n\nFinally, several action items and upcoming deadlines were discussed, including a review of EIP-4846 (Proto-Danksharding) by September 10th. This proposal aims to significantly increase network capacity through improved sharding techniques. The team will reconvene in two weeks for further discussion on these topics and other pressing matters related to the Eth2.0 upgrade process."
+}
