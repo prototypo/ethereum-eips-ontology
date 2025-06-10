@@ -1028,3 +1028,23 @@ Roadmap Setting: The focus on high-level roadmap ("why we do things") rather tha
 
 Core Devs: Not explicitly defined, but refers to the group of developers responsible for maintaining the Ethereum network.
 
+
+de facto structure: An informal standard or convention that has become widely accepted as a norm, in this case for Geth (Go-Ethereum)
+
+JSON Schema: A schema-based validation system introduced by the EIP to ensure consistency and tool compatibility across clients
+
+
+CC0: Creative Commons Zero, a license waiver allowing free use and modification of copyrighted material.
+
+
+de facto structure: An informal standard or convention that has become widely accepted as a norm, in this case for Geth (Go-Ethereum)
+
+JSON Schema: A schema-based validation system for ensuring consistency and tool compatibility across clients.
+
+
+chain ID: A unique identifier for a blockchain
+
+transaction hash: A string that uniquely identifies a transaction on a blockchain
+
+CC0: Creative Commons Zero, a license waiver allowing use of copyrighted material without restrictions.
+

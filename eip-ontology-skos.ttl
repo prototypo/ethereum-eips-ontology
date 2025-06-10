@@ -159,7 +159,8 @@ ex:Berlin a skos:Concept ;
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6122.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6800.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6953.md>,
-        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7568.md> ;
+        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7568.md>,
+        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7949.md> ;
     skos:definition "Specifies the changes included in the Berlin hardfork." ;
     skos:prefLabel "Berlin" .
 
@@ -309,6 +310,7 @@ ex:Byzantium a skos:Concept ;
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6953.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-758.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7823.md>,
+        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7949.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-908.md> ;
     skos:definition "Specifies the Byzantium hard fork, part of the Metropolis upgrade, introducing features like the REVERT opcode, elliptic curve precompiles, and transaction status codes." ;
     skos:prefLabel "Byzantium" .
@@ -383,13 +385,12 @@ ex:C057 a skos:Concept ;
 ex:C0E1 a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2124.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6122.md>,
-        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7643.md>,
-        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7937.md> ;
+        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7643.md> ;
     skos:definition "EOFv1 flow control opcode" ;
     skos:prefLabel "C0E1" .
 
 ex:C0E2 a skos:Concept ;
-    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7937.md> ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/.md> ;
     skos:definition "EOFv1 flow control opcode" ;
     skos:prefLabel "C0E2" .
 
@@ -409,9 +410,18 @@ ex:Cbrt a skos:Concept ;
     skos:definition "Not specified" ;
     skos:prefLabel "Cbrt" .
 
+ex:Cc0 a skos:Concept ;
+    rdfs:comment " Creative Commons Zero, a license waiver allowing use of copyrighted material without restrictions." ;
+    skos:definition "Creative Commons Zero, a license waiver allowing free use and modification of copyrighted material." ;
+    skos:prefLabel "Cc0" .
+
 ex:Cease%20Serving%20History%20Before%20Pos a skos:Concept ;
     skos:definition "Execution layer clients will stop serving block data from before the Paris (PoS) upgrade over the p2p network, reducing the data burden." ;
     skos:prefLabel "Cease Serving History Before Pos" .
+
+ex:Chain%20Id a skos:Concept ;
+    skos:definition "A unique identifier for a blockchain" ;
+    skos:prefLabel "Chain Id" .
 
 ex:Chain%20Id%20Bound a skos:Concept ;
     skos:definition "Establishes a safe and maximum range for the chain ID parameter to avoid overflow and compatibility issues, particularly for EIP-155 and EIP-712." ;
@@ -525,6 +535,7 @@ ex:Consensus%20Layer a skos:Concept ;
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7691.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7732.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7742.md>,
+        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7782.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7797.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7801.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7804.md>,
@@ -538,6 +549,7 @@ ex:Consensus%20Layer a skos:Concept ;
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7898.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7910.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7915.md>,
+        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7918.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7927.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7934.md> ;
     skos:definition "One of four layers of the Ethereum system standards. It ensures that a particular state and history are valid and provides settlement guarantees. It includes both soft forks and hard forks." ;
@@ -565,6 +577,7 @@ ex:Constantinople a skos:Concept ;
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-665.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-689.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6953.md>,
+        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7949.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-999.md> ;
     skos:definition "Specifies the changes included in the Constantinople hard fork, such as bitwise shifting instructions, CREATE2, and reducing gas costs for certain operations." ;
     skos:prefLabel "Constantinople" .
@@ -615,6 +628,7 @@ ex:Core%20Devs a skos:Concept ;
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-3756.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-649.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7329.md>,
+        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7892.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7940.md> ;
     skos:definition "Not explicitly defined, but refers to the group of developers responsible for maintaining the Ethereum network." ;
     skos:prefLabel "Core Devs" .
@@ -643,6 +657,11 @@ ex:Crosschain%20Identifier%20Specification a skos:Concept ;
 ex:Dao%20Fork a skos:Concept ;
     skos:definition "Describes an irregular state change at block 1,920,000, which transferred ether from the DAO and related accounts to a WithdrawDAO contract following the infamous DAO hack." ;
     skos:prefLabel "Dao Fork" .
+
+ex:De%20Facto%20Structure a skos:Concept ;
+    rdfs:comment " An informal standard or convention that has become widely accepted as a norm, in this case for Geth (Go-Ethereum)" ;
+    skos:definition "An informal standard or convention that has become widely accepted as a norm, in this case for Geth (Go-Ethereum)" ;
+    skos:prefLabel "De Facto Structure" .
 
 ex:Deactivate a skos:Concept ;
     skos:definition "Replaces SELFDESTRUCT, keeping the account’s storage and marking the account as deactivated by setting its nonce to 2^64-1, while transferring the balance and leaving the option to reuse the account via CREATE2." ;
@@ -1109,6 +1128,7 @@ ex:Frame%20Pointer%20Support a skos:Concept ;
 
 ex:Fusaka a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7607.md>,
+        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7918.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7935.md> ;
     skos:definition "A proposed Ethereum upgrade" ;
     skos:prefLabel "Fusaka" .
@@ -1209,9 +1229,11 @@ ex:Genesis a skos:Concept ;
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7748.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7799.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7801.md>,
+        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7892.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7910.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7917.md>,
-        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7927.md> ;
+        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7927.md>,
+        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7949.md> ;
     skos:definition "Log entry in system_logs for initial balances at network genesis." ;
     skos:prefLabel "Genesis" .
 
@@ -1279,6 +1301,7 @@ ex:Homestead a skos:Concept ;
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-649.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6953.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7.md>,
+        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7949.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-8.md> ;
     skos:definition "Specifies changes for the Homestead hard fork, including the activation of the hard fork at certain block numbers and the inclusion of EIPs 2, 7, and 8." ;
     skos:prefLabel "Homestead" .
@@ -1343,8 +1366,7 @@ ex:Increase%20Calldata%20Cost a skos:Concept ;
     rdfs:comment " Increases the gas cost for calldata to reduce the maximum possible block size and allow for a higher block gas limit." ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7600.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7623.md>,
-        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7703.md>,
-        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7778.md> ;
+        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7703.md> ;
     skos:definition "Increases the cost of calldata to reduce the maximum block size, making room for more blobs and improving network efficiency." ;
     skos:prefLabel "Increase Calldata Cost" .
 
@@ -1405,7 +1427,8 @@ ex:Istanbul a skos:Concept ;
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-5920.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6122.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-6953.md>,
-        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7266.md> ;
+        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7266.md>,
+        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7949.md> ;
     skos:definition "A meta-EIP that specifies the changes included in the Istanbul hardfork, incorporating various EIPs aimed at improving performance, security, and cost-efficiency of Ethereum." ;
     skos:prefLabel "Istanbul" .
 
@@ -1420,6 +1443,11 @@ ex:Javascript%20Request%20Method a skos:Concept ;
 ex:Json a skos:Concept ;
     skos:definition "A format chosen for its ubiquity, machine and human readability, and a standardized canonical form via RFC-8785." ;
     skos:prefLabel "Json" .
+
+ex:Json%20Schema a skos:Concept ;
+    rdfs:comment " A schema-based validation system for ensuring consistency and tool compatibility across clients." ;
+    skos:definition "A schema-based validation system introduced by the EIP to ensure consistency and tool compatibility across clients" ;
+    skos:prefLabel "Json Schema" .
 
 ex:Jumpf%20Instruction a skos:Concept ;
     skos:definition "Introduces the JUMPF opcode for EOF (EVM Object Format) contracts, enabling efficient tail-call optimizations without adding a return stack frame." ;
@@ -1781,7 +1809,7 @@ ex:Prepare%20For%20Address%20Space%20Extension a skos:Concept ;
     skos:prefLabel "Prepare For Address Space Extension" .
 
 ex:Prevent%20Block%20Gas%20Smuggling a skos:Concept ;
-    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7778.md> ;
+    skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/.md> ;
     skos:definition "Modifies gas accounting to exclude discounts and refunds from block gas calculations, ensuring block gas usage aligns with the actual workload." ;
     skos:prefLabel "Prevent Block Gas Smuggling" .
 
@@ -2338,6 +2366,10 @@ ex:Transaction%20Gas%20Limit%20Cap a skos:Concept ;
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7825.md> ;
     skos:definition "Sets a maximum transaction gas limit of 2^63-1, ensuring that gas values are within a reasonable range." ;
     skos:prefLabel "Transaction Gas Limit Cap" .
+
+ex:Transaction%20Hash a skos:Concept ;
+    skos:definition "A string that uniquely identifies a transaction on a blockchain" ;
+    skos:prefLabel "Transaction Hash" .
 
 ex:Transaction%20Package a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-2733.md> ;
