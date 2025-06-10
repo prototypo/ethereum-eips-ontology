@@ -1445,7 +1445,8 @@ ex:Json a skos:Concept ;
     skos:prefLabel "Json" .
 
 ex:Json%20Schema a skos:Concept ;
-    rdfs:comment " A schema-based validation system for ensuring consistency and tool compatibility across clients." ;
+    rdfs:comment " A schema-based validation system for ensuring consistency and tool compatibility across clients",
+        " A schema-based validation system for ensuring consistency and tool compatibility across clients." ;
     skos:definition "A schema-based validation system introduced by the EIP to ensure consistency and tool compatibility across clients" ;
     skos:prefLabel "Json Schema" .
 

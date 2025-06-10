@@ -1048,3 +1048,9 @@ transaction hash: A string that uniquely identifies a transaction on a blockchai
 
 CC0: Creative Commons Zero, a license waiver allowing use of copyrighted material without restrictions.
 
+
+de facto structure: An informal standard or convention that has become widely accepted as a norm, in this case for Geth (Go-Ethereum)
+
+JSON Schema: A schema-based validation system for ensuring consistency and tool compatibility across clients 
+
+
