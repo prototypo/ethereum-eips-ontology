@@ -7,6 +7,7 @@ There are three key files in this repository:
 
 * ethereum-glossary.txt, a glossary of Ethereum terms and their definitions.
 * eip-ontology.txt, a simple _term: definition_ version of the ontology with some duplicate terms in plain text format. This version is intended for single-user interactions with an LLM user interface that supports file uploading.
+* eip-ontology-terms-EIP-relationships.txt, provides a mapping between ontology terms and the EIPs that mention them.
 * eip-ontology-skos.ttl, a more complete ontology in [SKOS](https://en.wikipedia.org/wiki/Simple_Knowledge_Organization_System) format. This version is intended for use in a graph database orchestrated with an LLM in production products or services. 
 
 Why?
@@ -50,14 +51,16 @@ Sources:
 2. Consensys' [A Blockchain Glossary for Beginners](https://consensys.io/knowledge-base/a-blockchain-glossary-for-beginners)
 3. The Ethereum Foundation's active [Ethereum Improvement Proposals (EIPs)](https://github.com/ethereum/EIPs/tree/master)
 
-ChatGPT 4o is used to extract newly-created terms from the EIPs and add them sequentially to the text file until they are all represented.
+Meta's Llama 3.2 LLM is used to extract newly-created terms from the EIPs and add them sequentially to the text file until they are all represented.
+
+The Qwen LLM is used to generate meaningful meeting summaries for the AllCoreDevs meetings.
 
 A python script (mk_skos.py) is used to generate a de-duplicated and extended [SKOS](https://en.wikipedia.org/wiki/Simple_Knowledge_Organization_System) ontology. Where multiple definitions exist for the same term, both are kept using different predicates (skos:definition for the primary and rdfs:comment for the secondary). EIPs are linked via skos:broader where they are found.
 
 The SKOS file parses cleanly into the [Protege ontology editor](https://protege.stanford.edu/) if hand editing or human review is desired. However, its intended purpose is to be uploaded into a graph database that supplements an LLM in an orchestrated system.
 
-Prompt used to ChatGPT 4o
---------------------------------------
+Prompt used to Llama 3.2 running under PrivateGPT and Ollama
+------------------------------------------------------------
 
 ---
 
