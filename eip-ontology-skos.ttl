@@ -589,7 +589,8 @@ ex:Constantinople%20Difficulty%20Bomb%20Delay%20And%20Block%20Reward%20Adjustmen
 ex:Contract%20Code%20Size%20Limit a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-170.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-607.md>,
-        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7907.md> ;
+        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7907.md>,
+        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7954.md> ;
     skos:definition "Sets a hard limit on contract size at 0x6000 bytes, and if a contract exceeds this size during creation, it results in an out-of-gas error." ;
     skos:prefLabel "Contract Code Size Limit" .
 
@@ -1129,7 +1130,8 @@ ex:Frame%20Pointer%20Support a skos:Concept ;
 ex:Fusaka a skos:Concept ;
     skos:broader <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7607.md>,
         <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7918.md>,
-        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7935.md> ;
+        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7935.md>,
+        <https://github.com/ethereum/EIPs/blob/master/EIPS/eip-7960.md> ;
     skos:definition "A proposed Ethereum upgrade" ;
     skos:prefLabel "Fusaka" .
 
